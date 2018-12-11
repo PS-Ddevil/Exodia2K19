@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>Exodia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/flipclock.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/flipclock.js"></script>
+<style>
+    #top{
+        background-image: url(img/wall3.png);
+/*        background-attachment: fixed;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #abt{
+       background-image: url(img/2.jpg);
+/*        background-attachment: fixed;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+        #sidebar a {
+            position: fixed;
+            left: -80px;
+            transition: 0.3s;
+            padding: 15px;
+            padding-left: 25px;
+            width: 120px;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #sidebar a:hover {
+            left: 0;
+        }
+
+        #home {
+            top: 120px;
+/*            background-image: url(img/reel.png); */
+        }
+
+        #about {
+            top: 180px;
+/*            background-color: #2196F3;*/
+        }
+
+        #sap {
+            top: 240px;
+/*            background-color: #f44336;*/
+        }
+
+        #gallery {
+            top: 300px;
+/*            background-color: #555*/
+        }
+        #events {
+            top: 360px;
+/*            background-color: #f44336;*/
+        }
+
+        #register {
+            top: 420px;
+/*            background-color: #555*/
+        }
+        #sponser {
+            top: 480px;
+/*            background-color: #f44336;*/
+        }
+
+        #team {
+            top: 540px;
+/*            background-color: #555*/
+        }
+        #info {
+            top: 600px;
+/*            background-color: #555*/
+        }
+    #sidebar img{
+        position: relative;
+        top: -40px;
+        left: -30px;
+    }
+    h1{
+        font-size: 100px;
+        text-align: center;
+    }
+    #cam{
+        height: 80%;
+        width: 100%;
+    }
+    @media only screen and (max-width: 768px){
+        #sidebar{
+            display: none;
+        }
+    }
+</style>
+</head>
+<body>
+<!--nav-->
+    <!-- sidebar-->
+        <div id="sidebar">
+            <a href="#" id="home">Home<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#about" id="about">About<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="sap">SAP<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="gallery">Gallery<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="events">Events<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="register">Register<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="sponser">Sponsers<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="team">Team<img src="img/reel.png" height="80px" width="120px"></a>
+            <a href="#" id="info">Information<img src="img/reel.png" height="80px" width="120px"></a>
+        </div>
+    <!-- sidebar-->
+<!--nav-->
+<!--main-->
+    <div id="top" style="height: 100%"></div>
+    <div id="abt" style="height: 100%">
+    <div class="container">
+    <div style="padding-top: 10%">
+    
+    <center>
+    <img src="img/fb.png" height="70px">    
+    <img src="img/twitter.png" height="70px">    
+    <img src="img/youtube.png" height="70px">    
+    <img src="img/insta.png" height="70x">    
+    </center>
+    </div>
+    <div class="row">
+    <div class="col-2"></div>
+    <div class="clock col-8" style="margin:2em;padding-top: 35%"></div>
+<!--	<div class="message"></div>-->
+    <div class="col-2"></div>
+    </div>
+    </div>
+    </div>
+<!--main-->
+<!--clock-->
+	<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(8620880);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+<!--    <div id="about"></div>-->
+<!--clock-->
+</body>
+</html>
