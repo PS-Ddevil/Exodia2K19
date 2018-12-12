@@ -1,212 +1,495 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Team</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    @media only screen and (min-width: 768px){
-        #left > img{
-            width: 40%;
-        }
-        #left{
-            margin-top: 2%;
-            margin-left: 4% 
-        }
-        #left > #fb,#left > #email,#left > #tel{
-            width: 40px;
-        }
-        #left > #dp{
-            width:15%;
-            height: 25%;
-            position: relative;
-            margin-left: -35%;
-            margin-top: -5%;
-        }
-        #right > img{
-            width: 80%;
-        }
-        #right > #dp{
-            width:30%;
-            height: 25%;
-            position: relative;
-            margin-left: -68%;
-            margin-top: -5%;
-        }
-        #right{
-            margin-top: 2%;
-            margin-left: 50% 
-        }
-        #left > #fb,#left > #email,#left > #tel{
-            width: 20px;
-            margin-top: -1%;
-            margin-left: .5%;
-        }
-        #left > #fb{
-            margin-left: 25%;
-        }
-        #left > #name{
-            position: relative;
-            margin-top: -20%;
-            margin-left: 21%;
-            padding-top: 0px;
-        }
-        #left > #deg{
-            position: relative;
-            margin-left: 22%;
-        }
-        #right > a > #fb,#right > #email,#right > #tel{
-            width: 20px;
-            margin-top: 0%;
-            margin-left: .5%;
-        }
-        #right > #fb{
-            margin-left: 50%;
-        }
-        #right > #name{
-            position: relative;
-            margin-top: -38%;
-            margin-left: 45%;
-            padding-top: 0px;
-        }
-        #right > #deg{
-            position: relative;
-            margin-left: 50%;
-        }
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+    #deg1{
+        display: none;
     }
-    @media only screen and (max-width: 768px){
-        img{
-            width: 80%;
-        }
-        #left{
-            margin-top: 4%;
-            margin-left: 15% 
-        }
-        #dp{
-            width:28%;
-            position: relative;
-            margin-left: -55%;
-            margin-top: -15%;
-        }
-        #right{
-            margin-top: 4%;
-            margin-left: 15% 
-        }
-        #left > #fb,#left > #email,#left > #tel{
-            width: 20px;
-            margin-top: -8%;
-/*            margin-left: 2%;*/
-        }
-        #left > #fb{
-            margin-left: 32%;
-        }
-        #left > #name{
-            position: relative;
-            margin-top: -20%;
-            margin-left: 28%;
-            padding-top: 0px;
-        }
-        #left > #deg{
-            position: relative;
-            margin-top: -3%;
-            margin-left: 32%;
-            padding-top: 0px;
-        }
-    }
+}
+    
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.dp:hover{
+    opacity: 0.5;
+}
+#deg1{
+    background-color: aliceblue;
+}
 </style>
 </head>
-<body style="background-image: url(img/back6.jpg)">
-    <div width="100%">
-        <center><img src="img/index.jpg" style="width: 10%"></center>
-        <h1><center>Meet the Team</center></h1>
+<body>
+<div style="background-image: url(img/back_team.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; padding-bottom: 40%">
+<center><img src="img/exologo.png" style="width: 10%"></center>
+    <h1><center>The Team</center></h1>
+</div>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img class = "dp" src="img/team/aditya.jpg" alt="aditya" style="width:100%">
+      <div class="container">
+        <h3>Rishabh Dharmani</h3>
+        <p class="title">Mentor</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+  <div id = "deg1" class="column">
+      <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Mentor</center></h1></div>
+        
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/parimal.jpg" alt="parimal" style="width:100%">
+      <div class="container">
+        <h3>Parimal Kumar</h3>
+        <p class="title">Mentor</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey2.jpg">
-    <p id="name">Nakul Yadav</p>
-    <p id="deg">Conveyor</p>
-    <br>
-        <a href="https://www.facebook.com/nakul.yadav.50746"><img id="fb" src="img/fbnew.png"></a>
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+</div>
+<div class="row">
+    <div id = "deg1" class="column">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Convenor</center></h1></div>  
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  <div class="column">
+    <div class="card">
+      <img class = "dp" src="img/team/convey1.jpg" alt="Rishabh" style="width:100%">
+      <div class="container">
+        <h3>Rishabh Dharmani</h3>
+        <p class="title">Convenor</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/dp.jpg">
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/convey2.jpg" alt="nakul" style="width:100%">
+      <div class="container">
+        <h3>Nakul Yadav</h3>
+        <p class="title">Convenor</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/publicity1.jpg" alt="nabeel" style="width:100%">
+      <div class="container">
+        <h3>Nabeel Khan</h3>
+        <p class="title">Publicity Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/dp.jpg">
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/publicity2.jpg" alt="satyam" style="width:100%">
+      <div class="container">
+        <h3>Satyam Shakla</h3>
+        <p class="title">Publicity Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+    <div  id = "deg1" class="column">
+    <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Publicity Head</center></h1></div>  
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/dp.jpg">
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/spon1.jpg" alt="kanika" style="width:100%">
+      <div class="container">
+        <h3>Kanika Gupta</h3>
+        <p class="title">Sponsorship Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+    <div  id = "deg1" class="column">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Sponsorship Head</center></h1></div>  
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/dp.jpg">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/spon2.jpg" alt="nitin" style="width:100%">
+      <div class="container">
+        <h3>Nitin Mittal</h3>
+        <p class="title">Sponsorship Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
-    <div id="left">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/convey1.jpg">
-    <p id="name">Rishabh Dharmani</p>
-    <p id="deg">Conveyor</p>
-    <br>
-    <img id="fb" src="img/fbnew.png">
-    <img id="email" src="img/email.png">
-    <img id="tel" src="img/phone.png">
+  </div>
+</div>
+<div class="row">
+    <div id = "deg1" class="column">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Marketing Head</center></h1></div>  
     </div>
-    <div id="right">
-    <img src="img/papyrus___personal_use_only_by_moonlight4ngel-d2xjn6k.png">
-    <img id="dp" src="img/dp.jpg">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/market1.jpg" alt="akshita" style="width:100%">
+      <div class="container">
+        <h3>Akshita Jain</h3>
+        <p class="title">Marketing Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
     </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/market2.jpg" alt="amol" style="width:100%">
+      <div class="container">
+        <h3>Amol Agarwal</h3>
+        <p class="title">Marketing Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/plan1.jpg" alt="sanjeev" style="width:100%">
+      <div class="container">
+        <h3>Sanjeev Singh Yadav</h3>
+        <p class="title">Planning Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/plan2.jpg" alt="akash" style="width:100%">
+      <div class="container">
+        <h3>Akash Garva</h3>
+        <p class="title">Planning Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+    <div id = "deg1" class="column">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Planning Head</center></h1></div>  
+    </div>
+</div>
+<div class="row">
+<div id = "deg1" class="column">
+    <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><center>Hospitality Head</center></h1></div>  
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/hospital1.jpg" alt="gaurav" style="width:100%">
+      <div class="container">
+        <h3>Gaurav Nirmal</h3>
+        <p class="title">Hospitality Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/hospital2.jpg" alt="naveen" style="width:100%">
+      <div class="container">
+        <h3>Naveen Dara</h3>
+        <p class="title">Hospitality Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/content1.png" alt="namrata" style="width:100%">
+      <div class="container">
+        <h3>Namrata Malkani</h3>
+        <p class="title">Content Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+    <div id = "deg1" class="column">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Content Head</center></h1></div>  
+    </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/content2.jpg" alt="nikita" style="width:100%">
+      <div class="container">
+        <h3>Nikita Yadav</h3>
+        <p class="title">Content Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div id = "deg1">
+        <center><img src="img/exologo.png" style="width: 100px;margin-top: 5%"></center>
+        <div style="margin-top: 5%; margin-bottom: 2%"><h1><center>Design Head</center></h1></div>  
+    </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/design1.jpg" alt="amit" style="width:100%">
+      <div class="container">
+        <h3>Amit Chauhan</h3>
+        <p class="title">Design Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/design3.jpg" alt="mayank" style="width:100%">
+      <div class="container">
+        <h3>Mayank Agarawal</h3>
+        <p class="title">Design Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/design2.jpg" alt="shikhar" style="width:100%">
+      <div class="container">
+        <h3>Shikhar Kumar</h3>
+        <p class="title">Design Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/media1.jpg" alt="hardik" style="width:100%">
+      <div class="container">
+        <h3>Hardik Aggarwal</h3>
+        <p class="title">Media Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id = "deg1" class="column">
+      <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Media Head</center></h1></div>  
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/media2.jpg" alt="shivam" style="width:100%">
+      <div class="container">
+        <h3>Shivam Kumar</h3>
+        <p class="title">Media Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div id = "deg1" class="column">
+      <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>Web Development Head</center></h1></div>  
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/web1.jpg" alt="puru" style="width:100%">
+      <div class="container">
+        <h3>Purushottam Sinha</h3>
+        <p class="title">Web Development Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/web2.jpg" alt="abhishek" style="width:100%">
+      <div class="container">
+        <h3>Abhishek Bhardwaj</h3>
+        <p class="title">Web Development Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/app.jpg" alt="rohit" style="width:100%">
+      <div class="container">
+        <h3>Rohit Bhamu</h3>
+        <p class="title">App Development Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id = "deg1" class="column">
+      <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
+        <div style="margin-top: 10%"><h1><center>App Development Head<br><br>Finance Head</center></h1></div>  
+  </div>
+  <div class="column">
+    <div class="card">
+      <img  class = "dp" src="img/team/finance.png" alt="aniwesh" style="width:100%">
+      <div class="container">
+        <h3>Anwesh Das</h3>
+        <p class="title">Finance Head</p>
+        <p>
+        <a><img id="fb" src="img/fbnew.png" width="30px"></a>
+        <a><img id="email" src="img/email.png" width="30px"></a>
+        <a><img id="tel" src="img/phone.png" width="30px"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
