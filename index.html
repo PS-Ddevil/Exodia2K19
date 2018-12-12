@@ -7,6 +7,19 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/flipclock.js"></script>
 <style>
+    @media only screen and (max-width: 1295px){
+        #wheel1{
+            display: none;
+        }
+        #wheel2{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 1295px){
+        #wheel1{
+            display: none;
+        }
+    }
     @media only screen and (min-width: 768px){
     #top{
         background-image: url(img/exo1.jpg);
@@ -73,8 +86,14 @@
         #exologo{
             width: 10%;
         }
+        #wheel1{
+            position: absolute;
+        }
     }
     @media only screen and (max-width: 768px){
+        #wheel1{
+            display: none;
+        }
             #top_scr{
                 background-image: url("img/retro-wallpaper-1.jpg");
 /*                display: block;*/
@@ -97,6 +116,7 @@
                 }
         #exologo{
             width: 30%;
+/*            display: none;*/
         }
      }
         #sidebar a {
@@ -258,6 +278,7 @@
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><p>Come witness the moksh</p></center></div>
         </div>
+        <img id="wheel1" src="img/kisspng-car-motor-vehicle-steering-wheels-motor-vehicle-st-5af947786f9aa4.6922076415262862004571.png">
         <center><img id="car" src="img/back.png"></center>
     </div>
 <!--main-->
