@@ -9,7 +9,7 @@
 <style>
     @media only screen and (min-width: 768px){
     #top{
-        background-image: url(img/exo.jpg);
+        background-image: url(img/exo1.jpg);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -21,6 +21,21 @@
         min-width: 100%;
         z-index: -1;
     }
+/*
+    #loading{
+        background-image: url(img/retro-wallpaper-1.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+    }
+*/
     #inf_{
        background-image: url(img/2.jpg);
         -webkit-background-size: cover;
@@ -47,10 +62,21 @@
         min-width: 100%;
         z-index: -1;
     } 
+        #car{
+       position: relative;
+       animation: travel 4s forwards ease-in;
+    }
+        @keyframes travel{
+        from{top: -10%; width: 2%}
+        to{top: 70%; width: 30%}
+    }
+        #exologo{
+            width: 10%;
+        }
     }
     @media only screen and (max-width: 768px){
             #top_scr{
-                background-image: url("img/exo2.jpg");
+                background-image: url("img/retro-wallpaper-1.jpg");
 /*                display: block;*/
                 position: fixed;
                 background-position: center;
@@ -69,6 +95,9 @@
                 height: 100%;
                 z-index: -10;
                 }
+        #exologo{
+            width: 30%;
+        }
      }
         #sidebar a {
             position: fixed;
@@ -168,6 +197,16 @@
     #sm-gal:hover{
         opacity: 1;
     }
+    @media only screen and (max-width: 768px){
+        #car{
+          position: relative;
+          animation: travel-mini 4s forwards ease-in;  
+        }
+    @keyframes travel-mini{
+        from{top: -10%; width: 2%}
+        to{top: 120%; width: 50%}
+    }
+    }
 /*
     #reach{
         position: relative;
@@ -186,7 +225,7 @@
 */
 </style>
 </head>
-<body>
+<body onload="myFunction()" >
 <!--nav-->
     <!-- sidebar-->
         <div id="sidebar">
@@ -200,18 +239,26 @@
             <a href="team.html" id="team">Team<img src="img/reel.png" height="80px" width="125px"></a>
         </div>
     <!-- sidebar-->
+<!--loading-->
+<!--
+    <div id="loading">
+        <center><img id="car" src="img/back.png"></center>
+    </div>
+-->
+<!--loading-->
 <!--nav-->
 <!--main-->
     <div id="top_scr"></div>
     <div id="top" style="height: 100%">
         <div style="height: 16%"></div>
         <div class="row">
-            <div class="col-10" style="margin-left: 10%"><center><img src="img/exologo.png" style="width: 10%"></center></div>
+            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
         </div>
         <div style="height: 16%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><p>Come witness the moksh</p></center></div>
         </div>
+        <center><img id="car" src="img/back.png"></center>
     </div>
 <!--main-->
 <!--info-->
@@ -321,6 +368,18 @@
 
 		});
 	</script>
+    <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
 <!--    <div id="about"></div>-->
 <!--clock-->
 </body>
