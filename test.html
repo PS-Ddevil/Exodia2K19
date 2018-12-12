@@ -1,0 +1,386 @@
+<html>
+<head>
+<title>Exodia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/flipclock.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/flipclock.js"></script>
+<style>
+    @media only screen and (min-width: 768px){
+    #top{
+        background-image: url(img/exo1.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+    }
+/*
+    #loading{
+        background-image: url(img/retro-wallpaper-1.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+    }
+*/
+    #inf_{
+       background-image: url(img/2.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100%;
+        min-width: 100%; 
+        z-index: -1;
+    }
+    #abt{
+       background-image: url(img/pexels-photo-697662.jpeg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+    } 
+        #car{
+       position: relative;
+       animation: travel 4s forwards ease-in;
+    }
+        @keyframes travel{
+        from{top: -10%; width: 2%}
+        to{top: 70%; width: 30%}
+    }
+        #exologo{
+            width: 10%;
+        }
+    }
+    @media only screen and (max-width: 768px){
+            #top_scr{
+                background-image: url("img/retro-wallpaper-1.jpg");
+/*                display: block;*/
+                position: fixed;
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                }
+            #inf_{
+/*                height: 120%;*/
+                background-image: url("img/2.jpg");
+/*                display: block;*/
+/*                position: fixed;*/
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                z-index: -10;
+                }
+        #exologo{
+            width: 30%;
+        }
+     }
+        #sidebar a {
+            position: fixed;
+            left: -80px;
+            transition: 0.3s;
+            padding: 10px;
+            padding-left: 15px;
+            width: 120px;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #sidebar a:hover {
+            left: 0;
+        }
+
+        #home {
+            top: 120px;
+            font-size: 2px;
+/*            background-image: url(img/reel.png); */
+        }
+
+        #about {
+            top: 180px;
+/*            background-color: #2196F3;*/
+        }
+
+        #sap {
+            top: 240px;
+/*            background-color: #f44336;*/
+        }
+
+        #gallery {
+            top: 300px;
+/*            background-color: #555*/
+        }
+        #events {
+            top: 360px;
+/*            background-color: #f44336;*/
+        }
+
+        #register {
+            top: 420px;
+/*            background-color: #555*/
+        }
+        #sponser {
+            top: 480px;
+/*            background-color: #f44336;*/
+        }
+
+        #team {
+            top: 540px;
+/*            background-color: #555*/
+        }
+    #sidebar img{
+        position: relative;
+        top: -40px;
+        left: -30px;
+    }
+    h1{
+        font-size: 100px;
+        text-align: center;
+    }
+    #cam{
+        height: 80%;
+        width: 100%;
+    }
+    @media only screen and (max-width: 768px){
+        #sidebar{
+            display: none;
+        }
+        #info{
+            position: relative;
+            margin-top: 5%;
+        }
+        #pronit{
+            display: none;
+        }
+    }
+    @media only screen and (min-width: 768px){
+        #sm-only{
+            display: none;
+        }
+    }
+    #info{
+        position: relative;
+        margin-top: 5%;
+        background-color: aliceblue;
+        padding: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        opacity: .5;
+/*        margin-left: 10%;*/
+    }
+    #sm-gal:hover{
+        opacity: 1;
+    }
+    @media only screen and (max-width: 768px){
+        #car{
+          position: relative;
+          animation: travel-mini 4s forwards ease-in;  
+        }
+    @keyframes travel-mini{
+        from{top: -10%; width: 2%}
+        to{top: 120%; width: 50%}
+    }
+    }
+/*
+    #reach{
+        position: relative;
+        margin-top: -50%;
+        margin-left: 20%;
+    }
+    #doc{
+        position: relative;
+        margin-top: -50%;
+    }
+    #sch{
+        position: relative;
+        margin-top: -50%;
+        margin-left: 20%;
+    }
+*/
+</style>
+</head>
+<body onload="myFunction()" >
+<!--nav-->
+    <!-- sidebar-->
+        <div id="sidebar">
+            <a href="#top" id="home">Home<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#abt" id="about">About<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#" id="sap">SAP<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="gallery.html" id="gallery">Gallery<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#events_" id="events">Events<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#" id="register">Register<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#" id="sponser">Sponsers<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="team.html" id="team">Team<img src="img/reel.png" height="80px" width="125px"></a>
+        </div>
+    <!-- sidebar-->
+<!--loading-->
+<!--
+    <div id="loading">
+        <center><img id="car" src="img/back.png"></center>
+    </div>
+-->
+<!--loading-->
+<!--nav-->
+<!--main-->
+    <div id="top_scr"></div>
+    <div id="top" style="height: 100%">
+        <div style="height: 16%"></div>
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
+        </div>
+        <div style="height: 16%"></div>
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%"><center><p>Come witness the moksh</p></center></div>
+        </div>
+        <center><img id="car" src="img/back.png"></center>
+    </div>
+<!--main-->
+<!--info-->
+    <div id="inf_" style="height: 100%">
+    <div class="container">
+    <div style="padding-top: 10%">
+    
+    <center>
+        <a href="https://www.facebook.com/Exodia.IITMandi/"><img src="img/fb.png" height="70px"></a>    
+        <a href="https://twitter.com/exodia_iitmandi"><img src="img/twitter.png" height="70px"></a>    
+        <a href="https://www.youtube.com/user/exodiaiitmandi"><img src="img/youtube.png" height="70px"></a>    
+        <a href="https://www.instagram.com/exodia.in/?hl=en"><img src="img/insta.png" height="70x"></a>    
+    </center>
+    </div>
+    </div> 
+    <div class="row" id="info">
+        <div class="col-md-3 col-sm-6">
+            <center><img id="noc" src="img/55719.svg" width="100px"></center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <center><img id="sch" src="img/overtime.png" width="100px"></center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <center><img id="reach" src="img/dka.png" width="100px"></center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <center><img id="doc" src="img/61715.svg" width="100px"></center>
+        </div>  
+    </div>
+    <div class="row">
+    <div class="col-2"></div>
+<!--    <div class="clock col-8" style="margin:2em;padding-top: 35%"></div>-->
+<!--	<div class="message"></div>-->
+    <div class="col-2"></div>
+    </div>
+    <div style="padding-top: 5%"></div>
+    <div class="row">
+        <div class="col-4" style="background-color: azure; opacity: .7; margin-left: 35%;">
+            <center><p><a href="team.html">MEET THE TEAM</a></p></center>
+        </div>    
+    </div>
+    </div>
+<!--info-->
+<!--about-->
+    <div id="abt" style="height: 100%">
+        <div><u><b><p style="font-size: 40px; margin-left: 10%; padding-top: 5%">ABOUT</p></b></u></div>
+        <div style="background-color: burlywood; margin-left: 10%; margin-right: 10%; opacity: 0.7; padding: 5%">
+        <p>
+
+        Exodia, a cultural-cum-technical festival hosted by the Indian Institute of Technology, Mandi, is all set to be pulled off this summer, from 6th to 8th April, among the serene mountains and gorgeous valleys of Himachal in the mesmerising Kamand campus of IIT Mandi.
+        </p>
+        <p>
+        It ain’t just another event, it’s a plethora of activities giving you lifelong of memories - An avenue where fun and frolics go hand in hand with learning, and which by all means, is worth three days of your lifetime. It's an experience like no other.
+        </p>
+        </div>
+    </div>
+<!--about-->
+<!--events-->
+<!--
+    <div id="events_" style="height: 100%">
+        <div><h1>EVENTS</h1></div>
+    </div>
+-->
+<!--events-->
+<!--gallery-->
+<!--
+    <div id="gal" style="height: 150%">
+        <div class="container">
+        <div class="row">
+        <div id="pronit" class="col-12" style=" opacity: 0.9"><center><img src="img/gallery/1.jpg" style=""></center></div>
+        <div style="position: relative; margin-top: -20%"></div>
+        </div>
+        </div>
+        <div style="padding-top: 5%"></div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div id = "sm-only" class="col-sm-12" style="margin-bottom: 12%"><center><img id="sm-gal" src="img/gallery/1.jpg" style="width:95%; opacity: 0.9"></center></div>
+            <div class="col-md-4 col-sm-6 col-xs-6"><center><img id="sm-gal" src="img/gallery/2.jpg" style="width:95%; opacity: 0.9"></center></div>
+            <div class="col-md-4 col-sm-6 col-xs-6"><center><img
+            id="sm-gal" src="img/gallery/3.jpg" style="width:95%; opacity: 0.9"></center></div>
+            <div class="col-md-4 col-sm-10 col-xs-10"><center><img id="sm-gal" src="img/gallery/1.jpg" style="width:95%; opacity: 0.9"></center></div>
+        </div>
+        </div>
+    </div>
+-->
+<!--gallery-->
+<!--clock-->
+	<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(8620880);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+    <script>
+    var myVar;
+
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+<!--    <div id="about"></div>-->
+<!--clock-->
+</body>
+</html>
