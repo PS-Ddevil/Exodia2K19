@@ -34,21 +34,6 @@
         min-width: 100%;
         z-index: -1;
     }
-/*
-    #loading{
-        background-image: url(img/retro-wallpaper-1.jpg);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:center;
-        min-height: 100%;
-        min-width: 100%;
-        z-index: -1;
-    }
-*/
     #inf_{
        background-image: url(img/2.jpg);
         -webkit-background-size: cover;
@@ -96,7 +81,6 @@
         }
             #top_scr{
                 background-image: url("img/retro-wallpaper-1.jpg");
-/*                display: block;*/
                 position: fixed;
                 background-position: center;
                 background-size: cover;
@@ -105,10 +89,7 @@
                 z-index: -1;
                 }
             #inf_{
-/*                height: 120%;*/
                 background-image: url("img/2.jpg");
-/*                display: block;*/
-/*                position: fixed;*/
                 background-size: cover;
                 width: 100%;
                 height: 100%;
@@ -116,69 +97,58 @@
                 }
         #exologo{
             width: 30%;
-/*            display: none;*/
         }
      }
-        #sidebar a {
-            position: fixed;
-            left: -80px;
-            transition: 0.3s;
-            padding: 10px;
-            padding-left: 15px;
-            width: 120px;
-            text-decoration: none;
-            font-size: 16px;
-            color: black;
-            border-radius: 0 5px 5px 0;
-        }
-
-        #sidebar a:hover {
-            left: 0;
-        }
-
-        #home {
-            top: 120px;
-            font-size: 2px;
-/*            background-image: url(img/reel.png); */
-        }
-
-        #about {
-            top: 180px;
-/*            background-color: #2196F3;*/
-        }
-
-        #sap {
-            top: 240px;
-/*            background-color: #f44336;*/
-        }
-
-        #gallery {
-            top: 300px;
-/*            background-color: #555*/
-        }
-        #events {
-            top: 360px;
-/*            background-color: #f44336;*/
-        }
-
-        #register {
-            top: 420px;
-/*            background-color: #555*/
-        }
-        #sponser {
-            top: 480px;
-/*            background-color: #f44336;*/
-        }
-
-        #team {
-            top: 540px;
-/*            background-color: #555*/
-        }
+    
+/*sidebar(start)*/
+    
+    #sidebar a {
+        position: fixed;
+        left: -80px;
+        transition: 0.3s;
+        padding: 10px;
+        padding-left: 15px;
+        width: 120px;
+        text-decoration: none;
+        font-size: 16px;
+        color: black;
+        border-radius: 0 5px 5px 0;
+    }
+    #sidebar a:hover {
+        left: 0;
+    }
+    #home {
+        top: 120px;
+        font-size: 2px;
+    }
+    #about {
+        top: 180px;
+    }
+    #sap {
+        top: 240px;
+    }
+    #gallery {
+        top: 300px;
+    }
+    #events {
+        top: 360px;
+    }
+    #register {
+        top: 420px;
+    }
+    #sponser {
+        top: 480px;
+    }
+    #team {
+        top: 540px;
+    }
     #sidebar img{
         position: relative;
         top: -40px;
         left: -30px;
     }
+/*sidebar(end)*/
+    
     h1{
         font-size: 100px;
         text-align: center;
@@ -212,7 +182,6 @@
         margin-left: 10%;
         margin-right: 10%;
         opacity: .5;
-/*        margin-left: 10%;*/
     }
     #sm-gal:hover{
         opacity: 1;
@@ -227,28 +196,159 @@
         to{top: 120%; width: 50%}
     }
     }
-/*
-    #reach{
-        position: relative;
-        margin-top: -50%;
-        margin-left: 20%;
+/*For loader(start)*/
+    html, body {
+      height: 100%;
+      margin: 0;
     }
-    #doc{
-        position: relative;
-        margin-top: -50%;
+    svg {
+      display: inline-block;
     }
-    #sch{
-        position: relative;
-        margin-top: -50%;
-        margin-left: 20%;
+    .no-select {
+      cursor: default;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
     }
-*/
+
+    #film-container {
+      width: 100%;
+      height: 100%;
+      background: url('//res.cloudinary.com/thdoan/image/upload/v1509581279/countdown/film_grain-small.gif') no-repeat;
+      background-size: 100% 100%;
+    }
+    #film-countdown, #message-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #message-container text {
+      font: normal 28px Calibri, sans-serif;
+      opacity: 0;
+    }
+    body.message #film-container {
+      opacity: 0;
+      transition: opacity 0.75s;
+    }
+    body.message #message-container text {
+      opacity: 1;
+      transition: opacity 0.75s;
+    }
+    #numbers text {
+      fill: black;
+      font: bold 120px Arial, sans-serif;
+      letter-spacing: -10px;
+      opacity: 0;
+    }
+    .circle01 {
+      fill: none;
+      stroke: #111;
+      stroke-width: 1.5px;
+    }
+    .circle02 {
+      fill: none;
+      stroke: rgba(0, 0, 0, 0.3);
+      stroke-dasharray: 1 3200;
+      stroke-width: 989;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+    .line01, .line02 {
+      stroke: #deedee;
+    }
+    .rectangle01 {
+      fill: gray;
+    }
+
+    ** END RADIO DIAL **
+
+    .animated-flicker {
+      height: 100%;
+      animation: flicker 1s 1;
+      opacity: 0.2;
+    }
+    .animated-rotate {
+      animation: rotate .5s 10;
+    }
+    #animated-text1 {
+      animation: countdown .5s 1;
+      animation-delay: 0s;
+    }
+    #animated-text2 {
+      animation: countdown .5s 1;
+      animation-delay: .5s;
+    }
+    #animated-text3 {
+      animation: countdown .5s 1;
+      animation-delay: 1s;
+    }
+    #animated-text4 {
+      animation: countdown .5s 1;
+      animation-delay: 1.5s;
+    }
+    #animated-text5 {
+      animation: countdown .5s 1;
+      animation-delay: 2s;
+    }
+    #animated-text6 {
+      animation: countdown .5s 1;
+      animation-delay: 2.5s;
+    }
+    #animated-text7 {
+      animation: countdown .5s 1;
+      animation-delay: 3s;
+    }
+    #animated-text8 {
+      animation: countdown .5s 1;
+      animation-delay: 3.5s;
+    }
+    #animated-text9 {
+      animation: countdown .5s 1;
+      animation-delay: 4s;
+    }
+    #animated-text10 {
+      animation: countdown .5s 1;
+      animation-delay: 4.5s;
+    }
+
+    @keyframes countdown {
+      0% { opacity: 1; }
+      99% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes flicker {
+      0% { opacity: 0.45; }
+      10% { opacity: 0.7; }
+      23% { opacity: 0.85; }
+      30% { opacity: 0.4; }
+      41% { opacity: 0.6; }
+      46% { opacity: 0.8; }
+      53% { opacity: 0.4; }
+      60% { opacity: 0.75; }
+      75% { opacity: 0.5; }
+      79% { opacity: 0.55; }
+      100% { opacity: 0.1; }
+    }
+    @keyframes rotate {
+      100% { stroke-dasharray: 3200 0; }
+    }
+    
+/*for loade(end)r*/
+    
+    .hide{
+        display: none;
+    }
 </style>
 </head>
-<body onload="myFunction()" >
-<!--nav-->
-    <!-- sidebar-->
-        <div id="sidebar">
+<body>
+    
+    
+<!--nav(start)-->
+    <!-- sidebar(start)-->
+        <div id="sidebar" class="hide">
             <a href="#top" id="home">Home<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="#abt" id="about">About<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="#" id="sap">SAP<img src="img/reel.png" height="80px" width="125px"></a>
@@ -258,18 +358,13 @@
             <a href="#" id="sponser">Sponsers<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="team.html" id="team">Team<img src="img/reel.png" height="80px" width="125px"></a>
         </div>
-    <!-- sidebar-->
-<!--loading-->
-<!--
-    <div id="loading">
-        <center><img id="car" src="img/back.png"></center>
-    </div>
--->
-<!--loading-->
-<!--nav-->
-<!--main-->
+    <!-- sidebar(end)-->
+<!--nav(end)-->
+    
+    
+<!--main(start)-->
     <div id="top_scr"></div>
-    <div id="top" style="height: 100%">
+    <div id="top" class="hide" style="height: 100%">
         <div style="height: 16%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
@@ -278,12 +373,13 @@
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><p>Come witness the moksh</p></center></div>
         </div>
-        <img id="wheel1" src="img/kisspng-car-motor-vehicle-steering-wheels-motor-vehicle-st-5af947786f9aa4.6922076415262862004571.png">
         <center><img id="car" src="img/back.png"></center>
     </div>
-<!--main-->
-<!--info-->
-    <div id="inf_" style="height: 100%">
+<!--main(end)-->
+    
+    
+<!--info(start)-->
+    <div id="inf_" class="hide" style="height: 100%">
     <div class="container">
     <div style="padding-top: 10%">
     
@@ -311,8 +407,6 @@
     </div>
     <div class="row">
     <div class="col-2"></div>
-<!--    <div class="clock col-8" style="margin:2em;padding-top: 35%"></div>-->
-<!--	<div class="message"></div>-->
     <div class="col-2"></div>
     </div>
     <div style="padding-top: 5%"></div>
@@ -322,9 +416,11 @@
         </div>    
     </div>
     </div>
-<!--info-->
-<!--about-->
-    <div id="abt" style="height: 100%">
+<!--info(end)-->
+
+
+<!--about(start)-->
+    <div id="abt" class="hide" style="height: 100%">
         <div><u><b><p style="font-size: 40px; margin-left: 10%; padding-top: 5%">ABOUT</p></b></u></div>
         <div style="background-color: burlywood; margin-left: 10%; margin-right: 10%; opacity: 0.7; padding: 5%">
         <p>
@@ -336,72 +432,130 @@
         </p>
         </div>
     </div>
-<!--about-->
-<!--events-->
-<!--
-    <div id="events_" style="height: 100%">
-        <div><h1>EVENTS</h1></div>
-    </div>
--->
-<!--events-->
-<!--gallery-->
-<!--
-    <div id="gal" style="height: 150%">
-        <div class="container">
-        <div class="row">
-        <div id="pronit" class="col-12" style=" opacity: 0.9"><center><img src="img/gallery/1.jpg" style=""></center></div>
-        <div style="position: relative; margin-top: -20%"></div>
-        </div>
-        </div>
-        <div style="padding-top: 5%"></div>
-        <div class="container">
-        <div class="row justify-content-center">
-            <div id = "sm-only" class="col-sm-12" style="margin-bottom: 12%"><center><img id="sm-gal" src="img/gallery/1.jpg" style="width:95%; opacity: 0.9"></center></div>
-            <div class="col-md-4 col-sm-6 col-xs-6"><center><img id="sm-gal" src="img/gallery/2.jpg" style="width:95%; opacity: 0.9"></center></div>
-            <div class="col-md-4 col-sm-6 col-xs-6"><center><img
-            id="sm-gal" src="img/gallery/3.jpg" style="width:95%; opacity: 0.9"></center></div>
-            <div class="col-md-4 col-sm-10 col-xs-10"><center><img id="sm-gal" src="img/gallery/1.jpg" style="width:95%; opacity: 0.9"></center></div>
-        </div>
-        </div>
-    </div>
--->
-<!--gallery-->
-<!--clock-->
-	<script type="text/javascript">
-		var clock;
-		
-		$(document).ready(function() {
-			var clock;
-
-			clock = $('.clock').FlipClock({
-		        clockFace: 'DailyCounter',
-		        autoStart: false,
-		        callbacks: {
-		        	stop: function() {
-		        		$('.message').html('The clock has stopped!')
-		        	}
-		        }
-		    });
-				    
-		    clock.setTime(8620880);
-		    clock.setCountdown(true);
-		    clock.start();
-
-		});
-	</script>
-    <script>
-    var myVar;
-
-    function myFunction() {
-      myVar = setTimeout(showPage, 3000);
+<!--about(end)-->
+    
+    
+<!--loading(start)-->
+<div id="film-container">
+  <div class="animated-flicker">
+    <svg id="film-mask" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+      width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 400 225">
+      <rect class="rectangle01" width="400" height="225"/>
+      <line id="line-h" class="line01" x1="0" y1="112.5" x2="400" y2="112.5"/>
+      <line id="line-v" class="line02" x1="200" y1="0" x2="200" y2="225"/>
+    </svg>
+    <svg id="film-countdown" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+      width="100%" height="100%" viewBox="0 0 400 225">
+      <circle id="circle-outer" class="circle01" cx="200" cy="112.5" r="95"/>
+      <circle id="circle-inner" class="circle01" cx="200" cy="112.5" r="85"/>
+      <circle class="circle02 animated-rotate" cx="200" cy="112.5" r="494.5"/>
+      <g id="numbers" text-anchor="middle" class="no-select">
+        <text id="animated-text1" x="200.5" y="155">10</text>
+        <text id="animated-text2" x="200.5" y="155">9</text>
+        <text id="animated-text3" x="200.5" y="155">8</text>
+        <text id="animated-text4" x="200.5" y="155">7</text>
+        <text id="animated-text5" x="200.5" y="155">6</text>
+        <text id="animated-text6" x="200.5" y="155">5</text>
+        <text id="animated-text7" x="200.5" y="155">4</text>
+        <text id="animated-text8" x="200.5" y="155">3</text>
+        <text id="animated-text9" x="200.5" y="155">2</text>
+        <text id="animated-text10" x="200.5" y="155">1</text>
+      </g>
+    </svg>
+  </div>
+</div>
+<!--loading(end)-->
+    
+    
+<!--script for loading(start)-->
+<script>          
+setTimeout(function(){
+    document.getElementById('top').classList.remove('hide');
+    document.getElementById('sidebar').classList.remove('hide');
+    document.getElementById('inf_').classList.remove('hide');
+    document.getElementById('abt').classList.remove('hide');
+    document.getElementById('film-container').classList.add('hide');
+}, 6000);
+    
+(function() {
+  if (!window.requestAnimationFrame) {
+    var nLastTime = 0,
+      aVendors = ['moz', 'ms', 'o', 'webkit'];
+    for (var i=0; i<aVendors.length; ++i) {
+      window.requestAnimationFrame = window[aVendors[i] + 'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[aVendors[i] + 'CancelAnimationFrame'] || window[aVendors[i] + 'CancelRequestAnimationFrame'];
     }
+    window.requestAnimationFrame = function(callback, element) {
+      var nCurrentTime = new Date().getTime(),
+        nTimeToCall = Math.max(0, 16 - (nCurrentTime - nLastTime)),
+        nTimer = window.setTimeout(function() {
+          callback(nCurrentTime + nTimeToCall);
+        }, nTimeToCall);
+      nLastTime = nCurrentTime + nTimeToCall;
+      return nTimer;
+    };
+  }
+  if (!window.cancelAnimationFrame) {
+    window.cancelAnimationFrame = function(nTimer) {
+      clearTimeout(nTimer);
+    };
+  }
+}());
 
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
+var circleOuter = document.getElementById('circle-outer'),
+  circleInner = document.getElementById('circle-inner'),
+  lineH = document.getElementById('line-h'),
+  lineV = document.getElementById('line-v'),
+  numbers = document.getElementById('numbers'),
+  nCircleCx = +circleOuter.getAttribute('cx'),
+  nCircleCy = +circleOuter.getAttribute('cy'),
+  nLineY = +lineH.getAttribute('y1'),
+  nLineX = +lineV.getAttribute('x1'),
+  nFps = 12, // Just like vintage silent films :]
+  nJitterLevel = 2.5, // How shaky is the projector?
+  nTick = 0;
+
+function jitter() {
+  setTimeout(function() {
+    if (nTick===nFps*9) {
+      // Reset position
+      circleOuter.setAttribute('cx', nCircleCx);
+      circleInner.setAttribute('cx', nCircleCx);
+      circleOuter.setAttribute('cy', nCircleCy);
+      circleInner.setAttribute('cy', nCircleCy);
+      lineH.setAttribute('y1', nLineY);
+      lineH.setAttribute('y2', nLineY);
+      lineV.setAttribute('x1', nLineX);
+      lineV.setAttribute('x2', nLineX);
+      numbers.style.transform = '';
+      // Transition after countdown
+      document.body.className = 'message';
+      return;
     }
-    </script>
-<!--    <div id="about"></div>-->
-<!--clock-->
+    // Use rAF for improved performance
+    requestAnimationFrame(jitter);
+    // Repaint!
+    var nOffsetX = Math.random()*nJitterLevel * ((Math.random()>=0.5)?1:-1),
+      nOffsetY = Math.random()*nJitterLevel * ((Math.random()>=0.5)?1:-1);
+    circleOuter.setAttribute('cx', nCircleCx + nOffsetX);
+    circleInner.setAttribute('cx', nCircleCx + nOffsetX);
+    circleOuter.setAttribute('cy', nCircleCy + nOffsetY);
+    circleInner.setAttribute('cy', nCircleCy + nOffsetY);
+    lineH.setAttribute('y1', nLineY + nOffsetY);
+    lineH.setAttribute('y2', nLineY + nOffsetY);
+    lineV.setAttribute('x1', nLineX + nOffsetX);
+    lineV.setAttribute('x2', nLineX + nOffsetX);
+    numbers.style.transform = 'translate3d(' + nOffsetX + 'px, ' + nOffsetY + 'px, 0)';
+    ++nTick;
+  }, 1000/nFps);
+}
+
+jitter();
+</script>
+<!--script for loading(end)-->
+    
+    
 </body>
 </html>
