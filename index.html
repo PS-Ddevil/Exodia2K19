@@ -33,6 +33,7 @@
     #open{
         display: none;
     }
+/*
     #inf_{
        background-image: url(img/2.jpg);
         -webkit-background-size: cover;
@@ -46,13 +47,14 @@
         min-width: 100%; 
         z-index: -1;
     }
+*/
     #car{
        position: relative;
        animation: travel 4s forwards ease-in;
     }
         @keyframes travel{
         from{top: -10%; width: 2%}
-        to{top: 70%; width: 30%}
+        to{top: 70%; width: 28%}
     }
     #exologo{
         width: 10%;
@@ -170,10 +172,10 @@
           position: relative;
           animation: travel-mini 4s forwards ease-in;  
         }
-    @keyframes travel-mini{
-        from{top: -10%; width: 2%}
-        to{top: 120%; width: 50%}
-    }
+        @keyframes travel-mini{
+            from{top: -10%; width: 2%}
+            to{top: 120%; width: 50%}
+        }
     }
 /*For loader(start)*/
     html, body {
@@ -400,7 +402,6 @@
             <a href="#">Register</a>
             <a href="#">Sponsers</a>
             <a href="team.html">Team</a>
-            <a href="info.html">Info</a>
         </div>
         <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%" onclick="openNav()">&#9776;</span>
         <script>
@@ -420,11 +421,11 @@
 <!--main(start)-->
     <div id="top_scr"></div>
     <div id="top" class="hide" style="height: 100%">
-        <div style="height: 16%"></div>
+        <div style="height: 13%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
         </div>
-        <div style="height: 8%"></div>
+        <div style="height: 5%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%">
                 <center><h2 id="tag1" style="color: color">Remake the Rapture</h2>
@@ -440,6 +441,7 @@
     
     
 <!--info(start)-->
+<!--
     <div id="inf_" class="hide" style="height: 100%">
     <div class="container">
     <div style="padding-top: 10%">
@@ -477,6 +479,7 @@
         </div>    
     </div>
     </div>
+-->
 <!--info(end)-->
     
 <!--loading(start)-->
@@ -520,7 +523,7 @@
 setTimeout(function(){
     document.getElementById('top').classList.remove('hide');
     document.getElementById('sidebar').classList.remove('hide');
-    document.getElementById('inf_').classList.remove('hide');
+//    document.getElementById('inf_').classList.remove('hide');
     document.getElementById('open').classList.remove('hide');
     document.getElementById('film-container').classList.add('hide');
 }, 6000);
