@@ -69,9 +69,73 @@ html {
     padding-top: 5%;
     font-family: 'Pacifico', cursive;
 }
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+/*      background-color: #111;*/
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align:center;
+/*      opacity: .9;*/
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+
+    }
+
+    .sidenav a:hover{
+      color: grey;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
 </style>
 </head>
 <body>
+    <!--mobi-sidebar-->
+        <div id="mobo-side" class="sidenav" style="background-image: url(img/pexels-photo-277319.jpeg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">SAP</a>
+            <a href="events.html">Events</a>
+            <a href="#">Register</a>
+            <a href="#">Sponsers</a>
+            <a href="team.html">Team</a>
+        </div>
+        <div>
+            <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: white" onclick="openNav()">&#9776;</span>
+            </div>
+        <script>
+        function openNav() {
+          document.getElementById("mobo-side").style.width = "100%";
+        }
+
+        function closeNav() {
+          document.getElementById("mobo-side").style.width = "0";
+        }
+        </script>
+    <!--mobi-sidebar-->
 <div style="background-image: url(img/back_team.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; padding-bottom: 40%">
 <center><img src="img/exologo.png" style="width: 10%"></center>
 <div style="padding-top: 10%">
