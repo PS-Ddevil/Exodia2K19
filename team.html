@@ -8,67 +8,82 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Pacifico|Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet"> 
 <style>
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 650px) {
-    #deg1{
-        display: none;
+    html {
+      box-sizing: border-box;
     }
-}
-    
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
-.container {
-  padding: 0 16px;
-}
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
 
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
 
-.title {
-  color: grey;
-}
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
 
-.dp:hover{
-    opacity: 0.5;
-}
-#deg1{
-    background-color: aliceblue;
-}
-#head{
-    font-family: 'Righteous', cursive;
-}
-#quote{
-    padding-top: 5%;
-    font-family: 'Pacifico', cursive;
-}
+    @media screen and (max-width: 650px) {
+        #deg1{
+            display: none;
+        }
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .dp:hover{
+        opacity: 0.5;
+    }
+    h3{
+        font-family: 'Architects Daughter', cursive;
+    }
+    #deg1{
+        background-color: aliceblue;
+    }
+    #head{
+        font-family: 'Righteous', cursive;
+    }
+    #deg1{
+        font-family: 'Merienda', cursive;
+        font-size: 35px;
+    }
+    #quote{
+        padding-top: 5%;
+        font-family: 'Kaushan Script', cursive;
+    }
+    .title{
+        font-family: 'Sacramento', cursive;
+        font-size: 20px;
+    }
     .sidenav {
       height: 100%;
       width: 0;
@@ -117,11 +132,11 @@ html {
         <div id="mobo-side" class="sidenav" style="background-image: url(img/pexels-photo-277319.jpeg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="#">SAP</a>
             <a href="events.html">Events</a>
             <a href="#">Register</a>
             <a href="#">Sponsers</a>
-            <a href="team.html">Team</a>
         </div>
         <div>
             <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: white" onclick="openNav()">&#9776;</span>
@@ -165,7 +180,7 @@ html {
   </div>
     <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Mentor</center></h1></div>
+        <div style="margin-top: 10%"><h2><center>Mentor</center></h2></div>
     </div>
   <div class="column">
     <div class="card">
@@ -185,7 +200,7 @@ html {
 <div class="row">
     <div id = "deg1" class="column">
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Convenor</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Convenor</center></h2></div>  
     </div>
   <div class="column">
     <div class="card">
@@ -249,13 +264,13 @@ html {
   </div>
     <div  id = "deg1" class="column">
     <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Publicity Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Publicity Head</center></h2></div>  
     </div>
 </div>
 <div class="row">
     <div id = "deg1" class="column">
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Marketing Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Marketing Head</center></h2></div>  
     </div>
   <div class="column">
     <div class="card">
@@ -317,13 +332,13 @@ html {
   </div>
     <div id = "deg1" class="column">
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Planning Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Planning Head</center></h2></div>  
     </div>
 </div>
 <div class="row">
 <div id = "deg1" class="column">
     <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Hospitality Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Hospitality Head</center></h2></div>  
   </div>
   <div class="column">
     <div class="card">
@@ -371,7 +386,7 @@ html {
   </div>
     <div id = "deg1" class="column">
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Content Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Content Head</center></h2></div>  
     </div>
   <div class="column">
     <div class="card">
@@ -391,7 +406,7 @@ html {
 <div class="row">
     <div class="col-12" id = "deg1">
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 5%"></center>
-        <div style="margin-top: 5%; margin-bottom: 2%"><h1><center>Design Head</center></h1></div>  
+        <div style="margin-top: 5%; margin-bottom: 2%"><h2><center>Design Head</center></h2></div>  
     </div>
 </div>
 <div class="row">
@@ -455,7 +470,7 @@ html {
   </div>
   <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Media Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Media Head</center></h2></div>  
   </div>
   <div class="column">
     <div class="card">
@@ -475,7 +490,7 @@ html {
 <div class="row">
   <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Web Development Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Web Development Head</center></h2></div>  
   </div>
   <div class="column">
     <div class="card">
@@ -509,15 +524,15 @@ html {
 <div class="row">
     <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center> Sponsorship Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center> Sponsorship Head</center></h2></div>  
     </div>
     <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>App Development Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>App Development Head</center></h2></div>  
     </div>
     <div id = "deg1" class="column">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
-        <div style="margin-top: 10%"><h1><center>Finance Head</center></h1></div>  
+        <div style="margin-top: 10%"><h2><center>Finance Head</center></h2></div>  
     </div>
 </div>
 <div class="row">
