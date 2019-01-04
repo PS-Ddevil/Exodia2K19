@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
 <style>
     @media only screen and (min-width: 768px){
     #top{
@@ -389,6 +390,10 @@
         text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
       }
     }
+    
+    #hours, #min, #days, #sec, #none{
+        font-family: 'Akronim', cursive;
+    }
 </style>
 </head>
 <body>
@@ -445,6 +450,17 @@
                 <hr width="15%" id="line3" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px;opacity: 0.4">
                 <h5 id="tag2">#RocktheRetro</h5></center>
             </div>
+        </div>
+        <div>
+            <center>
+            <span id="days" style="font-size: 50px;"></span>
+            <span id = "none" style="font-size: 50px;">:</span>
+            <span id="hours" style="font-size: 50px;">0</span>
+            <span id = "none" style="font-size: 50px;">:</span>
+            <span id="min" style="font-size: 50px;">0</span>
+            <span id = "none" style="font-size: 50px;">:</span>
+            <span id="sec" style="font-size: 50px;">0</span>
+            </center>
         </div>
         <center><img id="car" src="img/back.png"></center>
     </div>
@@ -574,7 +590,40 @@ function jitter() {
 jitter();
 </script>
 <!--script for loading(end)-->
-    
+<!--script foy clock-->
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("April 7, 2019 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var countdownfunction = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("days").innerHTML = (days < 10) ? ('0' + days) : days;
+      document.getElementById("hours").innerHTML = (hours < 10) ? ('0' + hours) : hours;
+      document.getElementById("min").innerHTML = (minutes < 10) ? ('0' + minutes) : minutes;
+      document.getElementById("sec").innerHTML = (seconds < 10) ? ('0' + seconds) : seconds;
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("days").innerHTML = "0";
+      }
+    }, 1000);
+    </script>
+<!--script foy clock-->
     
 </body>
 </html>
