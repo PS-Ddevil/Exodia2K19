@@ -370,6 +370,25 @@
             font-size: 25px;
         }
     }
+    
+    .glow {
+/*      font-size: 40px;*/
+      color: #fff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
 </style>
 </head>
 <body>
@@ -379,7 +398,7 @@
     <!-- sidebar(start)-->
         <div id="sidebar" class="hide">
             <a href="about.html" id="about">About<img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="#" id="sap">SAP<img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="sap.html" id="sap">SAP<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="events.html" id="events">Events<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="#" id="register">Register<img src="img/reel.png" height="80px" width="125px"></a>
             <a href="#" id="sponser">Sponsers<img src="img/reel.png" height="80px" width="125px"></a>
@@ -389,7 +408,7 @@
         <div id="mobo-side" class="sidenav" style="background-image: url(img/pexels-photo-247929.jpeg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="about.html">About</a>
-            <a href="#">SAP</a>
+            <a href="sap.html">SAP</a>
             <a href="events.html">Events</a>
             <a href="#">Register</a>
             <a href="#">Sponsers</a>
@@ -420,7 +439,7 @@
         <div style="height: 5%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%">
-                <center><h2 id="tag1" style="color: color">Remake the Rapture</h2>
+                <center><h2 id="tag1" style="color: white" class="glow">Remake the Rapture</h2>
                 <hr width="25%" id = "line1" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.8">
                 <hr width="20%" id = "line2" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.6">
                 <hr width="15%" id="line3" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px;opacity: 0.4">
