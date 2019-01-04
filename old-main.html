@@ -178,7 +178,7 @@
     #film-container {
       width: 100%;
       height: 100%;
-      background: url('img/film_grain-small.gif') no-repeat;
+      background: url('//res.cloudinary.com/thdoan/image/upload/v1509581279/countdown/film_grain-small.gif') no-repeat;
       background-size: 100% 100%;
     }
     #film-countdown, #message-container {
@@ -234,13 +234,8 @@
       opacity: 0.2;
     }
     .animated-rotate {
-      animation: rotate .5s 3;
+      animation: rotate .5s 10;
     }
-    #film-container{
-        animation: fadeaway 1.5s;
-        animation-delay: 1.5s;
-    }
-/*
     #animated-text1 {
       animation: countdown .5s 1;
       animation-delay: 0s;
@@ -269,18 +264,17 @@
       animation: countdown .5s 1;
       animation-delay: 3s;
     }
-*/
     #animated-text8 {
       animation: countdown .5s 1;
-      animation-delay: 0s;
+      animation-delay: 3.5s;
     }
     #animated-text9 {
       animation: countdown .5s 1;
-      animation-delay: .5s;
+      animation-delay: 4s;
     }
     #animated-text10 {
       animation: countdown .5s 1;
-      animation-delay: 1s;
+      animation-delay: 4.5s;
     }
 
     @keyframes countdown {
@@ -303,11 +297,6 @@
     }
     @keyframes rotate {
       100% { stroke-dasharray: 3200 0; }
-    }
-    
-    @keyframes fadeaway{
-        0%{ opacity: 1;}
-        100%{opacity: 0.5;}
     }
     
 /*for loade(end)r*/
@@ -449,7 +438,6 @@
       <circle id="circle-inner" class="circle01" cx="200" cy="112.5" r="85"/>
       <circle class="circle02 animated-rotate" cx="200" cy="112.5" r="494.5"/>
       <g id="numbers" text-anchor="middle" class="no-select">
-<!--
         <text id="animated-text1" x="200.5" y="155">10</text>
         <text id="animated-text2" x="200.5" y="155">9</text>
         <text id="animated-text3" x="200.5" y="155">8</text>
@@ -457,7 +445,6 @@
         <text id="animated-text5" x="200.5" y="155">6</text>
         <text id="animated-text6" x="200.5" y="155">5</text>
         <text id="animated-text7" x="200.5" y="155">4</text>
--->
         <text id="animated-text8" x="200.5" y="155">3</text>
         <text id="animated-text9" x="200.5" y="155">2</text>
         <text id="animated-text10" x="200.5" y="155">1</text>
@@ -477,8 +464,8 @@ setTimeout(function(){
 //    document.getElementById('inf_').classList.remove('hide');
     document.getElementById('open').classList.remove('hide');
     document.getElementById('film-container').classList.add('hide');
-}, 3000);
-
+}, 6000);
+    
 (function() {
   if (!window.requestAnimationFrame) {
     var nLastTime = 0,
