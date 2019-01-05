@@ -619,7 +619,10 @@ jitter();
       // If the count down is over, write some text 
       if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("days").innerHTML = "0";
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("min").innerHTML = "00";
+        document.getElementById("sec").innerHTML = "00";
       }
     }, 1000);
     </script>
