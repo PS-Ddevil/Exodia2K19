@@ -67,16 +67,23 @@
           float: right;
         }
     
+        
+    
     @media screen and (min-width: 768px){
         #log-fb{
             padding-top: 40%; 
             width: 200px;
         }
-        
+        #log-goog{
+            padding-top: 5%; 
+            width: 200px;
+            padding-bottom: 200px;
+        }
         #sap{
             padding-top: 25%; 
-            color: white; 
+            color: black; 
             font-size: 100px;
+            padding-bottom: 20px;
         }
         #for-sm{
             display: none;
@@ -134,19 +141,27 @@
             #navbar{
                 display: none;
             }
-            #log-fb{
-                padding-top: 1%; 
+            #log-fb{ 
                 width: 200px;
             }
+            #log-goog{
+                padding-top: 10px; 
+                width: 200px;
+                padding-bottom: 50px;
+            }
             #sap{
-                padding-top: 15%; 
-                color: white; 
+                padding-top: 5%; 
+                color: black; 
                 font-size: 50px;
+                align-content: center;
             }
             #respon-img{
                 display: none;
             }
             #for-lg{
+                display: none;
+            }
+            .for-lg{
                 display: none;
             }
             #why-list{
@@ -166,14 +181,14 @@
                 color: white;
             }
             #myBtn{
-                background-color: #e6e600;
+                background-color: #ee592e;
                 border: none;
                 color: white;
+                padding-bottom: 40px;
+                padding-top: 10px;
             }
             #faqs{
                 background-color: deepskyblue; 
-                padding-top: 40px; 
-                padding-bottom: 60px
             }
             #faq-inbox{
                 padding-bottom: 80px; 
@@ -246,19 +261,20 @@
     <div id="mobonav">
     
     </div>
-    <div id= "home" style="background-image: url(img/vin-2.jpg); background-attachment: scroll; background-position: top; background-repeat: no-repeat; background-size: cover; padding:15px 15px;" class="container-fluid">
+    <div id= "home" style="background-image: url(img/back6.jpg); background-attachment: scroll; background-position: top; background-repeat: no-repeat; background-size: cover;padding:15px 15px;" class="container-fluid">
        <div class = "row">
             <div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 100px;">
-                <p id="sap">Student<br> Ambassdor<br>Program</p>
+                <center id="for-sm"><img src="img/exologo.png" style="width: 100px"><p id="sap">Student<br> Ambassador<br>Program</p><br><i class='fas fa-user-graduate' style='font-size:128px;color:red'></i> </center>
+                <p id="sap" class="for-lg">Student<br> Ambassador<br>Program</p>
            </div>
            <div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <center><img id="log-fb" src="img/login-facebook.png"><br>
-                <img src="img/login-google.png" style="padding-top: 5%; width: 200px;">
+                <img id = "log-goog" src="img/login-google.png">
                 </center>
            </div>
         </div>
     </div>
-    <div id = "about" style="background-color: deepskyblue;" class="contain-fluid">
+    <div id = "about" style="background-color: deepskyblue;">
         <div style="height: 50%; background-attachment: scroll; background-image: url(img/About_us.jpg); background-position: left; background-repeat: no-repeat; background-size: cover">
         </div>
         <div id = "about-txt" class="container" style="padding-top: 5%; padding-bottom: 10%; word-wrap: break-word">
@@ -267,7 +283,7 @@
             </center>
         </div>
     </div>
-    <div id = "why" class="contain-fluid">
+    <div id = "why">
 <!--        <img src="img/why.jpg" style="width: 100%">-->
         <div class="container" style="background-color: red;padding-top: 80px;">
         <div class="row">
@@ -289,7 +305,7 @@
         </div>
     </div>
     </div>
-    <div id = "respon" class="contain-fluid">
+    <div id = "respon">
         <div class="container">
         <div class="row" style="padding-top:;padding-bottom: 100px; background-color: blue;">
             <div id = "for-sm" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " style="padding-top: 50px; border-radius: 25px;">
@@ -315,8 +331,8 @@
         </div>
         </div>
     </div>
-        <div id = "prize" class="contain-fluid">
-        <div class="container" style="background-color:green ;padding-top: 80px;padding-bottom: 80px;">
+        <div id = "prize">
+        <div class="container" style="background-color:#01a7b7;padding-top: 80px;padding-bottom: 80px;">
         <div class="row">
             <div class="col-12">
                 <p style="padding-left: 60px; padding-bottom: 40px; font-size: 60px; color: white; float: left"><b>Incentives</b></p>
@@ -361,8 +377,8 @@
                 </div>
             </div>
         </div>
-        <div id="faqs" class="container-fluid">
-            <div class="container" id="faq-inbox" style="background-color:#e6e600;padding-top: 80px;">
+        <div id="faqs">
+            <div class="container" id="faq-inbox" style="background-color:#ee592e;padding-top: 120px;">
                 <h1><center style="color:white"><b>FAQs</b></center></h1>
                 <div class="container" style="width: 80%; background-color: white; margin-top: 50px; height: 300px; overflow: scroll">
                     <h4>jdshfj dsjfhj hsdjfdsk fkjsdf ahkjdfh askjf hkjasdfh kjsdhf kjsdhf?</h4>
@@ -378,7 +394,7 @@
                     <h4>jdshfj dsjfhj hsdjfdsk fkjsdf ahkjdfh askjf hkjasdfh kjsdhf kjsdhf?</h4>
                     <p>jgsjfagf kjasdh fjg uskajgf hjaf jhfkgh fah gisksghlks hfklfn kg kghdgh ksghk hfkhgklh kgkldfhkg hdsgkjh gkdskgh dk hgklds gkdfhkgh fklghklsghldfkh glskhdkglhdfghlfkdj</p>
                 </div>
-                <h2 style="padding-top: 40px"><center style="color:white"><b><button id="myBtn" style="cursor: pointer">Contact us</button></b></center></h2>
+                <h2 style="padding-top: 40px;"><center style="color:white"><b><button id="myBtn" style="cursor: pointer">Contact us</button></b></center></h2>
             </div>
         </div>
         
