@@ -199,7 +199,7 @@
 
     </style>
 </head>
-<body style="background-image: url(img/edm-blur-2.gif); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover">
+<body style="background-image: url(img/edm-blur-2.gif); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; width: 100%">
 <!--
     <video autoplay muted loop id="myVideo">
       <source src="EDM%20-%20Vintage%20Vibes.mp4" type="video/mp4">
@@ -229,7 +229,7 @@
         }
         </script>
     <!--mobi-sidebar-->
-         <audio autoplay loop id="edm">
+         <audio loop id="edm">
           <source src="EDM%20-%20Vintage%20Vibes.ogg" type="audio/ogg">
           <source src="EDM%20-%20Vintage%20Vibes-1.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
@@ -531,6 +531,11 @@
             audio.pause();
             btn.innerHTML = "<i class='fas fa-play' style='font-size: 24px; color:white'></i>";
           }
+        }
+    </script>
+    <script>
+        window.onload = function() {
+            document.getElementById("edm").play();
         }
     </script>
 </body>
