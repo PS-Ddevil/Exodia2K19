@@ -1,17 +1,24 @@
 <html>
 <head>
+    <title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
+    <link rel="icon" href="img/favicon.ico">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='https://npmcdn.com/basscss@8.0.0/css/basscss.min.css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <style>
         body{
-          max-width: 900px;
+/*          max-width: 900px;*/
           float: none;
           margin: auto; 
         }
         #portfolio {  
-            margin: 1rem 0;
+/*            margin: 1rem 0;*/
             -webkit-column-count: 3; 
             -moz-column-count: 3;
             column-count: 3;
@@ -77,7 +84,7 @@
             border: 1px solid;
             vertical-align: middle;
             -webkit-appearance: none;
-            color: #555;
+            color: white;
             background-color: rgba(0, 0, 0, 0);
         }
 
@@ -95,21 +102,186 @@
           border: 0;
           padding: 0;
         }
+        #myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%; 
+          min-height: 100%;
+        }
+/*
+        .content {
+          position: fixed;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: #f1f1f1;
+          width: 100%;
+          padding: 20px;
+        }
+*/
+        .carousel-inner img {
+              width: 100%;
+              height: 500px
+          }
+        @media screen and (max-width: 768px){
+           .carousel-inner img {
+                  width: 100%;
+                  height: 300px
+              }
+        }
+        
+        @media screen and (min-width: 768px){
+            .carousel-inner img {
+                  width: 100%;
+                  height: 450px
+              }
+        }
+        
+        .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+/*      background-color: #111;*/
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align:center;
+/*      opacity: .9;*/
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+      font-family: 'Courgette', cursive;
+    }
+
+    .sidenav a:hover{
+      color: grey;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
     </style>
 </head>
-<body>
-    <div class="toolbar mb2 mt2">
+<body style="background-image: url(img/edm1.gif); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover">
+<!--
+    <video autoplay muted loop id="myVideo">
+      <source src="EDM%20-%20Vintage%20Vibes.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+-->
+    <!--mobi-sidebar-->
+        <div id="mobo-side" class="sidenav" style="background-image: url(img/pexels-photo-277319.jpeg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sap.html">SAP</a>
+            <a href="events.html">Events</a>
+            <a href="pronite.html">Pronites</a>
+            <a href="#">Register</a>
+            <a href="#">Sponsors</a>
+        </div>
+        <script>
+        function openNav() {
+          document.getElementById("mobo-side").style.width = "100%";
+          document.getElementById("to-hide").style.display = "none";
+        }
+
+        function closeNav() {
+          document.getElementById("mobo-side").style.width = "0";
+          document.getElementById("to-hide").style.display = "block";
+        }
+        </script>
+    <!--mobi-sidebar-->
+         <audio autoplay loop id="edm">
+          <source src="EDM%20-%20Vintage%20Vibes.ogg" type="audio/ogg">
+          <source src="EDM%20-%20Vintage%20Vibes.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    <div id="demo" class="carousel slide container" data-ride="carousel">
+
+      
+      <ul class="carousel-indicators" id="to-hide">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+        <li data-target="#demo" data-slide-to="5"></li>
+      </ul>
+        
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/pronites/slide/1.jpg" alt="Base Guns" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/pronites/slide/2.jpg" alt="DJ Myris" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/pronites/slide/3.jpg" alt="Progressive Brothers" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/pronites/slide/4.jpg" alt="DJ Tejas" width="1100" height="500">
+        </div>
+          <div class="carousel-item">
+          <img src="img/pronites/slide/5.jpg" alt="Dunes Music Festival" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="img/pronites/slide/6.jpg" alt="Nayalak Band" width="1100" height="500">
+        </div>
+      </div>
+
+      
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    
+    <div class="container">
+        
+        <h2><center style="color: white">
+            <div class="container">
+            <span id="open" style="font-size:30px;cursor:pointer; float: left; color: white; padding-top: 20px;" onclick="openNav()">&#9776;</span>
+            <button id="myBtn" style="border-style: none; background-color: transparent; float: right; padding-top: 20px;" onclick="myFunction()"><i class='fas fa-pause' style='font-size: 24px;color: white;'></i></button>
+            </div>
+            <img src="img/exologo-1.png" width="200px"><br>
+            <br>PRONITES
+            </center>
+        </h2>
+    </div>
+    <div class="toolbar mb2 mt2 container" style="padding-top: 30px">
         <button class="btn fil-cat" href="" data-rel="all">All</button>
         <button class="btn fil-cat" data-rel="base">Base Guns</button>
         <button class="btn fil-cat" data-rel="probro">Progressive Brothers</button>
-        <button class="btn fil-cat" data-rel="nayalak">Nalayak Brothers</button>
+        <button class="btn fil-cat" data-rel="nayalak">Nalayak Band</button>
         <button class="btn fil-cat" data-rel="tejas">DJ Tejas</button>
         <button class="btn fil-cat" data-rel="chaar">Chaar Hazaari</button>
         <button class="btn fil-cat" data-rel="myris">DJ Myris</button>
         <button class="btn fil-cat" data-rel="dunes">Dunes Music Festival</button>
     </div> 
 
-    <div id="portfolio">
+    <div class="container" id="portfolio">
         <div class="tile scale-anm base all">
             <img src="img/pronites/base1.jpg" alt="" />
         </div>
@@ -328,6 +500,20 @@
 
         });
     });
+    </script>
+    <script>
+        var audio = document.getElementById("edm");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+          if (audio.paused) {
+            audio.play();
+            btn.innerHTML = "<i class='fas fa-pause' style='font-size: 24px; color:white'></i>";
+          } else {
+            audio.pause();
+            btn.innerHTML = "<i class='fas fa-play' style='font-size: 24px; color:white'></i>";
+          }
+        }
     </script>
 </body>
 </html>
