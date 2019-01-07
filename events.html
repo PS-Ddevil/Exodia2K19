@@ -12,6 +12,10 @@
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
 <style>
    * {
     box-sizing: boder-box;
@@ -175,12 +179,14 @@
     }
     
     .info{
-        font-family: 'Charm', cursive;
+/*        font-family: 'Charm', cursive;*/
+        font-family: 'Josefin Sans', sans-serif;
         font-size: 20px;
     }
     
     .event_name{
-        font-family: 'Lobster', cursive;
+/*        font-family: 'Lobster', cursive;*/
+        font-family: 'ZCOOL XiaoWei', serif;
         font-size: 20px;
         text-decoration: underline;
     }
@@ -193,14 +199,33 @@
         font-family: 'Carter One', cursive;
     }
     
+    h4{
+        font-family: 'ZCOOL XiaoWei', serif;
+        text-align: center;
+        background-color: coral;
+        color: white;
+    }
     #main-head{
         font-size: 40px;
         text-align: center;
+        font-family: 'Bungee Inline', cursive;
     }
     
     .subhead{
         font-size: 30px;
         margin-left: 5%;
+        font-family: 'ZCOOL XiaoWei', serif;
+        color: coral;
+        width: 400px;
+        cursor: pointer;
+    }
+    .innerhead{
+        font-family: 'Bungee Inline', cursive;
+    }
+    
+    .tiles-a{
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
     }
 </style>    
 </head>
@@ -234,14 +259,14 @@
         <div class="container-fluid" style="height: 100%;width: 100%; background-attachment: fixed; background-image: url(img/pexels-photo-260024.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;">
             <center><a href="index.html"><img id="top-exologo" src="img/exologo-1.png"></a></center>
             <center>
-                <h3 style="margin-top: 5%;color: aliceblue">
-                    <b>"Taste the relish to be found in competition -- in having put forth the best within you."</b>
+                <h3 style="margin-top: 5%;color: aliceblue; text-transform:uppercase; font-family: 'Bungee Inline', cursive;">
+                    <b>"Taste the relish to be found in competition -- in having put forth<br> the best within you."</b>
                 </h3>
-                <h5 style="color: aliceblue">
+                <h5  style="font-family: 'ZCOOL XiaoWei', serif; color: red; font-size: 30px">
                     <i><b>Henry Kaiser</b></i>
                 </h5>
-                <h3 style="margin-top: 5%; color: aliceblue">
-                    <i><b>Events</b></i>
+                <h3 style="margin-top: 5%; color: aliceblue; text-transform: uppercase; font-size: 50px">
+                    <b>Events</b>
                 </h3>
             </center>
         </div> 
@@ -256,7 +281,7 @@
 					<div class="details visually-hidden" >
 						<img src="img/events/band1.jpg" alt="Band Slam">
 						<div class="text-copy wrapper">
-							<h3>Bandslam</h3>
+							<h3 class="innerhead">Bandslam</h3>
                             <h5><i>One thing about music is that when it hits you, you feel no pain!</i></h5>
 							<p class="info">Band Slam, a rock band competition gives an opportunity to the enchanting melodies to cast a spell over the brook and rock pyramids of Mandi. The artists, the echo of their assonances and the beauty of their voices receive a platform to persist in the hearts of admirers forever.</p>
 						</div>
@@ -287,7 +312,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/sing1.jpg" alt="Exodia Idol">
 						<div class="text-copy wrapper">
-							<h3>Exodia Idol</h3>
+							<h3 class="innerhead">Exodia Idol</h3>
                             <h5><i>One doesn’t just entertain the audience, you give them bits of your soul.</i></h5>
 							<p class="info">Do you have the potential to enchant your audience with your vocals, to set the stage on fire through your sheer chording to make an exhilarating  accompaniment to the melody ?</p>
 							<p class="info">If yes then Exodia Idol is your cue!</p>
@@ -327,7 +352,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/solo1.jpg" alt="Groove Fanatics">
 						<div class="text-copy wrapper">
-							<h3>Groove Fanatics</h3>
+							<h3 class="innerhead">Groove Fanatics</h3>
                             <h5><i>Smash the beats.....</i></h5>
 							<p class="info">This solo dance event provides all the amazing dancers out here with the opportunity to make the world feel the warmth of their passion, to let the people sway in sync with the beats they dance to and to create breathtaking memories for themselves. After all, what could be better than making the world take notice of your grooves and beats?</p>
 						</div>
@@ -358,7 +383,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/sync1.jpg" alt="Synchronians">
 						<div class="text-copy wrapper">
-							<h3>Synchronians</h3>
+							<h3 class="innerhead">Synchronians</h3>
                             <h5><i>Perfect resonance of beat and body!!</i></h5>
 							<p class="info">Dancing the most pure and cultured manner of showing their dynamic expressions in a sync with the beat and the music. Dancing, can easily be used in giving sort of messages or show certain stuff which the audience can easily grasp and inculcate within themselves.</p>
 							<p class="info">Synchronians, the group dance competition comes up with beautiful coordinated dance groups which takes away the heart of each and everyone sitting in the audience.The well performed dance in the lap of himalayas can make you see the beauty of the unnoticed activity of  human ,dancing with a great impact.</p>
@@ -420,7 +445,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/drama1.jpg" alt="Street Soul">
 						<div class="text-copy wrapper">
-							<h3>Street Soul</h3>
+							<h3 class="innerhead">Street Soul</h3>
                             <h5><i>What is drama but life with dull bits cut out</i></h5>
 							<p class="info">Acting is a very special process.It is behaving truthfully under imaginary circumstances.</p>
 							<p class="info">In this group drama event, we bring everyone an opportunity to amaze others with the ingenuity hidden inside themselves, whilst fighting the intense dramatic battles taking place in the Streets.</p>
@@ -451,7 +476,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/monoact1.jpg" alt="Sole Soul">
 						<div class="text-copy wrapper">
-							<h3>Sole Soul</h3>
+							<h3 class="innerhead">Sole Soul</h3>
                             <h5><i>Stand alone and let your character speak for you</i></h5>
 							<p class="info">What makes people fascinating is conflict, it's drama, it's the human condition. Nobody wants to watch perfection, and neither do we. Here in this monoact event we give you a chance to showcase your talent to imbibe into yourself anyone and pick up a brand new personality in front of the world through this Monoact event.
                             </p>
@@ -489,7 +514,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/canvas1.jpg" alt="Canvas">
 						<div class="text-copy wrapper">
-							<h3>Canvas</h3>
+							<h3 class="innerhead">Canvas</h3>
                             <h5><i>Who knew those arbitrary fragments of your imagination made perfect sense in entirety</i></h5>
 							<p class="info">How does it appeal to you when that jigsaw puzzle you spend hours on, jiggering those arbitrary pieces, finally culminates into something that makes sense? Sheer pleasure, right! Here at Exodia, we offer you something even more enticing, not just affixing your chunks, but actually making them out of scratch. For the drawing and painting competition, Canvas, all you need to have is a group of inventive minds, each individual making an erratic piece of drawing and the whole group joining these together into a reasoned piece of art.</p>
 						</div>
@@ -519,7 +544,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/fashion1.jpg" alt="Couture">
 						<div class="text-copy wrapper">
-							<h3>Couture</h3>
+							<h3 class="innerhead">Couture</h3>
                             <h5><i>Himalayan beauties amidst the beauty of Himalayas</i></h5>
 							<p class="info">Couture is a major attraction for the Mandi Crowd and the college youth alike. Couture serves as a major platform for exhibition of latest fashion designs and for the youth models in the state.  The sizzling ramp walks and the breath-taking designs amidst an aura of enthusiasm make this ramp-walk show event an enthralling experience for the participants and the audiences alike.</p>
 						</div>
@@ -554,7 +579,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/landscape1.jpg" alt="Landscape Photoscape">
 						<div class="text-copy wrapper">
-							<h3>Landscape Photography</h3>
+							<h3 class="innerhead">Landscape Photography</h3>
                             <h5><i>Taking an image, freezing a moment, reveals how rich reality truly is.</i></h5>
 							<p class="info">Photography has been preserving moments since forever. Here we encourage participants to capture and send in the most breathtaking and scenic still life moments and help us make the world admire your skills. </p>
 						</div>
@@ -608,7 +633,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/potrait1.jpg" alt="Portrait Photography">
 						<div class="text-copy wrapper">
-							<h3>Portrait Photography</h3>
+							<h3 class="innerhead">Portrait Photography</h3>
                             <h5><i>A portrait is not made in the camera but on either side of it.</i></h5>
 							<p class="info">Like nature, people too captivate and enthrail us. So captivate one such person or more in your camera and let everyone admire their sharp personality and your effective lighting, backdrops, and poses.</p>
 						</div>
@@ -648,7 +673,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/dementia1.jpg" alt="Dementia">
 						<div class="text-copy wrapper">
-							<h3>Dementia</h3>
+							<h3 class="innerhead">Dementia</h3>
                             <h5><i> Lose Yourself in Code</i></h5>
 							<p class="info">Gearing up for an awesome competitive coding contest? Buckle up for Dementia. Compete with hundreds of students from various colleges throughout India and abroad in a three hour long competitive programming contest hosted by IIT Mandi. Amazing prizes at stake!</p>
 						</div>
@@ -663,7 +688,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/iot2.jpg" alt="nternet Of Things">
 						<div class="text-copy wrapper">
-							<h3>Internet Of Things</h3>
+							<h3 class="innerhead">Internet Of Things</h3>
                             <h5><i>Words ain’t enough!</i></h5>
 							<p class="info">In the modern set-up of smart phones, TVs and cities, facilitation to the human life is felicitated by the minimization of human intervention amongst their mutual cooperation! Here we bring you the opportunity to take part in this 36 hour hackathon and build anything from a web app to a solid prototype which you believe can be a step ahead in technology. So Come over, build a prototype that works for you - without you!</p>
 						</div>
@@ -682,7 +707,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/car1.jpg" alt="Hurdle Rush">
 						<div class="text-copy wrapper">
-							<h3>Hurdle Rush</h3>
+							<h3 class="innerhead">Hurdle Rush</h3>
                             <h5><i>Let the damn adrenaline rush!</i></h5>
 							<p class="info">Crowd, Cheering, Intensity, Competition, Hurdles and Rush. The race track is all set for one of the most popular and competitive robotic competition around- Hurdle Rush! Is your car fast enough? Let’s find out!</p>
 						</div>
@@ -713,7 +738,7 @@
 					<div class="details visually-hidden" >
 						<img src="img/events/line.jpg" alt="Workshops">
 						<div class="text-copy wrapper">
-							<h3>Line Follower</h3>
+							<h3 class="innerhead">Line Follower</h3>
                             <h5><i>Set your path!</i></h5>
 							<p class="info">Line Follower is an event in which the participants make small bots which move on the given path autonomously with the help of sensors.</p>
 						</div>
@@ -749,7 +774,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/junk1.jpg" alt="Junkyard Wars">
 						<div class="text-copy wrapper">
-							<h3>Junkyard Wars</h3>
+							<h3 class="innerhead">Junkyard Wars</h3>
                             <h5><i>Because Nothing is ever ‘Just Junk’</i></h5>
 							<p class="info">An innovation-based competition which helps the participants enhance their thinking and creativity skills by provoking them to solve issues caused by trash.</p>
 							<p class="info">The event is an on-the-spot design and fabrication challenge where the teams will be tested on their ability to crack the problem at hand and come up with solutions from the available heap of garbage junk.</p>
@@ -780,7 +805,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/nitro3.jpg" alt="Nitro Car Racing">
 						<div class="text-copy wrapper">
-							<h3>Nitro Car Racing</h3>
+							<h3 class="innerhead">Nitro Car Racing</h3>
                             <h5><i>If this doesn’t ‘fuel’ the racer in you, what will?</i></h5>
 							<p class="info">An intense, dramatic rivalry about to unravel as opposing teams rush their monster cars at each other to smash, fight and only to smash again till one emerges victorious. Build your own nitro-monster with all we provide and ready, set , boom!</p>
 						</div>
@@ -799,7 +824,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/bridge3.jpg" alt="Viaduct">
 						<div class="text-copy wrapper">
-							<h3>Viaduct</h3>
+							<h3 class="innerhead">Viaduct</h3>
                             <h5><i>Praise the bridge that carries you over!</i></h5>
 							<p class="info">Whilst walking on a bridge, its natural for an intuitive engineer to wonder about its construction, to get curious about its strength and design, to be eager to predict its durability.</p>
 							<p class="info">Viaduct is an on the spot event wherein the participants have to build a bridge using the materials provided. Beginning right from the elementary level, grab the opportunity to make a structure that would stand firm on the strong base of your structural knowledge.</p>
@@ -835,7 +860,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/auction1-min.jpg" alt="Reap Revenue">
 						<div class="text-copy wrapper">
-							<h3>Reap Revenue</h3>
+							<h3 class="innerhead">Reap Revenue</h3>
                             <h5><i>The ultimate auction platform</i></h5>
 							<p class="info">An event where participants can participate in real-like auction drills that teach the ways of conduction and stakes involved while learning the art to generate massive revenues. Organized by E-cell IIT Mandi.</p>
 						</div>
@@ -873,7 +898,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/doodle2.jpg" alt="Doodle">
 						<div class="text-copy wrapper">
-							<h3>Doodle</h3>
+							<h3 class="innerhead">Doodle</h3>
                             <h5><i>Something you just neet to chill</i></h5>
 							<p class="info">In this wonderful arts event we challenge you to draw or paint an amazing piece of art. Whether you create a drawing filled with concrete representational meaning or be full of random, abstract lines, the only condition is that it must be an art capable of garnering all the attention around!</p>
 						</div>
@@ -910,7 +935,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/ps1.jpg" alt="Pace a Patch">
 						<div class="text-copy wrapper">
-							<h3>Pace a Patch</h3>
+							<h3 class="innerhead">Pace a Patch</h3>
                             <h5><i>Show us the most amazing graphics you’re capable of!</i></h5>
 							<p class="info">An online poster designing competition in which we provide our participants with a theme and let them carry their imaginations as far as they can to put together the most amazing piece of design.</p>
 						</div>
@@ -929,7 +954,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/pic1.jpg" alt="Charismatic Clicks">
 						<div class="text-copy wrapper">
-							<h3>Charismatic Clicks</h3>
+							<h3 class="innerhead">Charismatic Clicks</h3>
                             <h5><i>Let your pictures speak volumes</i></h5>
 							<p class="info">In this online events, participants are encouraged to send us their beautiful stories crafted through sheer pictures and we’ll let the netizens be the judge and choose the best story to ultimately go down in Himalayan history!</p>
 						</div>
@@ -944,7 +969,7 @@
 					<div class="details visually-hidden">
 						<img src="img/events/movie2.jpg" alt="Vintage Vibes">
 						<div class="text-copy wrapper">
-							<h3>Vintage Vibes</h3>
+							<h3 class="innerhead">Vintage Vibes</h3>
                             <h5><i>A lifelike video</i></h5>
 							<p class="info">Send in your best short film videos and let the online junta be your movie critique! Whatever genre you deem suitable for your taste – romance, comedy, action, mystery, sci-fi or anything else, make sure it has that element of surprise that gets hold of your audience suddenly, swiftly.</p>
 						</div>
@@ -1006,6 +1031,22 @@
 		
 	</div>
 </aside>
+    
+<script>
+    var coll = document.getElementsByClassName("subhead");
+    var i;
+    for(i = 0; i < coll.length; i++){
+        coll[i].addEventListener("click",function(){
+//                                 this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else{
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+                                 });
+    }
+</script>
 <script>
   var	$parent = $("#main"),
 		$aside = $("#aside"),
