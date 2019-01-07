@@ -7,6 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
@@ -17,6 +18,11 @@
 <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
 <style>
+    html {
+        scroll-behavior: smooth;
+        word-wrap: break-word;
+        overflow-x: hidden;
+    }
    * {
     box-sizing: boder-box;
     }
@@ -205,10 +211,11 @@
         background-color: coral;
         color: white;
     }
-    #main-head{
+    .main-head{
         font-size: 40px;
         text-align: center;
         font-family: 'Bungee Inline', cursive;
+        padding-bottom: 100px;
     }
     
     .subhead{
@@ -216,7 +223,7 @@
         margin-left: 5%;
         font-family: 'ZCOOL XiaoWei', serif;
         color: coral;
-        width: 400px;
+        width: 500px;
         cursor: pointer;
     }
     .innerhead{
@@ -226,6 +233,28 @@
     .tiles-a{
         max-height: 0;
         transition: max-height 0.5s ease-out;
+    }
+    
+    .title-icon{
+        font-size:96px; 
+        color:red;
+    }
+    .subhead{
+       color:red; 
+    }
+    .title-icon:hover{
+        transition: 1s;
+        color: aqua;
+    }
+    .subhead:hover{
+        transition: 1s;
+        color: aqua;
+    }
+    
+    @media screen and (max-width: 536px){
+        .subhead{
+            font-size: 20px;
+        }
     }
 </style>    
 </head>
@@ -256,7 +285,7 @@
         </script>
     <!--mobi-sidebar-->
     <section>
-        <div class="container-fluid" style="height: 100%;width: 100%; background-attachment: fixed; background-image: url(img/pexels-photo-260024.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;">
+        <div class="container-fluid" style="min-height: 850px; width: 100%; background-attachment: fixed; background-image: url(img/pexels-photo-260024.jpeg); background-position: center; background-repeat: no-repeat;background-size: cover;">
             <center><a href="index.html"><img id="top-exologo" src="img/exologo-1.png"></a></center>
             <center>
                 <h3 style="margin-top: 5%;color: aliceblue; text-transform:uppercase; font-family: 'Bungee Inline', cursive;">
@@ -271,8 +300,26 @@
             </center>
         </div> 
     </section>
-    <div><p id="main-head">Cultural</p>
-    <p class="subhead">Music</p>
+    <div class="container">
+        <div class="row" style="height: 200px; padding-top: 100px; padding-bottom: 200px;">
+            <div class="col-4">
+                <a href="#cult" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span style="font-size: 25px">Cultural Events</span></center></a>
+            </div>
+            <div class="col-4">
+                <a href="#tech" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span style="font-size: 25px">Technical Events</span></center></a>
+            </div>
+            <div class="col-4">
+                <a href="#online" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span style="font-size: 25px">Online Events</span></center></a>
+            </div>
+<!--
+            <div class="col-3">
+                <a href="#workshop"><i class='fas fa-chess-king' style='font-size:48px; color:red'></i>Workshop</a>
+            </div>
+-->
+        </div>
+    </div>
+    <div style="padding-bottom: 100px;background-color: aliceblue" class="container"><p class="main-head" id="cult">Cultural</p>
+    <p class="subhead"><i class='fas fa-drum' style='font-size:48px;'></i>&nbsp;Music</p>
 	<section class="tiles-a ele-2">
 		<ul>
             <li>
@@ -343,7 +390,7 @@
 			</li>
 			</ul>
     </section>
-    <p class="subhead">Dance</p>
+    <p class="subhead"><i class='fas fa-mask' style='font-size:48px;'></i>&nbsp;Dance</p>
     <section class="tiles-a ele-2">
         <ul>
         <li>
@@ -436,7 +483,7 @@
         </ul> 
     </section>
     
-    <p class="subhead">Dramatics</p>
+    <p class="subhead"><i class='fas fa-theater-masks' style='font-size:48px;'></i>&nbsp;Dramatics</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -505,7 +552,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Arts and Design(Fashion)</p>
+    <p class="subhead"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Arts and Design(Fashion)</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -570,7 +617,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Photography</p>
+    <p class="subhead"><i class='fas fa-camera-retro' style='font-size:48px;'></i>&nbsp;Photography</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -663,8 +710,8 @@
     </section>
     </div>
     
-    <div><p id="main-head">Technical</p>
-    <p class="subhead">Programmer's Paradigms</p>
+    <div style="padding-bottom: 100px;background-color: aliceblue" class="container"><p class="main-head" id="tech">Technical</p>
+    <p class="subhead"><i class='fas fa-laptop' style='font-size:48px;'></i>&nbsp;Programmer's Paradigms</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -698,7 +745,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Reckless Robotronics</p>
+    <p class="subhead"><i class='fas fa-microchip' style='font-size:48px;'></i>&nbsp;Reckless Robotronics</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -765,7 +812,7 @@
     
         </ul>
     </section>
-    <p class="subhead">Mechanical Maniacs</p>
+    <p class="subhead"><i class='fas fa-cogs' style='font-size:48px;'></i>&nbsp;Mechanical Maniacs</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -815,7 +862,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Builder Bliss</p>
+    <p class="subhead"><i class='fas fa-drafting-compass' style='font-size:48px;'></i>&nbsp;Builder Bliss</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -851,7 +898,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Enimatic Entepreneurs</p>
+    <p class="subhead"><i class='fas fa-gavel' style='font-size:48px;'></i>&nbsp;Enimatic Entepreneurs</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -888,8 +935,8 @@
     </section>
     </div>
     
-    <div><p id="main-head">Online Events</p>
-    <p class="subhead">Art and Design</p>
+    <div style="padding-bottom: 100px; background-color: aliceblue" class="container"><p class="main-head" id="online">Online Events</p>
+    <p class="subhead"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Art and Design</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
@@ -945,7 +992,7 @@
 			</li>
         </ul>
     </section>
-    <p class="subhead">Photograhy and Videography</p>
+    <p class="subhead"><i class='fas fa-camera' style='font-size:48px;'></i>&nbsp;Photograhy and Videography</p>
     <section class="tiles-a ele-2">
         <ul>
             <li>
