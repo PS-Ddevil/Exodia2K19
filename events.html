@@ -18,13 +18,14 @@
 <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
 <style>
-    html {
-        scroll-behavior: smooth;
+    body{
+/*        scroll-behavior: smooth;*/
         word-wrap: break-word;
-        overflow-x: hidden;
+        position: relative;
     }
    * {
-    box-sizing: boder-box;
+        box-sizing: boder-box;
+       scroll-behavior: smooth;
     }
 
     body {
@@ -265,7 +266,7 @@
 </style>    
 </head>
 <body>
-<main role="main" id="main">
+<main role="main" id="main" style="overflow-x: hidden">
     <!--mobi-sidebar-->
         <div id="mobo-side" class="sidenav" style="background-image: url(img/pexels-photo-1425146.jpeg); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
