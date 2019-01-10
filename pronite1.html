@@ -2,6 +2,10 @@
 <head>
     <title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
     <link rel="icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
+    <meta name="keywords" content="IIT Mandi, Exodia">
+    <meta name="author" content="Exodia IIT Mandi">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -284,29 +288,7 @@ p:hover {
           document.getElementById("content-data").style.visibility = "visible";
         }
         </script>
-<!--
-        <div>
-        <div id="mySidenav" class="content-menu">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeContent()">&times;</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div>
-        <span style="font-size:30px;cursor:pointer" onclick="openContent()">Discover</span>
-        <script>
-        function openContent() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
 
-        function closeContent() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
-        </script>
-        </div>
--->
         <div class="bg-image"></div>
         <div class="bg-text" id="content-data">
             <img src="img/exologo-1.png" width="100px">
@@ -318,9 +300,8 @@ p:hover {
                 <span>Contact Us</span>
             </div>
         </div>
-        <div class="bg-text" id="gallery" style="display: none;height: 90%; overflow: hidden">
+        <div class="bg-text" id="gallery" style="display: none;overflow: hidden">
         <div class="toolbar mb2 mt2">
-<!--            <button class="btn fil-cat" href="" data-rel="all">All</button>-->
             <button class="btn fil-cat" data-rel="base">Base Guns</button>
             <button class="btn fil-cat" data-rel="probro">Progressive Brothers</button>
             <button class="btn fil-cat" data-rel="nayalak">Nalayak Band</button>
@@ -329,60 +310,12 @@ p:hover {
             <button class="btn fil-cat" data-rel="myris">DJ Myris</button>
             <button class="btn fil-cat" data-rel="dunes">Dunes Music Festival</button>
         </div> 
-
-        <div id="portfolio" style="overflow:auto; height: 99%">
-<!--
-            <div class="tile scale-anm base">
-            <img src="img/pronites/base3.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm base">
-            <img src="img/pronites/base6.jpg" alt="" />
-            </div>
--->
-            <div class="tile scale-anm base">
-            <img src="img/pronites/base8.jpg" alt="" / style="height: 90%">
-            </div>
-<!--
-            <div class="tile scale-anm base">
-            <img src="img/pronites/base2.jpg" alt="" />
-            </div>
--->
-            <div class="tile scale-anm probro">     
-            <img src="img/pronites/probro5.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm probro">     
-            <img src="img/pronites/probro4.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm probro">     
-            <img src="img/pronites/probro1.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm probro">     
-            <img src="img/pronites/probro3.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak8.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak1.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak4.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak2.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak6.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm nayalak">     
-            <img src="img/pronites/nalayak5.jpg" alt="" />
-            </div>
-            <div class="tile scale-anm dunes">     
-            <img src="img/pronites/dunes12.jpg" alt="" />
+        <div id="portfolio">
+            <div class="tile scale-anm myris">
+            <img src="img/pro/djs-l.jpg" alt="" style="height: 80%"/>
             </div>
         </div>
-
-        <div style="clear:both;"></div>   
+        <div style="clear:both;"></div> 
         </div>
         <script>
         var scroller = document.getElementById("expand");
