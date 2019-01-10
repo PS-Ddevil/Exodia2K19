@@ -315,7 +315,9 @@
             $("#past").click(function(){
                 setTimeout(function(){
                     $("#content-data").fadeTo(100,0);
+                    $("#content-data").hide();
                     $('#old').fadeIn(); 
+                    $('#old').show(); 
                 },300);
             })
         })    
@@ -325,7 +327,9 @@
              $(".back").click(function(){
                 setTimeout(function(){
                     $("#content-data").fadeTo(0,100);
+                    $("#content-data").show();
                     $('#old').fadeOut(); 
+                    $('#old').hide(); 
                 },300);
             })
         })    
