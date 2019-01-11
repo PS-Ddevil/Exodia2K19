@@ -131,6 +131,77 @@
             cursor: pointer;
         }
 </style>
+<style>
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          border: 1px solid #888;
+          width: 80%;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+          -webkit-animation-name: animatetop;
+          -webkit-animation-duration: 0.4s;
+          animation-name: animatetop;
+          animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+          from {top:-300px; opacity:0} 
+          to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+          from {top:-300px; opacity:0}
+          to {top:0; opacity:1}
+        }
+
+        /* The Close Button */
+        .close {
+          color: white;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .modal-header {
+          padding: 2px 16px;
+          background-color: #DEB887;
+          color: white;
+        }
+
+        .modal-body {padding: 2px 16px;}
+
+        .modal-footer {
+          padding: 2px 16px;
+          background-color: #DEB887;
+          color: white;
+        }    
+</style>
 </head>
 <body>
 <div>
@@ -226,7 +297,7 @@
         <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
+                    <a href="#" id="click-about">About</a>
                     <a href="sap.html">SAP</a>
                     <a href="events.html">Events</a>
                     <a href="#">Register</a>
@@ -237,20 +308,97 @@
         function openNav() {
           document.getElementById("mobo-side").style.width = "100%";
           document.getElementById("content-data").style.visibility = "hidden";
+          document.getElementById("expandtxt").style.visibility = "hidden";
         }
 
         function closeNav() {
           document.getElementById("mobo-side").style.width = "0";
           document.getElementById("content-data").style.visibility = "visible";
+          document.getElementById("expandtxt").style.visibility = "visible";
         }
         </script>
+        <!-- The Modal -->
+                <div id="myModal" class="modal">
 
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2>About</h2>
+                      <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 20px">
+                        <p style="font-size: 40px">Exodia</p>
+                      <p><i>The biggest and the most magnificent technical and cultural fest of the Himalayas,
+                        a complete feast for its participants and sponsors alike,
+                        Exodia,
+                        is back with its 8th edition,
+                        to thrill the youth with its invigorating cultural extravaganza and brain-storming technical fiesta.
+                        The previous seven editions of this 3 day long euphoria,
+                        organized by the students of the esteemed
+                        Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
+                    </p>
+                        <p><b>Important</b></p>
+                    <div class="row" id="info">
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-file-alt' style='font-size:96px;color:black'></i><br><b>NOC</b></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-calendar-alt' style='font-size:96px;color:black'></i><br><b>SCHEDULE</b></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:96px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-copy' style='font-size:96px;color:black'></i><br><b>DOCUMENTS</b></center>
+                    </div>  
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="http://www.exodia.in/"><img src="img/exologo.png" width="40px"></a>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn2 = document.getElementById("click-about");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn2.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+
+<!--model-->
         <div class="bg-image" id="backgd"></div>
         <div class="bg-text" id="content-data">
             <div id="open" style="float: left; font-size:30px; cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: white" onclick="openNav()">&#9776;</div>
             <a href="index.html"><img src="img/exologo-1.png" width="100px"></a>
             <h1 style="font-size:50px"><i style="font-family: 'Lobster Two', cursive;">Pronites</i></h1>
-            <button style="font-size:30px;cursor:pointer" class="accordion" id="expand"><center>Discover<br><i id="down" class='fas fa-angle-down' style='font-size:24px;color:white;'></i><i id="up" class='fas fa-angle-up' style='font-size:24px;color:white;display: none'></i></center></button>
+            <button style="font-size:30px;cursor:pointer" class="accordion" id="expand"><center id="expandtxt">Discover<br><i id="down" class='fas fa-angle-down' style='font-size:24px;color:white;'></i><i id="up" class='fas fa-angle-up' style='font-size:24px;color:white;display: none'></i></center></button>
             <div class="panel" id="txt">
                 <span><button id="upcom" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Upcoming Events</b></button></span>
                 <span><button id="past" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Tour de Past</b></button></span>
@@ -318,6 +466,7 @@
 //            alert("sfz");
             $("#past").click(function(){
                 setTimeout(function(){
+                    $("#expandtxt").hide();
 //                    $("#content-data").fadeTo(100,0);
                     $("#content-data").hide();
                     $("#backgd").hide();
@@ -334,6 +483,7 @@
 //                    $("#content-data").fadeTo(0,100);
                     $("#content-data").show();
                     $("#backgd").show();
+                    $("#expandtxt").show();
 //                    $('#old').fadeOut(); 
                     $('#old').hide(); 
                 },300);
