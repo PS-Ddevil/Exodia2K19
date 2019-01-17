@@ -1,0 +1,501 @@
+<html>
+<head>
+    <title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
+    <meta name="keywords" content="IIT Mandi, Exodia">
+    <meta name="author" content="Exodia IIT Mandi">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link type="text/css" href="css/style-pro.css" rel="stylesheet">
+    <link type="text/css" href="css/style-model.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://npmcdn.com/basscss@8.0.0/css/basscss.min.css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align:center;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      font-family: 'Courgette', cursive;
+    }
+
+    .sidenav a:hover{
+      color: grey;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow:hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .bg-image {
+      background-image: url("img/pro/base-l.jpg");
+
+     
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+
+
+      height: 100%; 
+
+ 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bg-text {
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0, 0.4);
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+/*
+        #content-data{
+        visibility: hidden;
+        }
+*/
+    #expand {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+/*  width: 100%;*/
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+#txt {
+  padding: 0 18px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+        .fa-home{
+            cursor: pointer;
+        }
+</style>
+<style>
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          border: 1px solid #888;
+          width: 80%;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+          -webkit-animation-name: animatetop;
+          -webkit-animation-duration: 0.4s;
+          animation-name: animatetop;
+          animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+          from {top:-300px; opacity:0} 
+          to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+          from {top:-300px; opacity:0}
+          to {top:0; opacity:1}
+        }
+
+        /* The Close Button */
+        .close {
+          color: white;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .modal-header {
+          padding: 2px 16px;
+          background-color: #DEB887;
+          color: white;
+        }
+
+        .modal-body {padding: 2px 16px;}
+
+        .modal-footer {
+          padding: 2px 16px;
+          background-color: #DEB887;
+          color: white;
+        }    
+</style>
+</head>
+<body>
+<div>
+    <center style="position: absolute"><i class='fas fa-home' style='color:black;font-size: 48px;color: white'></i></center>
+</div>
+<div class="container-fluid" id="old" style="display: none">
+	
+	<div data-am-fadeshow="next-prev-navigation">
+
+		<!-- Radio -->
+		<input type="radio" name="css-fadeshow" id="slide-1" />
+		<input type="radio" name="css-fadeshow" id="slide-2" />
+		<input type="radio" name="css-fadeshow" id="slide-3" />
+        <input type="radio" name="css-fadeshow" id="slide-4" />
+        <input type="radio" name="css-fadeshow" id="slide-5" />
+        <input type="radio" name="css-fadeshow" id="slide-6" />
+
+		<!-- Slides -->
+		<div class="fs-slides">
+			<div class="fs-slide" style="background-image: url(img/pro/base1-l.jpg); filter: blur(8px;)">
+				<!-- Add content to images (sample) -->
+				<div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                    <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+					<h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">Base Guns</h1>
+				</div>
+			</div>
+			<div class="fs-slide" style="background-image: url(img/pro/djs-l.jpg);">
+            <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+                    <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">DJ Myris</h1>
+            </div>
+            </div>
+			<div class="fs-slide" style="background-image: url(img/pro/nalayak.jpg);">
+            <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+					<h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">Nalayak Brothers</h1>
+            </div>
+            </div>
+            <div class="fs-slide" style="background-image: url(img/pro/dunes.jpg);">
+            <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+					<h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">Dunes Music Festival</h1>
+            </div>
+            </div>
+            <div class="fs-slide" style="background-image: url(img/pro/chaar2.jpg);">
+            <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+					<h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">Chaar Haazari</h1>
+            </div>
+            </div>
+            <div class="fs-slide" style="background-image: url(img/pro/tejas.jpg);">
+            <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
+					<h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">DJ Tejas</h1>
+            </div>
+            </div>
+            
+		</div>
+
+		<!-- Quick Navigation -->
+		<div class="fs-quick-nav">
+			<label class="fs-quick-btn" for="slide-1"></label>
+			<label class="fs-quick-btn" for="slide-2"></label>
+			<label class="fs-quick-btn" for="slide-3"></label>
+			<label class="fs-quick-btn" for="slide-4"></label>
+			<label class="fs-quick-btn" for="slide-5"></label>
+			<label class="fs-quick-btn" for="slide-6"></label>
+		</div>
+		
+		<!-- Prev Navigation -->
+		<div class="fs-prev-nav">
+			<label class="fs-prev-btn" for="slide-1"></label>
+			<label class="fs-prev-btn" for="slide-2"></label>
+			<label class="fs-prev-btn" for="slide-3"></label>
+			<label class="fs-prev-btn" for="slide-4"></label>
+			<label class="fs-prev-btn" for="slide-5"></label>
+			<label class="fs-prev-btn" for="slide-6"></label>
+		</div>
+		
+		<!-- Next Navigation -->
+		<div class="fs-next-nav">
+			<label class="fs-next-btn" for="slide-1"></label>
+			<label class="fs-next-btn" for="slide-2"></label>
+			<label class="fs-next-btn" for="slide-3"></label>
+			<label class="fs-next-btn" for="slide-4"></label>
+			<label class="fs-next-btn" for="slide-5"></label>
+			<label class="fs-next-btn" for="slide-6"></label>
+		</div>
+
+	</div>
+	
+</div>
+        <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../">Home</a>
+                    <a href="#" id="click-about">About</a>
+                    <a href="../ca">SAP</a>
+                    <a href="../events">Events</a>
+                    <a href="#">Register</a>
+                    <a href="#">Sponsors</a>
+                    <a href="../team">Team</a>
+        </div>
+        <script>
+        function openNav() {
+          document.getElementById("mobo-side").style.width = "100%";
+          document.getElementById("content-data").style.visibility = "hidden";
+          document.getElementById("expandtxt").style.visibility = "hidden";
+        }
+
+        function closeNav() {
+          document.getElementById("mobo-side").style.width = "0";
+          document.getElementById("content-data").style.visibility = "visible";
+          document.getElementById("expandtxt").style.visibility = "visible";
+        }
+        </script>
+        <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2>About</h2>
+                      <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 20px">
+                        <p style="font-size: 40px">Exodia</p>
+                      <p><i>The biggest and the most magnificent technical and cultural fest of the Himalayas,
+                        a complete feast for its participants and sponsors alike,
+                        Exodia,
+                        is back with its 8th edition,
+                        to thrill the youth with its invigorating cultural extravaganza and brain-storming technical fiesta.
+                        The previous seven editions of this 3 day long euphoria,
+                        organized by the students of the esteemed
+                        Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
+                    </p>
+                        <p><b>Important</b></p>
+                    <div class="row" id="info">
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-file-alt' style='font-size:96px;color:black'></i><br><b>NOC</b></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-calendar-alt' style='font-size:96px;color:black'></i><br><b>SCHEDULE</b></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:96px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><i class='fas fa-copy' style='font-size:96px;color:black'></i><br><b>DOCUMENTS</b></center>
+                    </div>  
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="http://www.exodia.in/"><img src="img/exologo.png" width="40px"></a>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn2 = document.getElementById("click-about");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn2.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+
+<!--model-->
+        <div class="bg-image" id="backgd"></div>
+        <div class="bg-text" id="content-data">
+            <div id="open" style="float: left; font-size:30px; cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: white" onclick="openNav()">&#9776;</div>
+            <a href="index.html"><img src="img/exologo-1.png" width="100px"></a>
+            <h1 style="font-size:50px"><i style="font-family: 'Lobster Two', cursive;">Pronites</i></h1>
+            <button style="font-size:30px;cursor:pointer" class="accordion" id="expand"><center id="expandtxt">Discover<br><i id="down" class='fas fa-angle-down' style='font-size:24px;color:white;'></i><i id="up" class='fas fa-angle-up' style='font-size:24px;color:white;display: none'></i></center></button>
+            <div class="panel" id="txt">
+                <span><button id="upcom" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Upcoming Events</b></button></span>
+                <span><button id="past" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Tour de Past</b></button></span>
+                <span><a style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px; text-decoration: none" href="#popup" >Contact Us</a></span>
+            </div>
+        </div>
+<!--          <a class="button" href="#popup">Open Modal</a>-->
+          <div class="popup" id="popup">
+            <div class="popup-inner">
+              <div class="popup__text">
+                  <center>
+                    <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                    <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                    <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                    <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                    <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                    <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:48px;color:black;padding-right: 20px;'></i></a>
+                </center>
+                  <h1><center>Contact Us</center></h1>
+                <div class="row">
+                <div class="col-6">
+                    <center style="">
+                        <h4>Rishabh Dharmani</h4>
+                        <p><i>Convenor</i></p>
+                        <p>
+                            <a href="https://www.facebook.com/Rishabh.DharmaniRD" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                            <a href="mailto:admin@exodia.in" target="_blank"><i class='fa fa-envelope' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                            <a href="tel:9418794251" target="_blank"><i class='fas fa-phone' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                        </p>
+                    </center>
+                </div>
+                <div class="col-6">
+                    <center style="">
+                        <h4>Nakul Yadav</h4>
+                        <p><i>Convenor</i></p>
+                        <p>
+                            <a href="https://www.facebook.com/nakul.yadav.50746" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                            <a href="mailto:admin@exodia.in" target="_blank"><i class='fa fa-envelope' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                            <a href="tel:9718939979" target="_blank"><i class='fas fa-phone' style='font-size:24px;color:black;padding-right: 10px;'></i></a>
+                        </p>
+                    </center>
+                </div>
+              </div>
+              </div>
+              <a class="popup__close" href="#">X</a>
+            </div>
+          </div> 
+        <script>
+        var scroller = document.getElementById("expand");
+        scroller.addEventListener("click", function(){
+            var panel = document.getElementById("txt");
+            if (panel.style.maxHeight){
+              panel.style.maxHeight = null;
+              document.getElementById("down").style.display = "block";
+              document.getElementById("up").style.display = "none";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              document.getElementById("down").style.display = "none";
+              document.getElementById("up").style.display = "block";
+            }
+        });
+        </script>
+        <script>
+        $(function(){
+//            alert("sfz");
+            $("#past").click(function(){
+                setTimeout(function(){
+                    $("#expandtxt").hide();
+//                    $("#content-data").fadeTo(100,0);
+                    $("#content-data").hide();
+                    $("#backgd").hide();
+//                    $('#old').fadeIn(); 
+                    $('#old').show(); 
+                },300);
+            })
+        })    
+        </script>
+        <script>
+        $(function(){
+             $(".back").click(function(){
+                setTimeout(function(){
+//                    $("#content-data").fadeTo(0,100);
+                    $("#content-data").show();
+                    $("#backgd").show();
+                    $("#expandtxt").show();
+//                    $('#old').fadeOut(); 
+                    $('#old').hide(); 
+                },300);
+            })
+        })    
+        </script>
+        <script>
+            $("#upcom").click(function(){
+                alert("Not Yet Decided");
+            })
+        </script>
+</body>
+</html>
