@@ -98,7 +98,8 @@
 }
 @media (max-width: 500px) {
   [data-am-fadeshow] .fs-prev-btn, [data-am-fadeshow] .fs-next-btn {
-    width: 50%;
+    width: 10%;
+    font-size: 4vw;
   }
 }
 [data-am-fadeshow] .fs-prev-btn:before, [data-am-fadeshow] .fs-next-btn:before {

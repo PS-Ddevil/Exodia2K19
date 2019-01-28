@@ -140,10 +140,6 @@
         #sidebar{
             display: none;
         }
-        #info{
-            position: relative;
-            margin-top: 5%;
-        }
         #pronit{
             display: none;
         }
@@ -155,7 +151,6 @@
     }
     #info{
         position: relative;
-        margin-top: 5%;
         background-color: aliceblue;
         padding: 5%;
         margin-left: 10%;
@@ -409,6 +404,20 @@
     #hours, #min, #days, #sec, #none{
         font-family: 'Akronim', cursive;
     }
+    
+    #register-btn{
+        font-size: 20px;
+        border-style: double;
+        color: white;
+        padding: 5px;
+        background-color: burlywood;
+        cursor: pointer;
+    }
+    
+    #register-btn:hover{
+        background-color: cadetblue;
+        transition: 1s;
+    }
 </style>
 <style>
         /* The Modal (background) */
@@ -541,19 +550,29 @@
                         organized by the students of the esteemed
                         Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
                     </p>
-                        <p><b>Important</b></p>
+                    <div class="row justify-content-center">
+                    <div class="col-6" style="margin-bottom: 20px;">
+                    <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
+                    </div>    
+                    <div class="col-6">
+                    <center>
+                    <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                    </div>  
+                    </div>    
+                      <p><center><b>Important</b></center></p>
                     <div class="row" id="info">
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-file-alt' style='font-size:96px;color:black'></i><br><b>NOC</b></center>
+                        <center><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-calendar-alt' style='font-size:96px;color:black'></i><br><b>SCHEDULE</b></center>
+                        <center><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:96px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:48px;color:black'></i><br><b>HOW TO REACH</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-copy' style='font-size:96px;color:black'></i><br><b>DOCUMENTS</b></center>
+                        <center><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></center>
                     </div>  
                     </div>
                     </div>
@@ -607,7 +626,7 @@
 <!--main(start)-->
     <div id="top_scr"></div>
     <div id="top" class="hide" style="height: 100%">
-        <div style="height: 13%"></div>
+        <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://www.exodia.in/redirect-to-register/">Register Now</a></b></span></center></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
         </div>

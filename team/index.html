@@ -3,6 +3,12 @@
 <head>
 <title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
 <link rel="icon" href="img/favicon.ico">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ECE8DC">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ECE8DC">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#ECE8DC">
 <meta charset="UTF-8">
 <meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
 <meta name="keywords" content="IIT Mandi, Exodia">
@@ -12,6 +18,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"> 
@@ -66,10 +74,10 @@
             display: none;
         }
         .nameplate h3{
-            font-size: 6vw;
+            font-size: 5vw;
         }
         .nameplate p{
-            font-size: 5vw;
+            font-size: 4vw;
         }
     }
     
@@ -315,16 +323,17 @@
     <!--mobi-sidebar-->
         <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
+            <a href="../">Home</a>
             <a href="#" id="click-about">About</a>
-            <a href="ca/index.html">SAP</a>
-            <a href="events.html">Events</a>
-            <a href="pronite.html">Pronites</a>
-            <a href="#">Register</a>
-            <a href="#">Sponsors</a>
+            <a href="../ca">SAP</a>
+            <a href="../events">Events</a>
+            <a href="../pronite">Pronites</a>
+            <a href="https://www.exodia.in/redirect-to-register/">Register</a>
+            <a href="../spon">Sponsors</a>
+			<a href="https://www.exodia.in/~memberlogin/">Login</a>
         </div>
         <div>
-            <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: black" onclick="openNav()">&#9776;</span>
+            <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: black; z-index:1" onclick="openNav()">&#9776;</span>
             </div>
         <script>
         function openNav() {
@@ -358,23 +367,33 @@
                         organized by the students of the esteemed
                         Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
                     </p>
-                        <p><b>Important</b></p>
+                    <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                    <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
+                    </div>    
+                    <div class="col-md-6 col-sm-12">
+                    <center>
+                    <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                    </div>  
+                    </div>      
+                      <p><center><b>Important</b></center></p>
                     <div class="row" id="info">
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-file-alt' style='font-size:96px;color:black'></i><br><b>NOC</b></center>
+                        <center><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-calendar-alt' style='font-size:96px;color:black'></i><br><b>SCHEDULE</b></center>
+                        <center><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:96px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:48px;color:black'></i><br><b>HOW TO REACH</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-copy' style='font-size:96px;color:black'></i><br><b>DOCUMENTS</b></center>
+                        <center><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></center>
                     </div>  
                     </div>
                     </div>
-                    <div class="modal-footer">
+					<div class="modal-footer">
                         <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
                         <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
                         <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
@@ -429,7 +448,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img class = "dp" src="img/team/aditya.jpg" alt="aditya" style="width:100%;">
+      <img class = "dp" src="img/team/aditya.jpg" alt="aditya" style="width:100%;" data-aos="flip-left">
       <div class="overlay">
         <div class="text">
         <p>Contact:<br>
@@ -445,13 +464,13 @@
       </div>
     </div>
   </div>
-    <div id = "deg1" class="column">
+    <div id = "deg1" class="column" data-aos="zoom-in">
       <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
         <div style="margin-top: 10%"><h2><center>Mentor</center></h2></div>
     </div>
   <div class="column">
     <div class="card">
-      <img  class = "dp" src="img/team/parimal.jpg" alt="parimal" style="width:100%">
+      <img  class = "dp" src="img/team/parimal.jpg" alt="parimal" style="width:100%" data-aos="flip-right">
       <div class="overlay">
         <div class="text">
         <p>Contact:<br>
@@ -475,7 +494,7 @@
     </div>
   <div class="column">
     <div class="card">
-      <img class = "dp" src="img/team/convey1.jpg" alt="Rishabh" style="width:100%">
+      <img class = "dp" src="img/team/convey1.jpg" alt="Rishabh" style="width:100%" data-aos="flip-right">
       <div class="overlay">
         <div class="text">
         <p>Contact:<br>
@@ -494,7 +513,7 @@
 
   <div class="column">
     <div class="card">
-      <img  class = "dp" src="img/team/convey2.jpg" alt="nakul" style="width:100%">
+      <img  class = "dp" src="img/team/convey2.jpg" alt="nakul" style="width:100%" data-aos="flip-right">
       <div class="overlay">
         <div class="text">
         <p>Contact:<br>
@@ -513,7 +532,7 @@
 </div>
 <div class="row">
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-right">
       <img  class = "dp" src="img/team/publicity1.jpg" alt="nabeel" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -532,7 +551,7 @@
   </div>
 
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-right">
       <img  class = "dp" src="img/team/publicity2.jpg" alt="satyam" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -559,7 +578,7 @@
         <center><img src="img/exologo.png" style="width: 100px;margin-top: 20%"></center>
         <div style="margin-top: 10%"><h2><center>Marketing Head</center></h2></div>  
     </div>
-  <div class="column">
+  <div class="column" data-aos="flip-right">
     <div class="card">
       <img  class = "dp" src="img/team/market1.jpg" alt="akshita" style="width:100%">
       <div class="overlay">
@@ -578,7 +597,7 @@
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-right">
       <img  class = "dp" src="img/team/market2.jpg" alt="amol" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -604,7 +623,7 @@
 </div>
 <div class="row">
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-right">
       <img  class = "dp" src="img/team/plan1.jpg" alt="sanjeev" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -622,7 +641,7 @@
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-up">
       <img  class = "dp" src="img/team/plan2.jpg" alt="akash" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -640,7 +659,7 @@
     </div>
   </div>
   <div class="column">
-    <div class="card">
+    <div class="card" data-aos="flip-right">
       <img  class = "dp" src="img/team/plan3.jpg" alt="himanshu" style="width:100%">
       <div class="overlay">
         <div class="text">
@@ -960,5 +979,8 @@
   </div>
     </div>
     </div>
+<script>
+        AOS.init();
+</script>
 </body>
 </html>
