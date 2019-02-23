@@ -1,0 +1,17 @@
+// <script>
+//     var coll = document.getElementsByClassName("subhead");
+//     var i;
+//     for(i = 0; i coll.length; i++){
+//         coll[i].addEventListener("click",function(){
+//         var content = this.nextElementSibling;
+//         if(content.style.maxHeight){
+//             content.style.maxHeight = null;
+//         } else{
+//             content.style.maxHeight = content.scrollHeight + "px";
+//         }
+//         });
+//     }
+// </script>
+
+<p class="info">Whilst walking on a bridge, its natural for an intuitive engineer to wonder about its construction, to get curious about its strength and design, to be eager to predict its durability.</p>
+							

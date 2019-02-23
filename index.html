@@ -9,9 +9,13 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#F2D297">
 <meta charset="UTF-8">
-<meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
-<meta name="keywords" content="IIT Mandi, Exodia">
-<meta name="author" content="Exodia IIT Mandi">
+<meta name="description" content="The biggest and the most magnificent technical and cultural fest of the Himalayas, 
+a complete feast for its participants and sponsors alike, Exodia, is back with its 8th edition, to thrill the youth 
+with its invigorating cultural extravaganza and brain-storming technical fiesta. The previous seven editions of this 
+3 day long euphoria, organized by the students of the esteemed Indian Institute of Technology, 
+Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life">
+<meta name="keywords" content="IIT Mandi, Exodia, Indian Institute of Technology, Mandi, Himachal Competition, Fest, Exodia IIT Mandi">
+<meta name="author" content="Exodia Web Development Team, IIT Mandi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,7 +27,7 @@
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
 <style>
     @media only screen and (min-width: 768px){
@@ -114,6 +118,9 @@
     #team {
         top: 480px;
     }
+	#login {
+        top: 540px;
+    }
     #sidebar img{
         position: relative;
         margin-top: -48px;
@@ -132,6 +139,9 @@
         font-size: 100px;
         text-align: center;
     }
+	a{
+		text-decoration: none;
+	}
     #cam{
         height: 80%;
         width: 100%;
@@ -139,7 +149,7 @@
     @media only screen and (max-width: 768px){
         #sidebar{
             display: none;
-        }
+		}
         #pronit{
             display: none;
         }
@@ -148,14 +158,6 @@
         #sm-only{
             display: none;
         }
-    }
-    #info{
-        position: relative;
-        background-color: aliceblue;
-        padding: 5%;
-        margin-left: 10%;
-        margin-right: 10%;
-        opacity: .5;
     }
     #sm-gal:hover{
         opacity: 1;
@@ -174,6 +176,7 @@
     html, body {
       height: 100%;
       margin: 0;
+	  overflow: hidden;
     }
     svg {
       display: inline-block;
@@ -333,7 +336,7 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111;
+      background-color: #470B01;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -348,7 +351,7 @@
       color: white;
       display: block;
       transition: 0.3s;
-      font-family: 'Courgette', cursive;
+      font-family: 'B612', sans-serif;
     }
 
     .sidenav a:hover{
@@ -404,8 +407,8 @@
     #hours, #min, #days, #sec, #none{
         font-family: 'Akronim', cursive;
     }
-    
-    #register-btn{
+	
+	#register-btn{
         font-size: 20px;
         border-style: double;
         color: white;
@@ -424,7 +427,7 @@
         .modal {
           display: none; /* Hidden by default */
           position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
+          z-index: 3; /* Sit on top */
           padding-top: 100px; /* Location of the box */
           left: 0;
           top: 0;
@@ -499,19 +502,19 @@
         <div id="sidebar" class="hide">
             <a href="#" id="about"><span>About</span><img src="img/reel.png" height="80px" width="125px"></a>
             <a href="./ca" id="sap"><span>SAP</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="events.html" id="events"><span>Events</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="pronite.html" id="pronites"><span>Pronites</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="#" id="sponser"><span>Sponsors</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./events" id="events"><span>Events</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./pronite" id="pronites"><span>Pronites</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./spon" id="sponser"><span>Sponsors</span><img src="img/reel.png" height="80px" width="125px"></a>
             <a href="./team" id="team"><span>Team</span><img src="img/reel.png" height="80px" width="125px"></a>
         </div>
     <!--mobi-sidebar-->
-        <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9">
+        <div id="mobo-side" class="sidenav" style="z-index:2">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#" id="click-about">About</a>
             <a href="./ca">SAP</a>
-            <a href="events.html">Events</a>
-            <a href="pronite.html">Pronites</a>
-<!--            <a href="#">Sponsors</a>-->
+            <a href="./events">Events</a>
+            <a href="./pronite">Pronites</a>
+            <a href="./spon">Sponsors</a>
             <a href="./team">Team</a>
         </div>
         <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%" onclick="openNav()">&#9776;</span>
@@ -551,10 +554,10 @@
                         Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
                     </p>
                     <div class="row justify-content-center">
-                    <div class="col-6" style="margin-bottom: 20px;">
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
                     </div>    
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12">
                     <center>
                     <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </center>
@@ -626,7 +629,7 @@
 <!--main(start)-->
     <div id="top_scr"></div>
     <div id="top" class="hide" style="height: 100%">
-        <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://www.exodia.in/redirect-to-register/">Register Now</a></b></span></center></div>
+        <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://register.exodia.in/">Register Now</a></b></span></center></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
         </div>
@@ -673,15 +676,6 @@
       <circle id="circle-inner" class="circle01" cx="200" cy="112.5" r="85"/>
       <circle class="circle02 animated-rotate" cx="200" cy="112.5" r="494.5"/>
       <g id="numbers" text-anchor="middle" class="no-select">
-<!--
-        <text id="animated-text1" x="200.5" y="155">10</text>
-        <text id="animated-text2" x="200.5" y="155">9</text>
-        <text id="animated-text3" x="200.5" y="155">8</text>
-        <text id="animated-text4" x="200.5" y="155">7</text>
-        <text id="animated-text5" x="200.5" y="155">6</text>
-        <text id="animated-text6" x="200.5" y="155">5</text>
-        <text id="animated-text7" x="200.5" y="155">4</text>
--->
         <text id="animated-text8" x="200.5" y="155">3</text>
         <text id="animated-text9" x="200.5" y="155">2</text>
         <text id="animated-text10" x="200.5" y="155">1</text>
@@ -698,7 +692,6 @@
 setTimeout(function(){
     document.getElementById('top').classList.remove('hide');
     document.getElementById('sidebar').classList.remove('hide');
-//    document.getElementById('inf_').classList.remove('hide');
     document.getElementById('open').classList.remove('hide');
     document.getElementById('film-container').classList.add('hide');
 }, 2500);
@@ -782,7 +775,7 @@ jitter();
 <!--script foy clock-->
     <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("April 7, 2019 00:00:00").getTime();
+    var countDownDate = new Date("April 12, 2019 00:00:00").getTime();
 
     // Update the count down every 1 second
     var countdownfunction = setInterval(function() {

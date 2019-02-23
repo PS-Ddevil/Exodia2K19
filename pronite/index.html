@@ -1,18 +1,29 @@
 <html>
 <head>
     <title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
+	<link rel="icon" href="img/favicon.ico">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#31358E">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#31358E">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#31358E">
     <meta charset="UTF-8">
-    <meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
-    <meta name="keywords" content="IIT Mandi, Exodia">
-    <meta name="author" content="Exodia IIT Mandi">
+    <meta name="description" content="The biggest and the most magnificent technical and cultural fest of the Himalayas, 
+	a complete feast for its participants and sponsors alike, Exodia, is back with its 8th edition, to thrill the youth 
+	with its invigorating cultural extravaganza and brain-storming technical fiesta. The previous seven editions of this 
+	3 day long euphoria, organized by the students of the esteemed Indian Institute of Technology, 
+	Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life">
+	<meta name="keywords" content="IIT Mandi, Exodia, Indian Institute of Technology, Mandi, Himachal Competition, Fest, Exodia IIT Mandi">
+	<meta name="author" content="Exodia Web Development Team, IIT Mandi">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link type="text/css" href="css/style-pro-old.css" rel="stylesheet">
+    <link type="text/css" href="css/style-pro.css" rel="stylesheet">
     <link type="text/css" href="css/style-model.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+ 	<link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='https://npmcdn.com/basscss@8.0.0/css/basscss.min.css'>
@@ -23,13 +34,13 @@
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 1;
       top: 0;
       left: 0;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
       text-align:center;
+	  background-color: #470B01;
     }
 
     .sidenav a {
@@ -43,7 +54,7 @@
     }
 
     .sidenav a:hover{
-      color: grey;
+      color: aqua;
     }
 
     .sidenav .closebtn {
@@ -125,7 +136,6 @@
 #txt {
   padding: 0 18px;
   background-color: transparent;
-  max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
@@ -138,7 +148,7 @@
         .modal {
           display: none; /* Hidden by default */
           position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
+          z-index: 4; /* Sit on top */
           padding-top: 100px; /* Location of the box */
           left: 0;
           top: 0;
@@ -223,10 +233,9 @@
         <input type="radio" name="css-fadeshow" id="slide-7" />
         <input type="radio" name="css-fadeshow" id="slide-8" />
         <input type="radio" name="css-fadeshow" id="slide-9" />
-
 		<!-- Slides -->
 		<div class="fs-slides">
-			<div class="fs-slide" style="background-image: url(img/pro/local.jpg); filter: blur(8px;); background-position: top">
+			<div class="fs-slide" style="background-image: url(img/pro/local2.jpg); filter: blur(8px;); background-position: top">
 				<!-- Add content to images (sample) -->
 				<div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
                     <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer;"><i class='fas fa-home' style='color:white;'></i></button></strong></p>
@@ -239,10 +248,10 @@
                     <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;">Progressive Brothers</h1>
             </div>
             </div>
-            <div class="fs-slide" style="background-image: url(img/pro/sandeep.jpg);">
+            <div class="fs-slide" style="background-image: url(img/pro/sudeep1.jpg);">
             <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
                 <p style="font-size: 48px; font-weight: 100; margin-top: 40px;"><strong><button class="back" style="font-size: 48px; background-color: transparent; border: none;cursor: pointer"><i class='fas fa-home' style='color:white'></i></button></strong></p>
-                    <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;"> Sandeep Sharma</h1>
+                    <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 40px; font-weight: bold;font-family: 'Berkshire Swash', cursive;"> Sundeep Sharma</h1>
             </div>
             </div>
             <div class="fs-slide" style="background-image: url(img/pro/base1-l.jpg);">
@@ -326,15 +335,15 @@
 	</div>
 	
 </div>
-        <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9">
+        <div id="mobo-side" class="sidenav" style="z-index: 3">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../">Home</a>
                     <a href="#" id="click-about">About</a>
                     <a href="../ca">SAP</a>
                     <a href="../events">Events</a>
-                    <a href="#">Register</a>
-                    <a href="#">Sponsors</a>
+                    <a href="../spon">Sponsors</a>
                     <a href="../team">Team</a>
+					<a href="https://register.exodia.in/login/">Register</a>
         </div>
         <script>
         function openNav() {
@@ -369,19 +378,29 @@
                         organized by the students of the esteemed
                         Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
                     </p>
-                        <p><b>Important</b></p>
+                    <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                    <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
+                    </div>    
+                    <div class="col-md-6 col-sm-12">
+                    <center>
+                    <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                    </div>  
+                    </div>   
+                      <p><center><b>Important</b></center></p>
                     <div class="row" id="info">
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-file-alt' style='font-size:96px;color:black'></i><br><b>NOC</b></center>
+                        <center><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-calendar-alt' style='font-size:96px;color:black'></i><br><b>SCHEDULE</b></center>
+                        <center><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:96px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:48px;color:black'></i><br><b>HOW TO REACH</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-copy' style='font-size:96px;color:black'></i><br><b>DOCUMENTS</b></center>
+                        <center><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></center>
                     </div>  
                     </div>
                     </div>
@@ -430,7 +449,7 @@
             <div id="open" style="float: left; font-size:30px; cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: white" onclick="openNav()">&#9776;</div>
             <a href="index.html"><img src="img/exologo-1.png" width="100px"></a>
             <h1 style="font-size:50px"><i style="font-family: 'Lobster Two', cursive;">Pronites</i></h1>
-            <button style="font-size:30px;cursor:pointer" class="accordion" id="expand"><center id="expandtxt">Discover<br><i id="down" class='fas fa-angle-down' style='font-size:24px;color:white;'></i><i id="up" class='fas fa-angle-up' style='font-size:24px;color:white;display: none'></i></center></button>
+            <button style="font-size:30px;cursor:pointer" class="accordion" id="expand"><center id="expandtxt">Discover<br><i id="down" class='fas fa-angle-down' style='font-size:24px;color:white;'></i></center></button>
             <div class="panel" id="txt">
                 <span><button id="upcom" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Upcoming Events</b></button></span>
                 <span><button id="past" style="color: white; border: none; background-color: transparent; cursor: pointer; font-size: 20px"><b>Tour de Past</b></button></span>
@@ -478,21 +497,6 @@
               <a class="popup__close" href="#">X</a>
             </div>
           </div> 
-        <script>
-        var scroller = document.getElementById("expand");
-        scroller.addEventListener("click", function(){
-            var panel = document.getElementById("txt");
-            if (panel.style.maxHeight){
-              panel.style.maxHeight = null;
-              document.getElementById("down").style.display = "block";
-              document.getElementById("up").style.display = "none";
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-              document.getElementById("down").style.display = "none";
-              document.getElementById("up").style.display = "block";
-            }
-        });
-        </script>
         <script>
         $(function(){
 //            alert("sfz");

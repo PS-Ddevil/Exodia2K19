@@ -9,9 +9,13 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#ECE8DC">
 <meta charset="UTF-8">
-<meta name="description" content="Exodia is Technical and Cultural Fest of IIT Mandi">
-<meta name="keywords" content="IIT Mandi, Exodia">
-<meta name="author" content="Exodia IIT Mandi">
+<meta name="description" content="The biggest and the most magnificent technical and cultural fest of the Himalayas, 
+a complete feast for its participants and sponsors alike, Exodia, is back with its 8th edition, to thrill the youth 
+with its invigorating cultural extravaganza and brain-storming technical fiesta. The previous seven editions of this 
+3 day long euphoria, organized by the students of the esteemed Indian Institute of Technology, 
+Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life">
+<meta name="keywords" content="IIT Mandi, Exodia, Indian Institute of Technology, Mandi, Himachal Competition, Fest, Exodia IIT Mandi">
+<meta name="author" content="Exodia Web Development Team, IIT Mandi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,15 +24,13 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
-<link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet"> 
 <style>
     body{
 /*        scroll-behavior: smooth;*/
@@ -79,11 +81,16 @@
     list-style: none;
     }
     @media (min-width: 768px) {
-    .ele-2 li {
-    float: left;
-    width: 33.33%;
-    margin-left: 10%;
-    }
+        .ele-2 li {
+            float: left;
+            width: 33.33%;
+            margin-left: 10%;
+        }
+        .ele-1 li {
+            float: left;
+            width: 33.33%;
+            margin-left: 33.33%;  
+        }
     }
     .tiles-a a {
     margin: 1em;
@@ -149,26 +156,29 @@
         }
     }
     @media only screen and (max-width: 768px){
-    #top-exologo{
-        margin-top: 20%;
-        width: 35%;
-    }
-    .overlay{
-        display: none;
-        padding-top: -10%;    
-    }
+        #top-exologo{
+            margin-top: 20%;
+            width: 35%;
+        }
+        .overlay{
+            display: none;
+            padding-top: -10%;    
+        }
         .name-id{
             font-size: 18px;
+        }
+        .hover-title{
+            display: none;
         }
     }
     .sidenav {
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 1;
+      z-index: 2;
       top: 0;
       left: 0;
-      background-color: #111;
+      background-color: #470B01;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -183,7 +193,7 @@
       color: white;
       display: block;
       transition: 0.3s;
-      font-family: 'Courgette', cursive;
+      font-family: 'B612', sans-serif;
     }
 
     .sidenav a:hover{
@@ -204,13 +214,11 @@
     }
     
     .info{
-/*        font-family: 'Charm', cursive;*/
         font-family: 'Josefin Sans', sans-serif;
         font-size: 20px;
     }
     
     .event_name{
-/*        font-family: 'Lobster', cursive;*/
         font-family: 'ZCOOL XiaoWei', serif;
         font-size: 20px;
         text-decoration: underline;
@@ -241,17 +249,10 @@
         font-size: 30px;
         margin-left: 5%;
         font-family: 'ZCOOL XiaoWei', serif;
-        color: coral;
         width: 500px;
-        cursor: pointer;
     }
     .innerhead{
         font-family: 'Bungee Inline', cursive;
-    }
-    
-    .tiles-a{
-        max-height: 0;
-        transition: max-height 0.5s ease-out;
     }
     
     .title-icon{
@@ -262,29 +263,19 @@
         box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
         border-radius: 0%;
         cursor: pointer;
-        -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        /* -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
         -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
         -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
         font-size:96px; 
-        color:red;
+        /* color:red; */
         transition: color 1s;
-    }
-    .subhead{
-       color:red; 
     }
     .title-icon:hover{
         -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
     }
     .title-icon:hover{
         color: aqua;
-    }
-    .subhead:hover{
-        transition: 1s;
-        opacity: 0.5;
-    }
-    .name-id{
-        color: red;
     }
     .name-id:hover{ 
         transition: 1s;  
@@ -303,10 +294,25 @@
 	.inner-bx{
 		border-radius: 20%;
 	}
-	.inner-bx:hover{
-		opacity: 0.5;
-		transition: 1s;
-	}
+    @media screen and (min-width: 768px){
+        .hover-title{
+            opacity: 0;
+        }
+        .list-item:hover .hover-title{
+            opacity: 1;
+            transform: translateY(-100px);
+            font-family: 'Pacifico', cursive;
+            transition: 1s ease-in-out;
+        }
+        .list-item:hover .inner-bx{
+            opacity: 0.3;
+            transform:scale(1.1);
+            transition: 1s ease-in-out;
+        }
+        .event_name{
+            display: none;
+        }
+    }
 </style>
 <style>
         /* The Modal (background) */
@@ -322,6 +328,7 @@
           overflow: auto; /* Enable scroll if needed */
           background-color: rgb(0,0,0); /* Fallback color */
           background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		  z-index: 3;
         }
 
         /* Modal Content */
@@ -383,16 +390,15 @@
 <body>
 <main role="main" id="main" style="overflow-x: hidden">
     <!--mobi-sidebar-->
-        <div id="mobo-side" class="sidenav" style="background-color: #ff0e48;opacity: 0.9;z-index: 3" >
+        <div id="mobo-side" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../">Home</a>
             <a href="../ca">SAP</a>
             <a href="#" id="click-about">About</a>
-            <a href="https://www.exodia.in/redirect-to-register/">Register</a>
             <a href="../spon">Sponsors</a>
             <a href="../pronite">Pronites</a>
             <a href="../team">Team</a>
-			<a href="https://www.exodia.in/~memberlogin/">Login</a>
+			<a href="https://register.exodia.in/">Register</a>
         </div>
         <div>
             <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: black; z-index:2" onclick="openNav()">&#9776;</span>
@@ -411,11 +417,8 @@
         <div class="container-fluid" style="min-height: 850px; width: 100%; background-attachment: fixed; background-image: url(img/brewster-wallpaper-2704-67602sam-64_1000.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;">
             <center><a href="index.html"><img id="top-exologo" src="img/exologo.png"></a></center>
             <center>
-                <h3 style="margin-top: 5%;color: black; text-transform:uppercase; font-family: 'Bungee Inline', cursive;">
+                <h5 style="margin-top: 5%;color: black; text-transform:uppercase; font-family: 'Bungee Inline', cursive;">
                     <b>"Taste the relish to be found in competition -- in having put forth<br> the best within you."</b>
-                </h3>
-                <h5  style="font-family: 'ZCOOL XiaoWei', serif; color: red; font-size: 30px">
-                    <i><b>Henry Kaiser</b></i>
                 </h5>
                 <h3 style="margin-top: 5%; color: black; text-transform: uppercase; font-size: 50px">
                     <b>Events</b>
@@ -528,11 +531,11 @@
 -->
         </div>
     </div>
-    <div style="padding-bottom: 100px;background-color: aliceblue" class="container"><center><p class="main-head" id="cult" data-aos="fade-up">Cultural</p></center>
+    <div style="padding-bottom: 100px;background-color: #D2A832" class="container"><center><p class="main-head" id="cult" data-aos="fade-up">Cultural</p></center>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-drum' style='font-size:48px;'></i>&nbsp;Music</p>
 	<section class="tiles-a ele-2" data-aos="fade-up">
 		<ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">BandSlam</center>
 				<a href="#" style="background: url('img/events/band1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden" >
@@ -561,9 +564,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>BandSlam</b></p></center>
+                </div>
 			</li>
 			
-			<li>
+			<li class="list-item">
                 <center class="event_name">Exodia Idol</center>
 				<a href="#" style="background: url('img/events/sing1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -571,12 +577,9 @@
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Exodia Idol</h3>
                             <h5><i>One doesn’t just entertain the audience, you give them bits of your soul.</i></h5>
-							<p class="info">Do you have the potential to enchant your audience with your vocals, to set the stage on fire through your sheer chording to make an exhilarating  accompaniment to the melody ?</p>
-							<p class="info">If yes then Exodia Idol is your cue!</p>
-                            <p class="info">All you need is to give a stage performance, which can be any genre of music, be it pop, classical, folk, plain Bollywood style or even ghazals and qawwalis are welcomed.</p>
-                            <p class="info">So come, and be a part of the Exodia Idol and let a mesmerizing voice echo in the valleys of the Himalayas.
-                            </p>
-                            <p class="info">Who knows, you might turn out to be the ‘Idol’ after all !  </p>
+							<p class="info">It is a Solo singing competition wherein you perform your best to let your mesmerising voice echo 
+                            in the Himalayas. Melodies of all genres of music like pop, classical, folk, plain Bollywood style or even ghazals 
+                            and qawwalis are welcomed to enthrall the crowd with their fascinating and dazzling performances. </p>
 						</div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
@@ -597,13 +600,17 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Exodia Idol</b></p></center>
+                </div>
 			</li>
+
 			</ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-mask' style='font-size:48px;'></i>&nbsp;Dance</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-        <li>
+        <li class="list-item">
                 <center class="event_name">Grove Fanatics</center>
 				<a href="#" style="background: url('img/events/solo1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -632,9 +639,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Groove Fanatics</b></p></center>
+                </div>
 			</li>
             
-			<li>
+			<li  class="list-item">
                 <center class="event_name">Synchronians</center>
 				<a href="#" style="background: url('img/events/sync1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -642,8 +652,9 @@
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Synchronians</h3>
                             <h5><i>Perfect resonance of beat and body!!</i></h5>
-							<p class="info">Dancing the most pure and cultured manner of showing their dynamic expressions in a sync with the beat and the music. Dancing, can easily be used in giving sort of messages or show certain stuff which the audience can easily grasp and inculcate within themselves.</p>
-							<p class="info">Synchronians, the group dance competition comes up with beautiful coordinated dance groups which takes away the heart of each and everyone sitting in the audience.The well performed dance in the lap of himalayas can make you see the beauty of the unnoticed activity of  human ,dancing with a great impact.</p>
+							<p class="info">This gala dance event gives groups to present a coodinated piece of beats and moves to take away the heart 
+                            of each and everyone sitting in the audience.
+                            The well performed dance fascinates and fantasise the crowd to the fullest.</p>
 						</div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
@@ -666,28 +677,13 @@
                             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 <img src="img/gallery/sync-7.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-9.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-10.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-11.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-12.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-13.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-14.jpg">
-                            </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Synchronians</b></p></center>
+                </div>
 			</li>
         
         </ul> 
@@ -696,7 +692,7 @@
     <p class="subhead" data-aos="fade-up"><i class='fas fa-theater-masks' style='font-size:48px;'></i>&nbsp;Dramatics</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Street Soul</center>
 				<a href="#" style="background: url('img/events/drama1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -726,8 +722,11 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Street Soul</b></p></center>
+                </div>
 			</li>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Sole Soul</center>
 				<a href="#" style="background: url('img/events/monoact1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -738,34 +737,19 @@
 							<p class="info">What makes people fascinating is conflict, it's drama, it's the human condition. Nobody wants to watch perfection, and neither do we. Here in this monoact event we give you a chance to showcase your talent to imbibe into yourself anyone and pick up a brand new personality in front of the world through this Monoact event.
                             </p>
 						</div>
-<!--
-                        <h4>Previous Year Glimpses</h4>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-1.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-2.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-3.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-4.jpg">
-                            </div>
-                        </div>
--->
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Canvas</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Arts and Design(Fashion)</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Canvas</center>
 				<a href="#" style="background: url('img/events/canvas1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -794,8 +778,32 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Canvas</b></p></center>
+                </div>
 			</li>
-            <li>
+            <li class="list-item">
+                <center class="event_name">Face Painting</center>
+				<a href="#" style="background: url('img/events/face-3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img src="img/events/face-2.jpg" alt="Face Painting">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Face Painting</h3>
+                            <h5><i>Who knew those arbitrary fragments of your imagination made perfect sense in entirety</i></h5>
+							<p class="info">Painting is the best way to express your imagination. And when this painting is created on face an art piece is built. This art event presents a platform to bring out and convey emotions through face painting.</p>
+						</div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Face Painting</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
                 <center class="event_name">Couture</center>
 				<a href="#" style="background: url('img/events/fashion1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -824,13 +832,17 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Couture</b></p></center>
+                </div>
 			</li>
         </ul>
+    
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-camera-retro' style='font-size:48px;'></i>&nbsp;Photography</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Landscape Photography</center>
 				<a href="#" style="background: url('img/events/landscape1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -859,32 +871,17 @@
                                 <img src="img/gallery/land-5.jpg">
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-6.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-7.jpeg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-8.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-9.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 <img src="img/gallery/land-10.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-11.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-12.png">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Landscape Photograhy</b></p></center>
+                </div>
 			</li>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Portrait Photography</center>
 				<a href="#" style="background: url('img/events/potrait1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -894,37 +891,22 @@
                             <h5><i>A portrait is not made in the camera but on either side of it.</i></h5>
 							<p class="info">Like nature, people too captivate and enthrail us. So captivate one such person or more in your camera and let everyone admire their sharp personality and your effective lighting, backdrops, and poses.</p>
 						</div>
-<!--
-                        <h4>Previous Year Glimpses</h4>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-1.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-2.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-3.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-4.jpg">
-                            </div>
-                        </div>
--->
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Portrait Photograhy</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     </div>
     
-    <div style="padding-bottom: 100px;background-color: aliceblue" class="container"><center><p class="main-head" data-aos="fade-up" id="tech">Technical</p></center>
+    <div style="padding-bottom: 100px;background-color: #D2A832" class="container"><center><p class="main-head" data-aos="fade-up" id="tech">Technical</p></center>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-laptop' style='font-size:48px;'></i>&nbsp;Programmer's Paradigms</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Dementia</center>
 				<a href="#" style="background: url('img/events/dementia1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -937,9 +919,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Dementia</b></p></center>
+                </div>
 			</li>
 			
-			<li>
+			<li class="list-item">
                 <center class="event_name">Internet of Things</center>
 				<a href="#" style="background: url('img/events/iot2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -952,13 +937,16 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Internet of Things</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-microchip' style='font-size:48px;'></i>&nbsp;Reckless Robotronics</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Hurdle Rush</center>
 				<a href="#" style="background: url('img/events/car1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -987,9 +975,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Hurdle Rush</b></p></center>
+                </div>
 			</li>
 			
-            <li>
+            <li class="list-item">
                 <center class="event_name">Line Follower</center>
 				<a href="#" style="background: url('img/events/line.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden" >
@@ -1018,6 +1009,9 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Line Follower</b></p></center>
+                </div>
 			</li>
     
         </ul>
@@ -1025,7 +1019,7 @@
     <p class="subhead" data-aos="fade-up"><i class='fas fa-cogs' style='font-size:48px;'></i>&nbsp;Mechanical Maniacs</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Junkyard Wars</center>
 				<a href="#" style="background: url('img/events/junk1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1055,8 +1049,11 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Junkyard Wars</b></p></center>
+                </div>
 			</li>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Nitro Car Racing</center>
 				<a href="#" style="background: url('img/events/nitro3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1069,13 +1066,16 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Nitro Car Racing</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-drafting-compass' style='font-size:48px;'></i>&nbsp;Builder Bliss</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Viaduct</center>
 				<a href="#" style="background: url('img/events/bridge3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1083,8 +1083,7 @@
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Viaduct</h3>
                             <h5><i>Praise the bridge that carries you over!</i></h5>
-							<p class="info">Whilst walking on a bridge, its natural for an intuitive engineer to wonder about its construction, to get curious about its strength and design, to be eager to predict its durability.</p>
-							<p class="info">Viaduct is an on the spot event wherein the participants have to build a bridge using the materials provided. Beginning right from the elementary level, grab the opportunity to make a structure that would stand firm on the strong base of your structural knowledge.</p>
+						    <p class="info">Viaduct is an on the spot event wherein the participants have to build a bridge using the materials provided. Beginning right from the elementary level, grab the opportunity to make a structure that would stand firm on the strong base of your structural knowledge.</p>
 						</div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
@@ -1105,13 +1104,36 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Viaduct</b></p></center>
+                </div>
+			</li>
+
+            <li class="list-item">
+                <center class="event_name">CADx</center>
+				<a href="#" style="background: url('img/events/cad-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img src="img/events/cad-1.jpg" alt="CADx">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">CADx</h3>
+                            <h5><i>Praise the bridge that carries you over!</i></h5>
+						    <p class="info">This event offers a chance to the creative, artistic and innovative designers to participate and build the 
+                            best of their designs in given time using AutoCAD. The topic would be presented on spot and the prolific producers of design
+                             present their part to prove their proficiency and brilliance. </p>
+						</div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>CADx</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-gavel' style='font-size:48px;'></i>&nbsp;Enimatic Entepreneurs</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Reap Revenue</center>
 				<a href="#" style="background: url('img/events/auction1-min.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1121,41 +1143,28 @@
                             <h5><i>The ultimate auction platform</i></h5>
 							<p class="info">An event where participants can participate in real-like auction drills that teach the ways of conduction and stakes involved while learning the art to generate massive revenues. Organized by E-cell IIT Mandi.</p>
 						</div>
-                        <h4>Previous Year Glimpses</h4>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-1.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-2.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-3.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-4.jpg">
-                            </div>
-                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Reap Revenue</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     </div>
     
-    <div style="padding-bottom: 100px; background-color: aliceblue" class="container"><center><p class="main-head" data-aos="fade-up" id="online">Online Events</p></center>
+    <div style="padding-bottom: 100px; background-color: #D2A832" class="container"><center><p class="main-head" data-aos="fade-up" id="online">Online Events</p></center>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Art and Design</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Doodle Art</center>
 				<a href="#" style="background: url('img/events/doodle2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
 						<img src="img/events/doodle2.jpg" alt="Doodle">
 						<div class="text-copy wrapper">
-							<h3 class="innerhead">Doodle</h3>
+							<h3 class="innerhead">Doodle Art</h3>
                             <h5><i>Something you just neet to chill</i></h5>
 							<p class="info">In this wonderful arts event we challenge you to draw or paint an amazing piece of art. Whether you create a drawing filled with concrete representational meaning or be full of random, abstract lines, the only condition is that it must be an art capable of garnering all the attention around!</p>
 						</div>
@@ -1169,12 +1178,6 @@
                                 <img src="img/gallery/doodle-2.jpg">
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-3.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-4.jpg">
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 <img src="img/gallery/doodle-5.jpg">
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -1184,9 +1187,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Doodle Art</b></p></center>
+                </div>
 			</li>
             
-            <li>
+            <li class="list-item">
                 <center class="event_name">Pace A Patch</center>
 				<a href="#" style="background: url('img/events/ps1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1199,13 +1205,16 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Pace A Patch</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-camera' style='font-size:48px;'></i>&nbsp;Photograhy and Videography</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
-            <li>
+            <li class="list-item">
                 <center class="event_name">Charismatic Clicks</center>
 				<a href="#" style="background: url('img/events/pic1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1218,9 +1227,12 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Charismatic Clicks</b></p></center>
+                </div>
 			</li>
             
-            <li>
+            <li class="list-item">
                 <center class="event_name">Vintage Vibes</center>
 				<a href="#" style="background: url('img/events/movie2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
@@ -1233,47 +1245,14 @@
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Vintage Vibes</b></p></center>
+                </div>
 			</li>
         </ul>
     </section>
     </div>
-    
-<!--<section  class="tiles-a ele-2">
-
-        <ul>		
-			<li>
-                <center class="event_name">Literary Events</center>
-				<a href="#" style="background: url('img/events/lit2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false">
-					<div class="details visually-hidden">
-						<img src="img/events/lit2.jpg" alt="Literary Events">
-						<div class="text-copy wrapper">
-							<h3>Literary Events</h3>
-                            <h5><i>For the love of Literature</i></h5>
-							<p class="info">From fun extempore with a twist to grave debates making you play the devil’s advocate, from the sweet , sorrowful, emotional poetry to wit-testing word games, a lot awaits for you here!</p>
-						</div>
-                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 5%"></center>
-					</div>
-				</a>
-			</li>
-        
-            <li>
-                <center class="event_name">Workshops</center>
-				<a href="#" style="background: url('img/events/seminar1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false">
-					<div class="details visually-hidden" >
-						<img src="img/events/seminar1.jpg" alt="Workshops">
-						<div class="text-copy wrapper">
-							<h3>Workshops</h3>
-                            <h5><i>Learn and Grow!!</i></h5>
-							<p class="info">The Workshops give you an oportunity to learn from professors and institutions, while creating a interative environment with peer group from different colleges.</p>
-						</div>
-                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 5%"></center>
-					</div>
-				</a>
-			</li>
-		</ul>
-	</section> -->
-
-    <section>
+	<section>
         <div style="background-color: aliceblue">
             <center>
                 <a href = "index.html"><img src="img/exologo.png" style="width: 100px;"></a>
@@ -1290,19 +1269,7 @@
 </aside>
     
 <script>
-    var coll = document.getElementsByClassName("subhead");
-    var i;
-    for(i = 0; i < coll.length; i++){
-        coll[i].addEventListener("click",function(){
-//                                 this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if(content.style.maxHeight){
-            content.style.maxHeight = null;
-        } else{
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-                                 });
-    }
+
 </script>
 <script>
   var	$parent = $("#main"),
