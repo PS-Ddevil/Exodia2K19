@@ -19,373 +19,11 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
-<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet"> 
-<style>
-    body{
-/*        scroll-behavior: smooth;*/
-        word-wrap: break-word;
-        position: relative;
-    }
-   * {
-        box-sizing: boder-box;
-       scroll-behavior: smooth;
-    }
-
-    body {
-    margin: 0;
-    }
-    
-    a{
-        text-decoration: none;
-    }
-    #main {
-    position: relative;
-    z-index: 20;
-    background: #fff;
-    transition: -webkit-transform .6s ease;
-    transition: transform .6s ease;
-    transition: transform .6s ease, -webkit-transform .6s ease;
-    }
-    @media (min-width: 768px) {
-    #main {
-    padding: 1em;
-    }
-    }
-
-    .fake-section {
-    background: #eee;
-    height: 300px;
-    }
-
-    .tiles-a {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    }
-    .tiles-a ul {
-    margin-left: 0%;
-    padding: 0;
-    }
-    .tiles-a li {
-    list-style: none;
-    }
-    @media (min-width: 768px) {
-        .ele-2 li {
-            float: left;
-            width: 33.33%;
-            margin-left: 10%;
-        }
-        .ele-1 li {
-            float: left;
-            width: 33.33%;
-            margin-left: 33.33%;  
-        }
-    }
-    .tiles-a a {
-    margin: 1em;
-    display: block;
-    background: #222;
-    padding-top: 73%;
-    height: 0;
-    }
-
-    #aside {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    background: #eee;
-    overflow-y: scroll;
-    z-index: 10;
-    }
-    #aside img {
-    width: 100%;
-    height: auto;
-    vertical-align: top;
-    }
-    #aside .wrapper {
-    padding: 1em;
-    }
-    #aside .close {
-    width: 25px;
-    display: block;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    }
-
-    .show-detail {
-    overflow: hidden;
-    }
-    .show-detail #main {
-    -webkit-transform: translateX(-60%);
-          transform: translateX(-60%);
-    }
-
-    .visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    }
-    @media only screen and (min-width: 768px){
-    #top-exologo{
-        margin-top: 5%;
-        width: 15%;
-    }
-        .name-id{
-            font-size: 25px;
-        }
-    }
-    @media only screen and (max-width: 768px){
-        #top-exologo{
-            margin-top: 20%;
-            width: 35%;
-        }
-        .overlay{
-            display: none;
-            padding-top: -10%;    
-        }
-        .name-id{
-            font-size: 18px;
-        }
-        .hover-title{
-            display: none;
-        }
-    }
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      background-color: #470B01;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      text-align:center;
-      opacity: 1;
-    }
-
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: white;
-      display: block;
-      transition: 0.3s;
-      font-family: 'B612', sans-serif;
-    }
-
-    .sidenav a:hover{
-      color: aqua;
-    }
-
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-
-    @media only screen and (max-width: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-    
-    .info{
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 20px;
-    }
-    
-    .event_name{
-        font-family: 'ZCOOL XiaoWei', serif;
-        font-size: 20px;
-        text-decoration: underline;
-    }
-    
-    h5{
-        font-family: 'Acme', sans-serif;
-    }
-    
-    h3{
-        font-family: 'Carter One', cursive;
-    }
-    
-    h4{
-        font-family: 'ZCOOL XiaoWei', serif;
-        text-align: center;
-        background-color: coral;
-        color: white;
-    }
-    .main-head{
-        font-size: 40px;
-        font-family: 'Bungee Inline', cursive;
-        padding-bottom: 100px;
-        z-index: 1;
-    }
-    
-    .subhead{
-        font-size: 30px;
-        margin-left: 5%;
-        font-family: 'ZCOOL XiaoWei', serif;
-        width: 500px;
-    }
-    .innerhead{
-        font-family: 'Bungee Inline', cursive;
-    }
-    
-    .title-icon{
-        position: relative;
-        width: 100px;
-        height: 100px;
-        border: none;
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-        border-radius: 0%;
-        cursor: pointer;
-        /* -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-        -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-        -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
-        font-size:96px; 
-        /* color:red; */
-        transition: color 1s;
-    }
-    .title-icon:hover{
-        -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
-    }
-    .title-icon:hover{
-        color: aqua;
-    }
-    .name-id:hover{ 
-        transition: 1s;  
-        color: aqua;
-    }
-    
-    @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @media screen and (max-width: 536px){
-    .subhead{
-		font-size: 20px;
-		}
-    }
-	.inner-bx{
-		border-radius: 20%;
-	}
-    @media screen and (min-width: 768px){
-        .hover-title{
-            opacity: 0;
-        }
-        .list-item:hover .hover-title{
-            opacity: 1;
-            transform: translateY(-100px);
-            font-family: 'Pacifico', cursive;
-            transition: 1s ease-in-out;
-        }
-        .list-item:hover .inner-bx{
-            opacity: 0.3;
-            transform:scale(1.1);
-            transition: 1s ease-in-out;
-        }
-        .event_name{
-            display: none;
-        }
-    }
-</style>
-<style>
-        /* The Modal (background) */
-        .modal {
-          display: none; /* Hidden by default */
-          position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
-          padding-top: 100px; /* Location of the box */
-          left: 0;
-          top: 0;
-          width: 100%; /* Full width */
-          height: 100%; /* Full height */
-          overflow: auto; /* Enable scroll if needed */
-          background-color: rgb(0,0,0); /* Fallback color */
-          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-		  z-index: 3;
-        }
-
-        /* Modal Content */
-        .modal-content {
-          position: relative;
-          background-color: #fefefe;
-          margin: auto;
-          padding: 0;
-          border: 1px solid #888;
-          width: 80%;
-          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-          -webkit-animation-name: animatetop;
-          -webkit-animation-duration: 0.4s;
-          animation-name: animatetop;
-          animation-duration: 0.4s
-        }
-
-        /* Add Animation */
-        @-webkit-keyframes animatetop {
-          from {top:-300px; opacity:0} 
-          to {top:0; opacity:1}
-        }
-
-        @keyframes animatetop {
-          from {top:-300px; opacity:0}
-          to {top:0; opacity:1}
-        }
-
-        /* The Close Button */
-        .close {
-          color: white;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-          color: #000;
-          text-decoration: none;
-          cursor: pointer;
-        }
-
-        .modal-header {
-          padding: 2px 16px;
-          background-color: #FF00FF;
-          color: white;
-        }
-
-        .modal-body {padding: 2px 16px;}
-
-        .modal-footer {
-          padding: 2px 16px;
-          background-color: #FF00FF;
-          color: white;
-        }    
-</style>
+<link href="https://fonts.googleapis.com/css?family=Acme|Carter+One|Bungee+Inline|ZCOOL+XiaoWei|Josefin+Sans|Pacifico|B612" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <main role="main" id="main" style="overflow-x: hidden">
@@ -539,26 +177,27 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">BandSlam</center>
 				<a href="#" style="background: url('img/events/band1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden" >
-						<img src="img/events/band1.jpg" alt="Band Slam">
+						<img class="img-content" src="img/events/band1.jpg" alt="Band Slam">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Bandslam</h3>
                             <h5><i>One thing about music is that when it hits you, you feel no pain!</i></h5>
 							<p class="info">Band Slam, a rock band competition gives an opportunity to the enchanting melodies to cast a spell over the brook and rock pyramids of Mandi. The artists, the echo of their assonances and the beauty of their voices receive a platform to persist in the hearts of admirers forever.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Band_Slam.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/band-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/band-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/band-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/band-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/band-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/band-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/band-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/band-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -573,28 +212,29 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Exodia Idol</center>
 				<a href="#" style="background: url('img/events/sing1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/sing1.jpg" alt="Exodia Idol">
+						<img class="img-content" src="img/events/sing1.jpg" alt="Exodia Idol">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Exodia Idol</h3>
                             <h5><i>One doesn’t just entertain the audience, you give them bits of your soul.</i></h5>
 							<p class="info">It is a Solo singing competition wherein you perform your best to let your mesmerising voice echo 
                             in the Himalayas. Melodies of all genres of music like pop, classical, folk, plain Bollywood style or even ghazals 
                             and qawwalis are welcomed to enthrall the crowd with their fascinating and dazzling performances. </p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Exodia_Idol.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/idol-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/idol-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/idol-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/idol-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/idol-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/idol-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/idol-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/idol-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -607,33 +247,57 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 
 			</ul>
     </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Rap Battle</center>
+				<a href="#" style="background: url('img/events/rap-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/rap-1.jpg" alt="Rap Battle">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Rap Battle</h3>
+                            <h5><i>Enchant us with your RAPture! </i></h5>
+							<p class="info">A music competition aimed at bringing young rappers in limelight.The artists, the echo of their assonances and the beauty of their voices receive a platform to persist in the hearts of admirers forever.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Couture.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Rap Battle</b></p></center>
+                </div>
+			</li>
+        </ul>
+    
+    </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-mask' style='font-size:48px;'></i>&nbsp;Dance</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
         <li class="list-item">
-                <center class="event_name">Grove Fanatics</center>
+                <center class="event_name">Groove Fanatics</center>
 				<a href="#" style="background: url('img/events/solo1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/solo1.jpg" alt="Groove Fanatics">
+						<img class="img-content" src="img/events/solo1.jpg" alt="Groove Fanatics">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Groove Fanatics</h3>
                             <h5><i>Smash the beats.....</i></h5>
 							<p class="info">This solo dance event provides all the amazing dancers out here with the opportunity to make the world feel the warmth of their passion, to let the people sway in sync with the beats they dance to and to create breathtaking memories for themselves. After all, what could be better than making the world take notice of your grooves and beats?</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Groove_Fanatics.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/dance-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/dance-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/dance-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/dance-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/dance-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/dance-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/dance-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/dance-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -648,34 +312,35 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Synchronians</center>
 				<a href="#" style="background: url('img/events/sync1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/sync1.jpg" alt="Synchronians">
+						<img class="img-content" src="img/events/sync1.jpg" alt="Synchronians">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Synchronians</h3>
                             <h5><i>Perfect resonance of beat and body!!</i></h5>
 							<p class="info">This gala dance event gives groups to present a coodinated piece of beats and moves to take away the heart 
                             of each and everyone sitting in the audience.
                             The well performed dance fascinates and fantasise the crowd to the fullest.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Synchronians.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-4.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-6.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-6.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/sync-7.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/sync-7.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -688,7 +353,29 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         
         </ul> 
     </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Game of Street</center>
+				<a href="#" style="background: url('img/events/street.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/street.jpg" alt="Game of Street">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Game of Street</h3>
+                            <h5><i>May the best moves win the war! </i></h5>
+							<p class="info">A face off dance competition held in street fight style. The well performed dance fascinates and fantasise the crowd to the fullest.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Game_of_Street.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Game of Street</b></p></center>
+                </div>
+			</li>
+        </ul>
     
+    </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-theater-masks' style='font-size:48px;'></i>&nbsp;Dramatics</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
@@ -696,27 +383,28 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Street Soul</center>
 				<a href="#" style="background: url('img/events/drama1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/drama1.jpg" alt="Street Soul">
+						<img class="img-content" src="img/events/drama1.jpg" alt="Street Soul">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Street Soul</h3>
                             <h5><i>What is drama but life with dull bits cut out</i></h5>
 							<p class="info">Acting is a very special process.It is behaving truthfully under imaginary circumstances.</p>
 							<p class="info">In this group drama event, we bring everyone an opportunity to amaze others with the ingenuity hidden inside themselves, whilst fighting the intense dramatic battles taking place in the Streets.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Street_Soul.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/street-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/street-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/street-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/street-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/street-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/street-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/street-5.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/street-5.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -730,12 +418,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Sole Soul</center>
 				<a href="#" style="background: url('img/events/monoact1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/monoact1.jpg" alt="Sole Soul">
+						<img class="img-content" src="img/events/monoact1.jpg" alt="Sole Soul">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Sole Soul</h3>
                             <h5><i>Stand alone and let your character speak for you</i></h5>
 							<p class="info">What makes people fascinating is conflict, it's drama, it's the human condition. Nobody wants to watch perfection, and neither do we. Here in this monoact event we give you a chance to showcase your talent to imbibe into yourself anyone and pick up a brand new personality in front of the world through this Monoact event.
                             </p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Sole_Soul.pdf')">Problem Statement</button></center>
 						</div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
@@ -746,6 +435,29 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Open Mic</center>
+				<a href="#" style="background: url('img/events/open-2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/open-2.jpg" alt="Open Mic">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Open Mic</h3>
+                            <h5><i>Open up and speak that bleeding heart out! </i></h5>
+							<p class="info">The event gives the participants a chance to entertain the audience in whichever way they choose using a mic as the only prop.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Open_Mic.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Open Mic</b></p></center>
+                </div>
+			</li>
+        </ul>
+    
+    </section>
     <p class="subhead" data-aos="fade-up"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Arts and Design(Fashion)</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
@@ -753,26 +465,27 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Canvas</center>
 				<a href="#" style="background: url('img/events/canvas1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/canvas1.jpg" alt="Canvas">
+						<img class="img-content" src="img/events/canvas1.jpg" alt="Canvas">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Canvas</h3>
                             <h5><i>Who knew those arbitrary fragments of your imagination made perfect sense in entirety</i></h5>
 							<p class="info">How does it appeal to you when that jigsaw puzzle you spend hours on, jiggering those arbitrary pieces, finally culminates into something that makes sense? Sheer pleasure, right! Here at Exodia, we offer you something even more enticing, not just affixing your chunks, but actually making them out of scratch. For the drawing and painting competition, Canvas, all you need to have is a group of inventive minds, each individual making an erratic piece of drawing and the whole group joining these together into a reasoned piece of art.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Canvas.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/canvas-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/canvas-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/canvas-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/canvas-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/canvas-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -786,12 +499,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Face Painting</center>
 				<a href="#" style="background: url('img/events/face-3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/face-2.jpg" alt="Face Painting">
+						<img class="img-content" src="img/events/face-2.jpg" alt="Face Painting">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Face Painting</h3>
-                            <h5><i>Who knew those arbitrary fragments of your imagination made perfect sense in entirety</i></h5>
+                            <h5><i>Let's see how many personas one person depicts!</i></h5>
 							<p class="info">Painting is the best way to express your imagination. And when this painting is created on face an art piece is built. This art event presents a platform to bring out and convey emotions through face painting.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Face_Painting.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -801,32 +515,51 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <section class="tiles-a ele-1" data-aos="fade-up">
+    <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
+            <li class="list-item">
+                <center class="event_name">Live Sketching</center>
+				<a href="#" style="background: url('img/events/live-2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/live-2.jpg" alt="Live Sketching">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Live Sketching</h3>
+                            <h5><i>Sketch it as alive as you can be </i></h5>
+							<p class="info">An event where an individual sketches a structure or an entity through a certain given angle. This event gives an artist a chance to present the angle by which he/she visualise the world. </p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Live_Sketching.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Live Sketching</b></p></center>
+                </div>
+			</li>
             <li class="list-item">
                 <center class="event_name">Couture</center>
 				<a href="#" style="background: url('img/events/fashion1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/fashion1.jpg" alt="Couture">
+						<img class="img-content" src="img/events/fashion1.jpg" alt="Couture">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Couture</h3>
                             <h5><i>Himalayan beauties amidst the beauty of Himalayas</i></h5>
 							<p class="info">Couture is a major attraction for the Mandi Crowd and the college youth alike. Couture serves as a major platform for exhibition of latest fashion designs and for the youth models in the state.  The sizzling ramp walks and the breath-taking designs amidst an aura of enthusiasm make this ramp-walk show event an enthralling experience for the participants and the audiences alike.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Couture.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/couture-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/couture-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/couture-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/couture-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/couture-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/couture-4.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/couture-5.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/couture-5.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -846,32 +579,33 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Landscape Photography</center>
 				<a href="#" style="background: url('img/events/landscape1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/landscape1.jpg" alt="Landscape Photoscape">
+						<img class="img-content" src="img/events/landscape1.jpg" alt="Landscape Photoscape">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Landscape Photography</h3>
                             <h5><i>Taking an image, freezing a moment, reveals how rich reality truly is.</i></h5>
 							<p class="info">Photography has been preserving moments since forever. Here we encourage participants to capture and send in the most breathtaking and scenic still life moments and help us make the world admire your skills. </p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Landscape_Photography.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-4.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-5.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-5.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/land-10.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/land-10.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -885,12 +619,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Portrait Photography</center>
 				<a href="#" style="background: url('img/events/potrait1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/potrait1.jpg" alt="Portrait Photography">
+						<img class="img-content" src="img/events/potrait1.jpg" alt="Portrait Photography">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Portrait Photography</h3>
                             <h5><i>A portrait is not made in the camera but on either side of it.</i></h5>
 							<p class="info">Like nature, people too captivate and enthrail us. So captivate one such person or more in your camera and let everyone admire their sharp personality and your effective lighting, backdrops, and poses.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Potrait_Photography.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -910,12 +645,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Dementia</center>
 				<a href="#" style="background: url('img/events/dementia1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/dementia1.jpg" alt="Dementia">
+						<img class="img-content" src="img/events/dementia1.jpg" alt="Dementia">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Dementia</h3>
                             <h5><i> Lose Yourself in Code</i></h5>
 							<p class="info">Gearing up for an awesome competitive coding contest? Buckle up for Dementia. Compete with hundreds of students from various colleges throughout India and abroad in a three hour long competitive programming contest hosted by IIT Mandi. Amazing prizes at stake!</p>
-						</div>
+                            <center><i>Info to be provided a week before before the event</i></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -925,20 +661,43 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
 			
 			<li class="list-item">
-                <center class="event_name">Internet of Things</center>
-				<a href="#" style="background: url('img/events/iot2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+                <center class="event_name">Conundrum</center>
+				<a href="#" style="background: url('img/events/conundrum-2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/iot2.jpg" alt="nternet Of Things">
+						<img class="img-content" src="img/events/conundrum-2.jpg" alt="Conundrum">
 						<div class="text-copy wrapper">
-							<h3 class="innerhead">Internet Of Things</h3>
-                            <h5><i>Words ain’t enough!</i></h5>
-							<p class="info">In the modern set-up of smart phones, TVs and cities, facilitation to the human life is felicitated by the minimization of human intervention amongst their mutual cooperation! Here we bring you the opportunity to take part in this 36 hour hackathon and build anything from a web app to a solid prototype which you believe can be a step ahead in technology. So Come over, build a prototype that works for you - without you!</p>
-						</div>
+							<h3 class="innerhead">Conundrum</h3>
+                            <h5><i>dummy dummy dummy dummy dummy dummy dummy dummy</i></h5>
+							<p class="info">This event provides an opportunity to prove programing supremacy amidst brilliant coders by bringing in the best solution to the given problem statement in the limited amount of time using machine learning and deep learning. It is basically a programing dilemma to bring out the best accepted elucidation.</p>
+                            <center><i>Info to be provided a week before before the event</i></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
                 <div class="hover-title" style="margin-top: -30px;">
-                    <center><p style="font-size: 4vh"><b>Internet of Things</b></p></center>
+                    <center><p style="font-size: 4vh"><b>Conundrum</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+    <ul>
+    <li class="list-item">
+                <center class="event_name">D3bug</center>
+				<a href="#" style="background: url('img/events/debug-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/debug-1.jpg" alt="D3bug">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">D3bug</h3>
+                            <h5><i>dummy dummy dummy dummy dummy dummy dummy dummy</i></h5>
+							<p class="info">dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Debug.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>D3bug</b></p></center>
                 </div>
 			</li>
         </ul>
@@ -947,63 +706,64 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
-                <center class="event_name">Hurdle Rush</center>
-				<a href="#" style="background: url('img/events/car1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+                <center class="event_name">Robowar</center>
+				<a href="#" style="background: url('img/events/war-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/car1.jpg" alt="Hurdle Rush">
+						<img class="img-content" src="img/events/war-1.jpg" alt="Robowar">
 						<div class="text-copy wrapper">
-							<h3 class="innerhead">Hurdle Rush</h3>
-                            <h5><i>Let the damn adrenaline rush!</i></h5>
-							<p class="info">Crowd, Cheering, Intensity, Competition, Hurdles and Rush. The race track is all set for one of the most popular and competitive robotic competition around- Hurdle Rush! Is your car fast enough? Let’s find out!</p>
-						</div>
+							<h3 class="innerhead">Robowar</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info">Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Robowar.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/hurdle-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/war-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/hurdle-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/war-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/hurdle-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/war-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/hurdle-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/war-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
                 <div class="hover-title" style="margin-top: -30px;">
-                    <center><p style="font-size: 4vh"><b>Hurdle Rush</b></p></center>
+                    <center><p style="font-size: 4vh"><b>Robowar</b></p></center>
                 </div>
 			</li>
-			
             <li class="list-item">
                 <center class="event_name">Line Follower</center>
 				<a href="#" style="background: url('img/events/line.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden" >
-						<img src="img/events/line.jpg" alt="Workshops">
+						<img class="img-content" src="img/events/line.jpg" alt="Workshops">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Line Follower</h3>
                             <h5><i>Set your path!</i></h5>
 							<p class="info">Line Follower is an event in which the participants make small bots which move on the given path autonomously with the help of sensors.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Line_Follower.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/line-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/line-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/line-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/line-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/line-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/line-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/line-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/line-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -1023,27 +783,28 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Junkyard Wars</center>
 				<a href="#" style="background: url('img/events/junk1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/junk1.jpg" alt="Junkyard Wars">
+						<img class="img-content" src="img/events/junk1.jpg" alt="Junkyard Wars">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Junkyard Wars</h3>
                             <h5><i>Because Nothing is ever ‘Just Junk’</i></h5>
 							<p class="info">An innovation-based competition which helps the participants enhance their thinking and creativity skills by provoking them to solve issues caused by trash.</p>
 							<p class="info">The event is an on-the-spot design and fabrication challenge where the teams will be tested on their ability to crack the problem at hand and come up with solutions from the available heap of garbage junk.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Junkyard_Wars.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/junk-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/junk-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/junk-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/junk-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/junk-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/junk-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/junk-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/junk-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -1057,12 +818,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Nitro Car Racing</center>
 				<a href="#" style="background: url('img/events/nitro3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/nitro3.jpg" alt="Nitro Car Racing">
+						<img class="img-content" src="img/events/nitro3.jpg" alt="Nitro Car Racing">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Nitro Car Racing</h3>
                             <h5><i>If this doesn’t ‘fuel’ the racer in you, what will?</i></h5>
 							<p class="info">An intense, dramatic rivalry about to unravel as opposing teams rush their monster cars at each other to smash, fight and only to smash again till one emerges victorious. Build your own nitro-monster with all we provide and ready, set , boom!</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Nitro_Car.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -1079,26 +841,27 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Viaduct</center>
 				<a href="#" style="background: url('img/events/bridge3.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/bridge3.jpg" alt="Viaduct">
+						<img class="img-content" src="img/events/bridge3.jpg" alt="Viaduct">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Viaduct</h3>
                             <h5><i>Praise the bridge that carries you over!</i></h5>
 						    <p class="info">Viaduct is an on the spot event wherein the participants have to build a bridge using the materials provided. Beginning right from the elementary level, grab the opportunity to make a structure that would stand firm on the strong base of your structural knowledge.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Viaduct.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/viaduct-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/viaduct-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-3.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/viaduct-3.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/viaduct-4.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/viaduct-4.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -1113,19 +876,43 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">CADx</center>
 				<a href="#" style="background: url('img/events/cad-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/cad-1.jpg" alt="CADx">
+						<img class="img-content" src="img/events/cad-1.jpg" alt="CADx">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">CADx</h3>
                             <h5><i>Praise the bridge that carries you over!</i></h5>
 						    <p class="info">This event offers a chance to the creative, artistic and innovative designers to participate and build the 
                             best of their designs in given time using AutoCAD. The topic would be presented on spot and the prolific producers of design
                              present their part to prove their proficiency and brilliance. </p>
-						</div>
+                             <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/CADx.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
                 <div class="hover-title" style="margin-top: -30px;">
                     <center><p style="font-size: 4vh"><b>CADx</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <p class="subhead" data-aos="fade-up"><i class='fa fa-space-shuttle' style='font-size:48px;'></i>&nbsp;STAC</p>
+    <section class="tiles-a ele-2" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Quizzar</center>
+				<a href="#" style="background: url('img/events/quizzar-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/quizzar-1.jpg" alt="Quizzar">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Quizzar</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy</i></h5>
+							<p class="info"> A fresh idea for ones interested in the galaxies, constellations, stars, the heavenly bodies and all those astronomical theories get an amazing chance to participate in an offline astronomy quiz at an all new platform set by Astronomy club of IIT Mandi.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Landscape_Photography.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Quizzar</b></p></center>
                 </div>
 			</li>
         </ul>
@@ -1137,12 +924,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Reap Revenue</center>
 				<a href="#" style="background: url('img/events/auction1-min.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/auction1-min.jpg" alt="Reap Revenue">
+						<img class="img-content" src="img/events/auction1-min.jpg" alt="Reap Revenue">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Reap Revenue</h3>
                             <h5><i>The ultimate auction platform</i></h5>
 							<p class="info">An event where participants can participate in real-like auction drills that teach the ways of conduction and stakes involved while learning the art to generate massive revenues. Organized by E-cell IIT Mandi.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Reap_Revenue.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -1162,26 +950,27 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Doodle Art</center>
 				<a href="#" style="background: url('img/events/doodle2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/doodle2.jpg" alt="Doodle">
+						<img class="img-content" src="img/events/doodle2.jpg" alt="Doodle">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Doodle Art</h3>
                             <h5><i>Something you just neet to chill</i></h5>
 							<p class="info">In this wonderful arts event we challenge you to draw or paint an amazing piece of art. Whether you create a drawing filled with concrete representational meaning or be full of random, abstract lines, the only condition is that it must be an art capable of garnering all the attention around!</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Online_Doodle.pdf')">Problem Statement</button></center>
+                        </div>
                         <h4>Previous Year Glimpses</h4>
                         <br>
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-1.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/doodle-1.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-2.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/doodle-2.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-5.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/doodle-5.jpg">
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img src="img/gallery/doodle-6.jpg">
+                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <img data-lazysrc="img/gallery/doodle-6.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -1196,12 +985,13 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 <center class="event_name">Pace A Patch</center>
 				<a href="#" style="background: url('img/events/ps1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/ps1.jpg" alt="Pace a Patch">
+						<img class="img-content" src="img/events/ps1.jpg" alt="Pace a Patch">
 						<div class="text-copy wrapper">
 							<h3 class="innerhead">Pace a Patch</h3>
                             <h5><i>Show us the most amazing graphics you’re capable of!</i></h5>
 							<p class="info">An online poster designing competition in which we provide our participants with a theme and let them carry their imaginations as far as they can to put together the most amazing piece of design.</p>
-						</div>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Pace_A_Patch.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
@@ -1215,40 +1005,41 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
-                <center class="event_name">Charismatic Clicks</center>
+                <center class="event_name">I-Magination</center>
 				<a href="#" style="background: url('img/events/pic1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/pic1.jpg" alt="Charismatic Clicks">
+						<img class="img-content" src="img/events/pic1.jpg" alt="I-Magination">
 						<div class="text-copy wrapper">
-							<h3 class="innerhead">Charismatic Clicks</h3>
+							<h3 class="innerhead">I-Magination</h3>
                             <h5><i>Let your pictures speak volumes</i></h5>
 							<p class="info">In this online events, participants are encouraged to send us their beautiful stories crafted through sheer pictures and we’ll let the netizens be the judge and choose the best story to ultimately go down in Himalayan history!</p>
-						</div>
+                            <center><i>Refer to Fb Page</i></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
                 <div class="hover-title" style="margin-top: -30px;">
-                    <center><p style="font-size: 4vh"><b>Charismatic Clicks</b></p></center>
+                    <center><p style="font-size: 4vh"><b>I-Magination</b></p></center>
                 </div>
 			</li>
-            
             <li class="list-item">
-                <center class="event_name">Vintage Vibes</center>
-				<a href="#" style="background: url('img/events/movie2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+                <center class="event_name">Zenith horizon</center>
+				<a href="#" style="background: url('img/events/tele-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
 					<div class="details visually-hidden">
-						<img src="img/events/movie2.jpg" alt="Vintage Vibes">
+						<img class="img-content" src="img/events/tele-1.jpg" alt="Zenith horizon">
 						<div class="text-copy wrapper">
-							<h3 class="innerhead">Vintage Vibes</h3>
-                            <h5><i>A lifelike video</i></h5>
-							<p class="info">Send in your best short film videos and let the online junta be your movie critique! Whatever genre you deem suitable for your taste – romance, comedy, action, mystery, sci-fi or anything else, make sure it has that element of surprise that gets hold of your audience suddenly, swiftly.</p>
-						</div>
+							<h3 class="innerhead">Zenith horizon</h3>
+                            <h5><i>dummy dummy dummy dummy dummy dummy dummy dummy dummy dummy </i></h5>
+							<p class="info">An online astrophotography event which deals with capturing sky, the galaxies, the showers and many more. Participants submit their photographs along with equipment details and descriptions and win a chance to compete against the resolutions of others.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Zenith-Horizon.pdf')">Problem Statement</button></center>
+                        </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
 					</div>
 				</a>
                 <div class="hover-title" style="margin-top: -30px;">
-                    <center><p style="font-size: 4vh"><b>Vintage Vibes</b></p></center>
+                    <center><p style="font-size: 4vh"><b>Zenith horizon</b></p></center>
                 </div>
-			</li>
+			</li>       
         </ul>
     </section>
     </div>
@@ -1262,7 +1053,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 </main>
 
 <aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
-	<a href="#" class="close"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Return to main content</span></a>
+	<a href="#" class="close" style="z-index: 2"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Return to main content</span></a>
 	<div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Image details">
 		
 	</div>
@@ -1357,6 +1148,15 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 				killAside();
 			}
 		});  
+</script>
+<script>
+    $('.inner-bx').on('mouseover', function(){
+        $(this).find('.gal-img').children('img[data-lazysrc]').each( function(){
+            //* set the img src from data-src
+            $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
+            }
+        );
+    })
 </script>
 <script>
         AOS.init();

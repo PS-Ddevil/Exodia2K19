@@ -89,3 +89,37 @@
             </div>
         </div>
     </section>
+
+function ReLoadImages(){
+        $('img[data-lazysrc]').each( function(){
+            //* set the img src from data-src
+            $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
+            }
+        );
+    }
+
+    document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === "interactive") {  //or at "complete" if you want it to execute in the most last state of window.
+            ReLoadImages();
+        }
+    });
+
+<center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Viaduct_Nirmaan.pdf')">Problem Statement</button></center>
+
+<li class="list-item">
+                <center class="event_name">Vintage Vibes</center>
+				<a href="#" style="background: url('img/events/movie2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/movie2.jpg" alt="Vintage Vibes">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Vintage Vibes</h3>
+                            <h5><i>A lifelike video</i></h5>
+							<p class="info">Send in your best short film videos and let the online junta be your movie critique! Whatever genre you deem suitable for your taste – romance, comedy, action, mystery, sci-fi or anything else, make sure it has that element of surprise that gets hold of your audience suddenly, swiftly.</p>
+						</div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Vintage Vibes</b></p></center>
+                </div>
+			</li>
