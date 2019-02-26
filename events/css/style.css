@@ -70,7 +70,7 @@ height: 0;
 position: fixed;
 top: 0;
 right: 0;
-width: 60%;
+width: 30%;
 height: 100%;
 background: #eee;
 overflow-y: scroll;
@@ -84,24 +84,41 @@ vertical-align: top;
 #aside .wrapper {
 padding: 1em;
 }
-#aside .close {
-width: 25px;
-display: block;
-position: absolute;
-top: 1em;
-right: 1em;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 50%;
-}
-
 .show-detail {
 overflow: hidden;
 }
-.show-detail #main {
--webkit-transform: translateX(-60%);
-        transform: translateX(-60%);
+@media only screen and (min-width: 768px){
+    #aside {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        background: #eee;
+        overflow-y: scroll;
+        z-index: 10;
+        }
+    .show-detail #main {
+    -webkit-transform: translateX(-45%);
+            transform: translateX(-45%);
+    }
 }
-
+@media only screen and (max-width: 768px){
+    #aside {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background: #eee;
+        overflow-y: scroll;
+        z-index: 10;
+        }
+    .show-detail #main {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+    }
+}
 .visually-hidden {
 position: absolute;
 overflow: hidden;
@@ -119,6 +136,8 @@ border: 0;
 }
     .name-id{
         font-size: 25px;
+        color: blue;
+        cursor: pointer;
     }
 }
 @media only screen and (max-width: 768px){
@@ -132,6 +151,8 @@ border: 0;
     }
     .name-id{
         font-size: 18px;
+        color: blue;
+        cursor: pointer;
     }
     .hover-title{
         display: none;
@@ -141,7 +162,7 @@ border: 0;
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #470B01;
@@ -213,7 +234,7 @@ h4{
 
 .subhead{
     font-size: 30px;
-    margin-left: 5%;
+    padding-left: 5%;
     font-family: 'ZCOOL XiaoWei', serif;
     width: 500px;
 }
@@ -226,7 +247,6 @@ h4{
     width: 100px;
     height: 100px;
     border: none;
-    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
     border-radius: 0%;
     cursor: pointer;
     /* -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -234,16 +254,15 @@ h4{
     -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
     animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
     font-size:96px; 
-    /* color:red; */
-    transition: color 1s;
+    color: blue;
 }
 .title-icon:hover{
     -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
-.title-icon:hover{
+/* .title-icon:hover{
     color: aqua;
-}
-.name-id:hover{ 
+} */
+.name-id:hover, .name-id:hover .title-icon{ 
     transition: 1s;  
     color: aqua;
 }
@@ -369,3 +388,73 @@ h4{
     color: white;
 }    
 
+/* Sidebar2 For Events */
+.sidenav2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav2 a {
+    padding-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav2 a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav2 .closebtn2 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav2 {padding-top: 15px;}
+    .sidenav2 a {font-size: 18px;}
+  }
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/preload/1.gif) center no-repeat #fff;
+}

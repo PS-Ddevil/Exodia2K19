@@ -26,6 +26,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div class="se-pre-con"></div>
 <main role="main" id="main" style="overflow-x: hidden">
     <!--mobi-sidebar-->
         <div id="mobo-side" class="sidenav">
@@ -40,7 +41,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         </div>
         <div>
             <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%; position: fixed; color: black; z-index:2" onclick="openNav()">&#9776;</span>
-            </div>
+        </div>
         <script>
         function openNav() {
           document.getElementById("mobo-side").style.width = "100%";
@@ -53,7 +54,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     <!--mobi-sidebar-->
     <section>
         <div class="container-fluid" style="min-height: 850px; width: 100%; background-attachment: fixed; background-image: url(img/brewster-wallpaper-2704-67602sam-64_1000.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;">
-            <center><a href="index.html"><img id="top-exologo" src="img/exologo.png"></a></center>
+            <center><a href="https://www.exodia.in"><img id="top-exologo" src="img/exologo.png"></a></center>
             <center>
                 <h5 style="margin-top: 5%;color: black; text-transform:uppercase; font-family: 'Bungee Inline', cursive;">
                     <b>"Taste the relish to be found in competition -- in having put forth<br> the best within you."</b>
@@ -151,16 +152,17 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
             </center>
         </div> 
     </section>
-    <div class="container">
+    <button  onclick="topFunction()" id="myBtn" ><i class="fas fa-angle-up" style="font-size: 20px"></i></button>
+    <div class="container" id="all-cat">
         <div class="row" style="height: 200px; padding-top: 100px; padding-bottom: 200px;">
             <div class="col-4" data-aos="fade-up">
-                <a href="#cult" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span class="name-id">Cultural Events</span></center></a>
+                <span class="name-id" onclick="openCult()"><center><i class='fas fa-chess-king title-icon'></i><br><span>Cultural Events</span></center></span>
             </div>
             <div class="col-4" data-aos="fade-up">
-                <a href="#tech" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span class="name-id">Technical Events</span></center></a>
+                <span class="name-id" onclick="openTech()"><center><i class='fas fa-chess-king title-icon'></i><br><span>Technical Events</span></center></span>
             </div>
             <div class="col-4" data-aos="fade-up">
-                <a href="#online" style="text-decoration: none"><center><i class='fas fa-chess-king title-icon'></i><br><span class="name-id">Online Events</span></center></a>
+                <span class="name-id" onclick="openOnline()"><center><i class='fas fa-chess-king title-icon'></i><br><span>Online Events</span></center></span>
             </div>
 <!--
             <div class="col-3">
@@ -169,8 +171,36 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 -->
         </div>
     </div>
+    <div id="sideCult" class="sidenav2">
+        <a href="javascript:void(0)" class="closebtn2" onclick="closeCult()">&times;</a>
+        <a href="#cult" style="color:white;padding-left: 8px;font-size:25px">Cultural Events</a>
+        <a href="#music">Music</a>
+        <a href="#dance">Dance</a>
+        <a href="#drama">Drama</a>
+        <a href="#art1">Art and Design</a>
+        <a href="#photo1">Photography</a>
+        <a href="#write">Writing Club</a>
+        <a href="#debate">Debating Club</a>
+        <a href="#quiz">Quizzing Club</a>
+    </div>
+    <div id="sideTech" class="sidenav2">
+        <a href="javascript:void(0)" class="closebtn2" onclick="closeTech()">&times;</a>
+        <a href="#tech" style="color:white;padding-left: 8px;font-size:25px">Technical Events</a>
+        <a href="#prog">Programmer's Paradigms</a>
+        <a href="#robo">Reckless Robotronics</a>
+        <a href="#mech">Mechanical Maniacs</a>
+        <a href="#civil">Builder Bliss</a>
+        <a href="#stac">STAC</a>
+        <a href="#ecell">Enimatic Entepreneurs</a>
+    </div>
+    <div id="sideOnline" class="sidenav2">
+        <a href="javascript:void(0)" class="closebtn2" onclick="closeOnline()">&times;</a>
+        <a href="#online" style="color:white;padding-left: 8px;font-size:25px">Online Events</a>
+        <a href="#art2">Art and Design</a>
+        <a href="#photo2">Photograhy</a>
+    </div>
     <div style="padding-bottom: 100px;background-color: #D2A832" class="container"><center><p class="main-head" id="cult" data-aos="fade-up">Cultural</p></center>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-drum' style='font-size:48px;'></i>&nbsp;Music</p>
+    <p class="subhead" data-aos="fade-up" id="music"><i class='fas fa-drum' style='font-size:48px;'></i>&nbsp;Music</p>
 	<section class="tiles-a ele-2" data-aos="fade-up">
 		<ul>
             <li class="list-item">
@@ -270,7 +300,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         </ul>
     
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-mask' style='font-size:48px;'></i>&nbsp;Dance</p>
+    <p class="subhead" data-aos="fade-up" id="dance"><i class='fas fa-mask' style='font-size:48px;'></i>&nbsp;Dance</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
         <li class="list-item">
@@ -376,7 +406,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         </ul>
     
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-theater-masks' style='font-size:48px;'></i>&nbsp;Dramatics</p>
+    <p class="subhead" data-aos="fade-up" id="drama"><i class='fas fa-theater-masks' style='font-size:48px;'></i>&nbsp;Dramatics</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -458,7 +488,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         </ul>
     
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Arts and Design(Fashion)</p>
+    <p class="subhead" data-aos="fade-up" id="art1"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Arts and Design(Fashion)</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -572,7 +602,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
         </ul>
     
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-camera-retro' style='font-size:48px;'></i>&nbsp;Photography</p>
+    <p class="subhead" data-aos="fade-up" id="photo1"><i class='fas fa-camera-retro' style='font-size:48px;'></i>&nbsp;Photography</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -593,16 +623,10 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                                 <img data-lazysrc="img/gallery/land-1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/land-2.jpg">
-                            </div>
-                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 <img data-lazysrc="img/gallery/land-3.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/land-4.jpg">
-                            </div>
-                            <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/land-5.jpg">
+                                <img data-lazysrc="img/gallery/land-5_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 <img data-lazysrc="img/gallery/land-10.jpg">
@@ -635,10 +659,138 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
+
+    <p class="subhead" data-aos="fade-up" id="write"><i class='fas fa-pen-fancy' style='font-size:48px;'></i>&nbsp;Writing Club</p>
+    <section class="tiles-a ele-2" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Creative Writing</center>
+				<a href="#" style="background: url('img/events/write-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/write-1.jpg" alt="Creative Writing">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Creative Writing</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info">This event gives a chance to the budding writers to pen down their thoughts in a form of script or story on a particular theme and present a masterpiece of their literary skills.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Creative_Writing.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Creative Writing</b></p></center>
+                </div>
+			</li>
+            <li class="list-item">
+                <center class="event_name">Spell Bee</center>
+				<a href="#" style="background: url('img/events/bee-2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/bee-2.jpg" alt="Spell Bee">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Spell Bee</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info">Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Spell_Bee.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Spell Bee</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <p class="subhead" data-aos="fade-up" id="debate"><i class='fas fa-users' style='font-size:48px;'></i>&nbsp;Debating Club</p>
+    <section class="tiles-a ele-2" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Biggest Liar</center>
+				<a href="#" style="background: url('img/events/liar-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/liar-1.jpg" alt="Biggest Liar">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Biggest Liar</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info"></p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Biggest_Liar.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Biggest Liar</b></p></center>
+                </div>
+			</li>
+            <li class="list-item">
+                <center class="event_name">Survivor</center>
+				<a href="#" style="background: url('img/events/survive-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/survive-1.jpg" alt="Survivor">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Survivor</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info">Participants are given a well-known personality to play and are put in a situation where they need to justify and defend themselves to survive in the group. The person with the most logical justification survives against the rest.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Survivor.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Survivor</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <section class="tiles-a ele-1" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Youth Parliament</center>
+				<a href="#" style="background: url('img/events/congress-2.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/congress-2.jpg" alt="Quiz">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Youth Parliament</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info"> It is an a mock parliament session to test out your oratory skills on an on-the-spot topic. This session gives you a chance to compete with different orators with different intellectuals and different viewpoints And ultimately win against them to stand as the best speaker of the parliament.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Youth_Parliament.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Youth Parliament</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
+    <p class="subhead" data-aos="fade-up" id="quiz"><i class='fa fa-question-circle' style='font-size:48px;'></i>&nbsp;Quizzing Club</p>
+    <section class="tiles-a ele-2" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">Quiz</center>
+				<a href="#" style="background: url('img/events/quiz-1.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="img/events/quiz-1.jpg" alt="Quiz">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">Quiz</h3>
+                            <h5><i>Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy </i></h5>
+							<p class="info">This event gives a chance to the budding writers to pen down their thoughts in a form of script or story on a particular theme and present a masterpiece of their literary skills.</p>
+                            <center><button class="prob_download" type="submit" onclick="window.open('../prob_stat/Creative_Writing.pdf')">Problem Statement</button></center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>Quiz</b></p></center>
+                </div>
+			</li>
+        </ul>
+    </section>
     </div>
     
     <div style="padding-bottom: 100px;background-color: #D2A832" class="container"><center><p class="main-head" data-aos="fade-up" id="tech">Technical</p></center>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-laptop' style='font-size:48px;'></i>&nbsp;Programmer's Paradigms</p>
+    <p class="subhead" data-aos="fade-up" id="prog"><i class='fas fa-laptop' style='font-size:48px;'></i>&nbsp;Programmer's Paradigms</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -702,7 +854,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-microchip' style='font-size:48px;'></i>&nbsp;Reckless Robotronics</p>
+    <p class="subhead" data-aos="fade-up" id="robo"><i class='fas fa-microchip' style='font-size:48px;'></i>&nbsp;Reckless Robotronics</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -720,16 +872,16 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                         <br>
                         <div class="row">
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/war-1.jpg">
+                                <img data-lazysrc="img/gallery/war-1_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/war-2.jpg">
+                                <img data-lazysrc="img/gallery/war-2_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/war-3.jpg">
+                                <img data-lazysrc="img/gallery/war-3_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/war-4.jpg">
+                                <img data-lazysrc="img/gallery/war-4_1.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -776,7 +928,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-cogs' style='font-size:48px;'></i>&nbsp;Mechanical Maniacs</p>
+    <p class="subhead" data-aos="fade-up" id="mech"><i class='fas fa-cogs' style='font-size:48px;'></i>&nbsp;Mechanical Maniacs</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -834,7 +986,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-drafting-compass' style='font-size:48px;'></i>&nbsp;Builder Bliss</p>
+    <p class="subhead" data-aos="fade-up" id="civil"><i class='fas fa-drafting-compass' style='font-size:48px;'></i>&nbsp;Builder Bliss</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -894,7 +1046,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fa fa-space-shuttle' style='font-size:48px;'></i>&nbsp;STAC</p>
+    <p class="subhead" data-aos="fade-up" id="stac"><i class='fa fa-space-shuttle' style='font-size:48px;'></i>&nbsp;STAC</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -917,7 +1069,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-gavel' style='font-size:48px;'></i>&nbsp;Enimatic Entepreneurs</p>
+    <p class="subhead" data-aos="fade-up" id="ecell"><i class='fas fa-gavel' style='font-size:48px;'></i>&nbsp;Enimatic Entepreneurs</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -943,7 +1095,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     </div>
     
     <div style="padding-bottom: 100px; background-color: #D2A832" class="container"><center><p class="main-head" data-aos="fade-up" id="online">Online Events</p></center>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-paint-brush' style='font-size:48px;'></i>&nbsp;Art and Design</p>
+    <p class="subhead" data-aos="fade-up" id="art2"><i class='fas fa-palette' style='font-size:48px;'></i>&nbsp;Art and Design</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -961,16 +1113,16 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                         <br>
                         <div class="row">
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/doodle-1.jpg">
+                                <img data-lazysrc="img/gallery/doodle-1_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/doodle-2.jpg">
+                                <img data-lazysrc="img/gallery/doodle-2_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/doodle-5.jpg">
+                                <img data-lazysrc="img/gallery/doodle-5_1.jpg">
                             </div>
                             <div class="gal-img col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                <img data-lazysrc="img/gallery/doodle-6.jpg">
+                                <img data-lazysrc="img/gallery/doodle-6_1.jpg">
                             </div>
                         </div>
                         <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
@@ -1001,7 +1153,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 			</li>
         </ul>
     </section>
-    <p class="subhead" data-aos="fade-up"><i class='fas fa-camera' style='font-size:48px;'></i>&nbsp;Photograhy and Videography</p>
+    <p class="subhead" data-aos="fade-up" id="photo2"><i class='fas fa-camera' style='font-size:48px;'></i>&nbsp;Photograhy and Videography</p>
     <section class="tiles-a ele-2" data-aos="fade-up">
         <ul>
             <li class="list-item">
@@ -1046,7 +1198,15 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 	<section>
         <div style="background-color: aliceblue">
             <center>
-                <a href = "index.html"><img src="img/exologo.png" style="width: 100px;"></a>
+                <a href = "http://www.exodia.in"><img src="img/exologo.png" style="width: 100px;"></a>
+            </center>
+            <center>
+                <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
             </center>
         </div>
     </section>
@@ -1055,111 +1215,19 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
 	<a href="#" class="close" style="z-index: 2"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Return to main content</span></a>
 	<div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Image details">
-		
 	</div>
 </aside>
-    
-<script>
-
-</script>
-<script>
-  var	$parent = $("#main"),
-		$aside = $("#aside"),
-		$asideTarget = $aside.find(".aside--details"),
-		$asideClose = $aside.find(".close"),
-		$tilesParent = $(".tiles-a"),
-		$tiles = $tilesParent.find("a"),
-		slideClass = "show-detail";
-
-		// tile click
-		$tiles.on("click", function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			if(!$("html").hasClass(slideClass)){
-				$tiles.removeClass("active");
-				$(this).addClass("active");
-				$(this).attr("aria-expanded","true");
-				loadTileData($(this));
-			}else{
-				killAside();
-				$(this).attr("aria-expanded","false");
-			}
-		});
-
-		// kill aside
-		$asideClose.on("click", function(e){
-			e.preventDefault();
-			killAside();
-		});
-
-		// load data to aside
-		function loadTileData(target){
-			var $this = $(target),
-					itemHtml = $this.find(".details").html();
-					$asideTarget.html(itemHtml);
-					showAside();
-		}
-
-		// show/hide aside
-		function showAside(){
-			if(!$("html").hasClass(slideClass)){
-				$("html").toggleClass(slideClass);
-				$aside.attr("aria-hidden","false");
-				focusCloseButton();
-			}
-		}
-		
-		// handle esc key
-		window.addEventListener("keyup", function(e){
-
-			// grab key pressed
-			var code = (e.keyCode ? e.keyCode : e.which);
-			
-			// escape
-			if(code === 27){
-				killAside();
-			}
-
-		}, false);
-
-		// kill aside
-		function killAside(){
-			if($("html").hasClass(slideClass)){
-				$("html").removeClass(slideClass);
-				sendFocusBack();
-				$aside.attr("aria-hidden","true");
-				$tiles.attr("aria-expanded","false");
-			}
-		}
-
-		// send focus to close button
-		function focusCloseButton(){
-			$asideClose.focus();	
-		}
-
-		// send focus back to item that triggered event
-		function sendFocusBack(){
-			$(".active").focus();
-		}
-
-		// handle body click to close off-canvas
-		$parent.on("click",function(e){
-			if($("html").hasClass(slideClass)){
-				killAside();
-			}
-		});  
-</script>
-<script>
-    $('.inner-bx').on('mouseover', function(){
-        $(this).find('.gal-img').children('img[data-lazysrc]').each( function(){
-            //* set the img src from data-src
-            $( this ).attr( 'src', $( this ).attr( 'data-lazysrc' ) );
-            }
-        );
-    })
-</script>
+</body>
+<script type="text/javascript" src="js/action.js"></script>
 <script>
         AOS.init();
 </script>
-</body>
+<script>
+	//paste this code under head tag or in a seperate js file.
+    // Wait for window load
+    $(window).on("load", function (e) {
+        // Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+    })
+</script>
 </html>
