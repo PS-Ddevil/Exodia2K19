@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Workshops</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<style type="text/css">
+		.blackbar{
+		position: absolute;
+		top:0;
+		left:0;
+		background:#07323D;
+		height:200px;
+		width:100%;
+		margin: 0;
+		z-index: 1000;
+		display: inline-block;
+	}
+	a{
+		text-decoration:none;
+		color:white;
+	}
+	.eventdisplay{
+		position: absolute;
+		top:20px;
+		width:660px;
+		padding-bottom: 100px;
+		display:none;
+		background: #023F4A;
+		z-index: 2000;
+		border-radius: 10px;
+		font:16px helvetica;
+		text-align: center;
+		color:white;
+	}
+	.eventposter{
+		position: absolute;
+		top:200px;
+		left: 0;
+		width:100%;
+		height:700px;
+		margin: 0;
+	}
+	#techposter{
+		background:url("techcover.jpg") no-repeat;
+		background-size: auto 100%;
+		background-attachment: fixed;
+	}
+	.eventrhomb{
+		height:800px;
+		width:800px;
+		position: absolute;
+		top:150px;
+		z-index: 1001;
+		border:2px solid #07323D;
+		/*border-radius: 900px;*/
+	}
+	.eventrhombbck{
+		background:black;
+		position: absolute;
+		top:0;
+		left: 0;
+		height: 100%;
+		width:100%;
+		opacity:.2;
+	}
+	.section-window{
+		position: absolute;
+		top:0;
+		height:100%;
+		width: 50%;
+		left:25%;
+		overflow:hidden;
+	}
+	.eventrhom-section{
+		position: absolute;
+		top:0;
+		height:100%;
+		width:200%;
+	}
+	.eventcat{
+		display: inline-block;
+		margin-top: 80px;
+		border-left:3px solid #098C67;
+		opacity: 1;
+		width: 330px;
+		padding-left: 10px;
+		padding-top: 0;
+		cursor: pointer;
+	}
+	.eventname{
+		color: white;
+		width:100%;
+		font-size:30px;
+		font-family: 'Comfortaa', cursive;
+		font-weight: bolder;
+	}
+	.lighter{
+		font-weight: lighter;
+	}
+	.event-detail{
+		margin-left: 70px;
+		margin-right: 70px;
+		line-height: 10px;
+		font:16px helvetica;
+		color:white;
+	}
+	.psdetail{
+		border:1px solid white;
+		cursor: pointer;
+		margin-top: 40px;
+		padding:5px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+	.cross3{
+		position: absolute;
+		height:20px;
+		width:20px;
+		top:10px;
+		left:10px;
+		cursor: pointer;
+		background: url("cross2.png");
+		background-size: 100% 100%;
+	}
+	.cordi{
+		font:16px helvetica;
+		color:white;
+		border-bottom:1px solid white;
+	}
+	.eventnext,.eventprev{
+		position: absolute;
+		right:50px;
+		top:350px;
+		height:50px;
+		width:50px;
+		border:2px solid #098C67;
+		border-radius:50px;
+		background: url("next.png");
+		background-size: 100% 100%;
+		cursor: pointer;
+		box-sizing: border-box;
+	}
+	.eventprev{
+		left:50px;
+		background: url("prev.png");
+		background-size: 100% 100%;
+	}
+	.event-section1,.event-section2,.event-section3{
+		position: absolute;
+		bottom:60px;
+		left:350px;
+		height:10px;
+		width:10px;
+		background: red;
+		border:3px solid white;
+		border-radius: 20px;
+		opacity: .6;
+		z-index: 2000;
+		cursor: pointer;
+	}
+	.event-section2{
+		left:390px;
+		background: black;
+		cursor: pointer;
+	}
+	.event-section3{
+		left:430px;
+		background: black;
+		cursor: pointer;
+	}
+	.menu{
+		position: fixed;
+		top:60px;
+		right:20px;
+		height:50px;
+		width: 50px;
+		z-index: 3000;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		background: url("menu2.png") no-repeat;
+		background-size: 100% 100%;
+		border:1px solid #098C67;
+		border-radius: 25px;
+	}
+	.menu .menuitems{
+		position: absolute;
+		font-size: 18px;
+		padding-top:50px;
+		text-align: right;
+		right: 0;
+		display: block;
+		font-family: 'Comfortaa', cursive;
+		color:white;
+	}
+	.menuitemtext{
+		margin-top: 25px;
+		display: none;
+		color: white;
+		transition: .4s;
+	}
+	.menuitemtext:hover{
+		border-right: 1px solid white;
+		padding-right: 8px;
+		padding-left: 4px;
+	}
+	.blackbar img{
+		margin:45px 50px 60px 58px;
+		height:60px;
+		width:auto;
+		float: left;
+	}
+	.foot{
+		margin:110px 0 0 0;
+	  padding-top: 1rem;
+	  height: 40px;
+	  color: white;
+	  font-family: 'Raleway', sans-serif;
+	  text-align: center;
+	  background-color: rgb(8,8,8);
+
+	}
+	.foot a{
+		color: #05A796;
+	}
+	</style>
+<body>
+<div class="menu" id="menu1" >
+	<div class="menuitems">
+		<div class="menuitemtext" id="mevent"><a href="../events">Events</a></div>
+	<div class="menuitemtext" id="mwork">Workshop</div>
+		<div class="menuitemtext" id="mreg"><a href="../">Register</a></div>
+		<div class="menuitemtext" id="mteam"><a href="../team">Team</a></div>
+		<div class="menuitemtext" id="msap"><a href="../sap">SAP</a></div>
+		<div class="menuitemtext" id="mgall"><a href="../gallery">Gallery</a></div>
+		<div class="menuitemtext" id="mspon"><a href="../sponsors">Sponsors</a></div>
+	</div>
+</div>
+<div class=" eventspage blackbar">
+	<a href="../"><img src="logo-white.png"></a>
+	<div id="logondname" style="margin:55px 50px 50px 52px;border-bottom:1px solid white;height:55px;width:auto;color:white;font-size:45px;font-family: 'Source Code Pro', monospace;">
+		Workshops
+	</div>
+</div>
+	<div class="eventspage eventposter" id="techposter">
+		<div class="eventdisplay" id="clou" style="right:50px;">
+			<div class="cross3"></div><p class="eventname lighter">CLOUD COMPUTING</p><p class="event-detail"><br><u>HIGHLIGHTS</u></br><br>1. Receive an unparalleled education from experts from Industry.</br>
+			<br>2. Interactive Technical session, Query session, Live demos on Cloud Computing and Cloud Security and
+			PowerPoint presentations.</br>
+			<br>3. Learn and interact with Certified Professionals.</br>
+			<br>4. Improve student’s job prospects and get an edge over their counterparts in IT Field is the backbone of any other
+				industry</br></p><br>
+			<p><u><b>Fee:</b></u>  Rs. 1000</p>
+			<br><a class="psdetail" href="cloud.pdf" target="_blank">More Details</a>
+		</div>
+		<div class="eventdisplay" id="ethi" style="right:50px;">
+			<div class="cross3"></div><p class="eventname lighter">ETHICAL HACKING & INFORMATION SECURITY</p><p class="event-detail">
+				<br><u>HIGHLIGHTS</u></br><br>1. Receive an unparalleled education from experts from Industry.</br>
+			<br>2. Interactive Technical session, Query session, Live demos on Ethical Hacking and Cyber Forensics and
+PowerPoint presentations</br>
+			<br>3. Learn and interact with Certified Professionals.</br>
+			<br>4. Improve student’s job prospects and get an edge over their counterparts in IT Field is the backbone of any other
+				industry</br>
+			</p><br>
+			<p><u><b>Fee:</b></u>  Rs. 1000</p>
+			<br><a class="psdetail" href="hacking.pdf" target="_blank">More Details</a>
+		</div>
+		<div class="eventdisplay" id="anim" style="right:50px;">
+			<div class="cross3"></div><p class="eventname lighter">3D ANIMATION</p><p class="event-detail">
+				<br><u>WORKSHOP MODULE</u></br>
+				<br>1. What is Animation?
+				<br>2. Types of Animation
+				<br>3. Computer Animation Production Process
+				<br>4. Pre - Production
+				<br>5. Production
+				<br>6. Post – Production
+			</p><br>
+			</p>
+			<p><u><b>Fee:</b></u> Rs. 1000</p>
+			<p><u><b>Organiser:</u></b> Technoglobe Hub</p>
+			<p><u><b>Date:</u></b> 8-9 April</p>
+			<p><u><b>Contact:</u></b> 7291046306 Priya</p>
+			<p></p><a class="psdetail" href="3d.pdf" target="_blank">More Details</a>
+		</div>
+		<div class="eventdisplay" id="race" style="right:50px;">
+					<div class="cross3"></div><p class="eventname lighter">Race Engineering</p><p class="event-detail">
+					<br><u>HIGHLIGHTS</u></br><br>This program is actually another step for those students who are having basic knowledge of an
+Automobile and looking forward for next level training over Race machines. This program makes you
+aware of several secret facts & figures regarding engineering of Race vehicle which are very rare and
+generally students can't manage to learn. Resource person will be having technically wide knowledge
+with Race Circuit experience to make this program really successful for participants
+			</p><br>
+			<p><u><b>Fee:</b></u>  Rs. 1000</p>
+			<p><u><b>Organiser:</u></b> Entrench</p><a class="psdetail" href="http://entrench.in/wp-content/uploads/2017/Race%20engineering.pdf" target="_blank">More Details</a><br><br><br><a class="psdetail" href="http://entrench.in/workshop-registration-iit-mandi/" target="_blank">Register @ Entrench</a>
+		</div>
+	</div>
+	<div class="eventspage blackbar" style="height: 150px; top:900px;">
+		<div class="foot"><b>  Exodia '17.</b> Web Coordinators: <a href="http://www.facebook.com/abhigyankhaund">Abhigyan Khaund</a> | <a href="http://www.facebook.com/abhikbhasker">Abhishek Bhaskar</a> | <a href="http://www.facebook.com/lakshayArora940">Lakshay Arora</a></div>
+	</div>
+	<div class="eventspage eventrhomb" style="left:50px;">
+		<div class="eventrhombbck"></div>
+		<div class="eventnext" id="technext" onclick="event_next(this)"></div>
+		<div class="eventprev" id="techprev"  onclick="event_prev(this)"></div>
+		<div class="event-section1" id="tech-section1"  onclick="event_prev(this)" ></div>
+		<div class="event-section2" id="tech-section2"  onclick="event_next(this)"></div>
+			<div class="section-window">
+				<div class="eventrhom-section" id="techsec">
+					<div class="eventcat"  pos="1" id="clou_cat">
+						<span class="eventname">Cloud Computing</span>
+						<p class="cordi">Schedule:   7-8 April 2017</p>
+					</div>
+					<div class="eventcat" pos="2" style="margin-left:55px;" id="anim_anim"  >
+					<span class="eventname">3D Animation</span>
+						<p class="cordi">Schedule: 8-9 April 2017</p>
+					</div>
+					<div class="eventcat" pos="1" id="race_eng" >
+					<span class="eventname">Race Engineering</span>
+						<p class="cordi">Schedule: 8-9 April 2017</p>
+					</div>
+					<div class="eventcat" pos="1"  style="margin-left: 55px">
+					</div>
+					<div class="eventcat" pos="1" id="ethi_cat">
+						<span class="eventname">Ethical Hacking & Information Security</span>
+						<p class="cordi">Schedule: 7-8 April 2017</p>
+					</div><!--
+					<div class="eventcat" pos="1" id="tech_line" style="margin-left: 55px">
+						<span class="eventname">workshop</span>
+						<p class="cordi">Schedule:</p>
+					</div>-->
+					
+					
+					
+				</div>
+			</div>
+	</div>
+	
+</div>
+	
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#menu1").mouseenter(function(){
+		$(".menuitems").css({display:"inline-block"});
+		$("#mevent").fadeIn(50,function(){$("#mwork").fadeIn(50,function(){$("#mreg").fadeIn(50,function(){$("#mteam").fadeIn(50,function(){$("#msap").fadeIn(50,function(){$("#mgall").fadeIn(50,function(){$("#mspon").fadeIn(50);});});});});});});
+	})
+
+	$("#menu1").mouseleave(function(){
+		$("#mspon").fadeOut(50,function(){$("#mgall").fadeOut(50,function(){$("#msap").fadeOut(50,function(){$("#mteam").fadeOut(50,function(){$("#mreg").fadeOut(50,function(){$("#mwork").fadeOut(50,function(){$("#mevent").fadeOut(50);});});});});});});
+	})
+
+	function event_next(sel){
+			var currentid=sel.id.slice(0,4);
+			$("#"+currentid+"sec").animate({
+				left:"-350px"
+			})
+			$("#"+currentid+"-section1").css({background:"black"});
+			$("#"+currentid+"-section2").css({background:"red"})
+		}
+		function event_prev(sel){
+			var currentid=sel.id.slice(0,4);
+			$("#"+currentid+"sec").animate({
+				left:"0px"
+			})
+			$("#"+currentid+"-section1").css({background:"red"});
+			$("#"+currentid+"-section2").css({background:"black"})
+		}
+		
+	$(".eventcat").click(function(){
+	var catId=$(this).attr("id");
+	var pos=$(this).attr("pos");
+	var cattype=catId.slice(0,4);
+	$(".eventdisplay").fadeOut(200);
+	if(pos==1)
+		$("#"+cattype).fadeIn(200);
+	else
+		$("#"+cattype).fadeIn(200);
+	})
+	$(".cross3").click(function(){
+		$(".eventdisplay").fadeOut(200);
+	})
+	$(document).on("keyup",function(e){
+		if(e.which==27)
+			$(".eventdisplay").fadeOut(200);
+	});
+</script>
+</body>
+</html>

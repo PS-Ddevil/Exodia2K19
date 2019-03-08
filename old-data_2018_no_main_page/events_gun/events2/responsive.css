@@ -1,0 +1,79 @@
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than desktop */
+@media screen and (min-height: 100px) and (max-height: 1000px) {
+  .full-page { overflow: auto; } /* Or change the height or whatever */ 
+}
+
+@media (max-width: 1800px) {
+
+}
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 1050px) {
+.content {
+	height: 80%;
+}
+}
+/* Larger than tablet */
+@media (max-width: 850px) {
+.graph-row .columns {
+    width: 100%;
+    margin-left: 0%;
+}
+.graph-image {
+	width: 80%;
+	margin: auto 0;
+
+}
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (max-width: 700px) {
+.as-seen-in li {
+	width: 28%;
+}
+
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (max-width: 650px) {
+.as-seen-in li {
+	width: 28%;
+}
+.hero-button-override {
+    margin-left: 0px;
+    }
+#timer {
+	margin-left: 20px;
+}
+.button-subscribe {
+ margin-top: 10px;
+}
+
+}
+@media (max-width: 550px) {
+.as-seen-in ul {
+	margin-top: 10px;
+}
+.as-seen-in li {
+	width: 38%;
+}
+/* Larger than mobile */
+@media (max-width: 460px) {
+.reblim.popup, .reblim .popup {
+	min-width: 300px;
+}
+.as-seen-in li {
+	width: 40%;
+}
+
+}
+
+

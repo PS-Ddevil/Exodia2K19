@@ -18,14 +18,42 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <meta name="author" content="Exodia Web Development Team, IIT Mandi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Monoton|B612|Akronim" rel="stylesheet"> 
 <link type="text/css" rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 15px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    
-    
+<body onload="on()">
+        <div id="overlay" class="hide" onclick="off()">
+            <div id="text" class="hide"><a href="https://register.exodia.in"><img src="./register.png" alt="Register" height="75px" width="150px"></a></div>
+        </div>
 <!--nav(start)-->
     <!-- sidebar(start)-->
         <div id="sidebar" class="hide">
@@ -59,9 +87,42 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
     <!--mobi-sidebar-->
     <!-- sidebar(end)-->
 <!--nav(end)-->
+    
+<!--main(start)-->
+    <div id="top_scr"></div>
+    <div id="top" class="hide" style="height: 100%">
+        <!-- <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://register.exodia.in/">Register Now</a></b></span></center></div> -->
+		<div style="height: 15%"></div>
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
+        </div>
+        <div style="height: 5%"></div>
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%">
+                <center><h2 id="tag1" style="color: white" class="glow">Remake the Rapture</h2>
+                <hr width="25%" id = "line1" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.8">
+                <hr width="20%" id = "line2" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.6">
+                <hr width="15%" id="line3" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px;opacity: 0.4">
+                <h5 id="tag2">#RocktheRetro</h5></center>
+            </div>
+        </div>
+        <div>
+            <center>
+            <!--<span id="days"></span>
+            <span id = "none">:</span>
+            <span id="hours">0</span>
+            <span id = "none">:</span>
+            <span id="min">0</span>
+            <span id = "none">:</span>
+			<span id="sec">0</span> -->
+			<span id="none">12-14 April</span>
+            </center>
+        </div>
+        <center><img id="car" src="img/back.png"></center>
+    </div>
+<!--main(end)-->
 
 <!--model-->
-
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
 
@@ -154,39 +215,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                 </script>
 
 <!--model-->
-    
-<!--main(start)-->
-    <div id="top_scr"></div>
-    <div id="top" class="hide" style="height: 100%">
-        <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://register.exodia.in/">Register Now</a></b></span></center></div>
-        <div class="row">
-            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
-        </div>
-        <div style="height: 5%"></div>
-        <div class="row">
-            <div class="col-10" style="margin-left: 10%">
-                <center><h2 id="tag1" style="color: white" class="glow">Remake the Rapture</h2>
-                <hr width="25%" id = "line1" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.8">
-                <hr width="20%" id = "line2" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.6">
-                <hr width="15%" id="line3" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px;opacity: 0.4">
-                <h5 id="tag2">#RocktheRetro</h5></center>
-            </div>
-        </div>
-        <div>
-            <center>
-            <span id="days" style="font-size: 50px;"></span>
-            <span id = "none" style="font-size: 50px;">:</span>
-            <span id="hours" style="font-size: 50px;">0</span>
-            <span id = "none" style="font-size: 50px;">:</span>
-            <span id="min" style="font-size: 50px;">0</span>
-            <span id = "none" style="font-size: 50px;">:</span>
-            <span id="sec" style="font-size: 50px;">0</span>
-            </center>
-        </div>
-        <center><img id="car" src="img/back.png"></center>
-    </div>
-<!--main(end)-->
-    
+
 <!--loading(start)-->
 
 <div id="film-container">
@@ -223,6 +252,7 @@ setTimeout(function(){
     document.getElementById('sidebar').classList.remove('hide');
     document.getElementById('open').classList.remove('hide');
     document.getElementById('film-container').classList.add('hide');
+    document.getElementById('text').classList.remove('hide');
 }, 2500);
 
 (function() {
@@ -336,6 +366,15 @@ jitter();
         document.getElementById("sec").innerHTML = "00";
       }
     }, 1000);
+    </script>
+    <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
     </script>
 <!--script foy clock-->
     

@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^member\.exodia\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.member\.exodia\.in$
+RewriteRule ^/?$ "http\:\/\/exodia\.in\/member" [R=301,L]
+

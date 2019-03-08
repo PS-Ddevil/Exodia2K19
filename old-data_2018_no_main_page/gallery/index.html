@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Exodia'18 - IIT Mandi | Gallery</title>
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta name="theme-color" content="#0b0f16">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#0b0f16">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0b0f16">
+	
+	<link rel="stylesheet" type="text/css" href="gallery_files/css">
+	<link rel="stylesheet" type="text/css" href="gallery_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">  
+	<link rel="stylesheet" type="text/css" href="../css/style2.css"> 
+
+	<!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="gallery_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="gallery_files/material-kit5438.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="gallery_files/pag.css">
+    <link rel="stylesheet" href="./trans_files/kontext.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine&effect=decaying" rel="stylesheet">
+
+	<link rel="stylesheet" href="./trans_files/demo.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+	<link rel="shortcut icon" href="../exo_black.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../exo_black.png" type="image/png">
+	<link rel="shortcut icon" href="../exo_black.png" type="image/png">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">	
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900&effect=vintage|scuffed-steel" rel="stylesheet">
+	<!-- <script src="https://code.jquery.com/jquery.min.js"></script> -->
+  	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  	<script src="../js/bootstrap.min.js"></script>
+
+    <style>
+    	.title {
+    		font-family: "Roboto Slab", "Times New Roman", serif;
+    	}
+
+		.responsive {
+		    width: 100%;
+		    height: auto;
+		}
+
+
+		#trigger1 {
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+
+		.cursive{
+			font-family: 'Tangerine', cursive;
+			font-size: 4vw;
+		}
+		.title{
+			font-size: 4vw;
+		}
+		@media only screen and (max-width: 700px){
+			.cursive{
+				font-size: 10vw;
+				line-height: 10vw;
+			}
+			.title{
+				font-size: 10vw;
+			}
+		}
+		#trigger1:hover {opacity: 0.7;}
+
+		/* The Modal (background) */
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 6000; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); 
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+
+		/* Modal Content (image) */
+		.modal-content {
+		    margin: auto;
+		    display: block;
+		    width: 80%;
+		    max-width: 700px;
+		}
+
+		.icontainer {
+		    position: relative; 
+		    max-width: 800px; /* Maximum width */
+		    margin: 0 auto; /* Center it */
+		}
+
+		.icontainer .icontent {
+		    position: absolute; /* Position the background text */
+		    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+		    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+		    color: #f1f1f1; /* Grey text */
+		    width: 100%; /* Full width */
+		    padding: 20px; /* Some padding */
+		}
+
+		/* Add Animation */
+		.modal-content{    
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)} 
+		    to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		    from {transform:scale(0)} 
+		    to {transform:scale(1)}
+		}
+
+		/* The Close Button */
+		.close {
+		    position: absolute;
+		    top: 15px;
+		    right: 35px;
+		    color: #f1f1f1;
+		    font-size: 40px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px){
+		    .modal-content {
+		        width: 100%;
+		    }
+		}
+
+	    #prelaoder div{
+	        display: block;
+	      position: relative;
+	      left: 0;
+	      bottom: 0;
+	      right: 0;
+	      top: 30%;
+	      /*
+	      margin: -85px 0 0 -85px;
+	      border: 3px solid #F00;
+	*/  }
+	    
+	    #prelaoder div img{
+	        /*width: 170px;*/
+	      height: 250px;
+	      width: auto;
+	    }
+
+	    .downlogo{
+		        padding:2em 0;
+		        width:10%;
+		    }
+		.page-header .row{
+			/*margin-top: : 100%;*/
+			margin-top: -4vw;
+		}
+	    @media screen and (max-width: 768px){
+	       	.downlogo{
+			        padding:2em 0;
+			        width:20%;
+			    }
+			.page-header .row{
+				margin-top: -10vw;
+				}
+			.a{
+				/*text-align: right;*/
+			}
+			.b{
+				/*right: -5%;*/
+				/*text-align: center;*/
+
+			}
+			.c{
+				/*text-align: center;*/
+
+				/*left: 12%;*/
+			}
+			.d{
+				/*text-align: center;*/
+
+				/*right: -2%;*/
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="unselect" id="prelaoder" style="text-align: center;">
+        <div>
+        	<img src="../4_n.gif">
+        </div>
+    </div> 
+
+    <div class="button_container" id="toggle">
+	  <span class="top"></span>
+	  <span class="middle"></span>
+	  <span class="bottom"></span>
+	</div>
+    <div class="overlay2 unselect" id="overlay2">
+	<div class="row">
+		<div class="col-md-6 options">
+			<div id="particles-js" style="z-index: -1"></div> 
+
+			<nav style="font-family: 'Iceland', cursive; font-weight: bolder; line-height: 1em;">
+			    <ul>
+			      <li><a href="../">Home</a></li>
+			      <li><a href="../about/">About</a></li>
+			      <li><a href="../sap/">SAP</a></li>
+			      <li><a href="#">Gallery</a></li>
+			      <li><a href="#">Events</a></li>
+				  <li><a href="../sponsors/">Sponsors</a></li>	
+			      <li><a href="../team/">Team</a></li>
+
+			    </ul>
+			</nav>	
+		</div>
+		<div class="col-md-6"> 
+			<div class="temp"></div>
+		</div>
+	</div>
+</div>
+
+	<div class="page-header header-filter header-small" data-parallax="" style="background-image: url(gallery_files/pronite/0.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h3 class="cursive">Elevate your spirits, rejuvenate your souls - this spring, <br><h2 class="title font-effect-decaying">Come, Witness the Moksha</h2></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main main-raised">
+		<div class="container">
+
+			<div class="section">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-4 text-center">
+						<ul class=" row nav nav-pills nav-pills-primary">
+						  
+						  <li class="col-md-2 a"><a href="#tec" >Technical</a></li>
+						  <li class="col-md-2 b"><a href="#cul" >Cultural</a></li>
+						  <li class="col-md-2 c"><a href="#adv" >Adventure</a></li>
+						  <li class="col-md-2 d"><a href="#pro" >Pronite</a></li>
+						  
+						</ul>
+						<br>
+
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12" id = "tec">
+						<div class="card card-raised card-background" style="background-image: url(gallery_files/technical/7.jpg)">
+							<div class="card-content">
+								<h6 class="category text-info">&nbsp;</h6>
+								<h3 class="card-title">Technical Events</h3>
+								<p class="card-description">
+									Compete with the best from the country in events encompassing every possible tech aspect - from adrenaline pumping Robo-wars to cracking problems by deriving the best out of waste in Junkyard Wars, from intense competitive programming battles in Dementia to brain-storming ideas and their practical applications in Viaduct. 
+Participate in mind-boggling and bending workshops on trendy topics like IoT, Robotronics and other currently 'hot' fields -  hosted by the leaders of their respective fields .
+Come witness <b>#TheBestEver</b> manifest itself at the scenic valley of Kamand, this April!
+								</p>
+								<h6 class="category text-info">&nbsp;</h6>
+								<a id="trigger1" class="btn btn-warning btn-round" style = " min-width: 200px">
+									 View
+								</a>
+								
+								<h6 class="category text-info">&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6" id  = "cul">
+						<div class="card card-raised card-background" style="background-image: url(gallery_files/cultural/0.jpg)">
+							<div class="card-content">
+								<h6 class="category text-info">&nbsp;</h6>
+								<a >
+									<h3 class="card-title">Cultural</h3>
+								</a>
+								<p class="card-description">
+									 A great variety of cultural events  fuelling the competitior in you - alongside pro-nights with mind-blasting performances by all-known youth icons to groove your mundane, excitement-starved spirits at the end of the day, Exodia's got something for every geek misfit out there!
+Broadcast yourself in passion filled Groove Fanatics or in temperature soaring fashion face-offs in Couture - or let your expression soar in decibels in the engaging BandSlam battles amidst other intense battles in this three-day long cultural extravaganza!
+								</p>
+								<h6 class="category text-info">&nbsp;</h6>
+								<a id="trigger2" class="btn btn-danger btn-round" style = " min-width: 200px"> 
+									 View
+								</a>
+								<h6 class="category text-info">&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6"  id = "adv">
+						<div class="card card-raised card-background" style="background-image: url(gallery_files/informals/2.jpg)">
+							<div class="card-content">
+								<h6 class="category text-info">&nbsp;</h6>
+								<h3 class="card-title">Adventure Sports</h3>
+								<p class="card-description">
+									IIT Mandi, set in the serene valley of Kamand in the mountainous Himachal does not only offer the quiet solitude the wandering mind seeks, <br> but also hosts some of the most amazing adventure activities within the college campus to heed to the passionate soul.
+
+Test your limits whilst climbing that wall to the top, and your skills while rappeling your way down <br> - Or - <br>just let the mind, body, heart and soul feel free and boundless amidst that smooth flow in Fox-Flying!
+
+
+								</p>
+								<h6 class="category text-info">&nbsp;</h6>
+								
+
+								<a id="trigger3" class="btn btn-primary btn-round" style = " min-width: 200px">
+									 View
+								</a>
+								<h6 class="category text-info">&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12" id = "pro">
+						<div class="card card-raised card-background" style="background-image: url(gallery_files/pronite/5.jpg)">
+							<div class="card-content">
+								<h6 class="category text-info">&nbsp;</h6>
+								<h3 class="card-title">Pronites</h3>
+								<p class="card-description">
+									At the end of the day, having fought those demanding battles and amazed the audiences with their moves, bots or words; when the youthful spirits wander in a lustful search for fun-filled ecstasy, for a levelling passion and for feeling that pinch of an elated self - Exodia funnels 'em all into a thrilling experience hosted by the ultimate best in the nation.
+From freaking EDMs to resonating DJs and mystical Bands, pro-nites at Exodia guarantee having you high..... on life 
+								</p>
+								<h6 class="category text-info">&nbsp;</h6>
+								<a id="trigger4" class="btn btn-warning btn-round" style = " min-width: 200px">
+									 View
+								</a>
+								
+								<h6 class="category text-info">&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+
+
+			
+		</div>
+
+		
+		
+    </div>
+
+
+
+		<!-- The Modal -->
+		<div id="modal1" class="modal">
+		  <span class="close" id = "c1">&times;</span>
+		  
+		 	<article id = "kontext1" class="kontext modal-content" style="max-width: 800px; max-height: 600px">
+				<div class="layer  show" >
+					<img class="responsive" src="gallery_files/technical/1.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				
+				<div class="layer  " >
+					<img class="responsive" src="gallery_files/technical/3.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/technical/4.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div><div class="layer " >
+					<img class="responsive" src="gallery_files/technical/5.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/technical/6.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/technical/7.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+
+				<button id = "b1l" class="paginate left"><i></i><i></i></button>
+				<button id = "b1r" class="paginate right"><i></i><i></i></button>
+
+				<ul class="bullets" id = "bls1"></ul>
+			</article>
+
+			
+		</div>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('modal1');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById('trigger1');
+			//var modalImg = document.getElementById("img01");
+			//var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementById("c1");
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+		</script>
+
+
+
+
+		<!-- The Modal -->
+		<div id="modal2" class="modal">
+		  <span class="close" id = "c2">&times;</span>
+		  
+		 	<article id = "kontext2" class="kontext modal-content" style="max-width: 800px; max-height: 600px">
+				<div class="layer show" >
+					<img class="responsive" src="gallery_files/cultural/1.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/cultural/2.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/cultural/5.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/cultural/6.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/cultural/7.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+
+				<button id = "b2l" class="paginate left"><i></i><i></i></button>
+				<button id = "b2r" class="paginate right"><i></i><i></i></button>
+
+				<ul class="bullets" id = "bls2"></ul>
+				
+			</article>
+
+			
+		</div>
+
+	
+		<script>
+			// Get the modal
+			var modal2 = document.getElementById('modal2');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img2 = document.getElementById('trigger2');
+			//var modalImg = document.getElementById("img01");
+			//var captionText = document.getElementById("caption");
+			img2.onclick = function(){
+			    modal2.style.display = "block";
+			    
+			}
+
+			// Get the <span> element that closes the modal
+			var span2 = document.getElementById('c2');
+
+			// When the user clicks on <span> (x), close the modal
+			span2.onclick = function() { 
+			    modal2.style.display = "none";
+			}
+		</script>
+
+
+
+
+		<!-- The Modal -->
+		<div id="modal3" class="modal">
+		  <span class="close" id = "c3">&times;</span>
+		  
+		 	<article id = "kontext3" class="kontext modal-content" style="max-width: 800px; max-height: 600px">
+				<div class="layer show" >
+					<img class="responsive" src="gallery_files/informals/1.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/informals/2.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/informals/3.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<!--<div class="layer " >
+					<img class="responsive" src="gallery_files/informals/4.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div> - -->
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/informals/5.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+
+				<button id = "b3l" class="paginate left"><i></i><i></i></button>
+				<button id = "b3r" class="paginate right"><i></i><i></i></button>
+			</article>
+
+			<ul class="bullets" id = "bls3"></ul>
+		</div>
+
+		<script>
+			// Get the modal
+			var modal3 = document.getElementById('modal3');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img3 = document.getElementById('trigger3');
+			//var modalImg = document.getElementById("img01");
+			//var captionText = document.getElementById("caption");
+			img3.onclick = function(){
+			    modal3.style.display = "block";
+			   
+			}
+
+			// Get the <span> element that closes the modal
+			var span3 = document.getElementById('c3');
+
+			// When the user clicks on <span> (x), close the modal
+			span3.onclick = function() { 
+			    modal3.style.display = "none";
+			}
+		</script>
+
+
+		<div id="modal4" class="modal">
+		  <span class="close" id = "c4">&times;</span>
+		  
+		 	<article id = "kontext4" class="kontext modal-content" style="max-width: 800px; max-height: 600px">
+				<div class="layer  show" >
+					<img class="responsive" src="gallery_files/pronite/1.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				
+				<div class="layer  " >
+					<img class="responsive" src="gallery_files/pronite/3.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/pronite/4.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div><div class="layer " >
+					<img class="responsive" src="gallery_files/pronite/2.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/pronite/6.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+				<div class="layer " >
+					<img class="responsive" src="gallery_files/pronite/7.jpg" style="max-width: 800px; max-height: 600px">
+					  
+				</div>
+
+				<button id = "b4l" class="paginate left"><i></i><i></i></button>
+				<button id = "b4r" class="paginate right"><i></i><i></i></button>
+
+				<ul class="bullets" id = "bls4"></ul>
+			</article>
+
+			
+		</div>
+
+		<script>
+			// Get the modal
+			var modal4 = document.getElementById('modal4');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img4 = document.getElementById('trigger4');
+			//var modalImg = document.getElementById("img01");
+			//var captionText = document.getElementById("caption");
+			img4.onclick = function(){
+			    modal4.style.display = "block";
+			   
+			}
+
+			// Get the <span> element that closes the modal
+			var span4 = document.getElementById('c4');
+
+			// When the user clicks on <span> (x), close the modal
+			span4.onclick = function() { 
+			    modal4.style.display = "none";
+			}
+		</script>
+
+
+
+
+		
+
+		
+
+
+		<!-- <script async="" src="./trans_files/ga.js.download"></script> -->
+		<!-- <script id="twitter-wjs" src="./trans_files/widgets.js.download"></script> -->
+		<script src="trans_files/kontext.js.download"></script>
+		<script>
+		$(window).on('load', function() {
+			  setTimeout(function() {
+					$('.spinner').fadeOut("slow");
+						
+					  setTimeout(function() {
+					  $('#prelaoder').fadeOut("slow"); 
+					  
+						  setTimeout(function() {
+							  $('.content-block').addClass('animated fadeInDown').fadeIn("slow");
+						       $('#footer').fadeIn('slow');
+							   
+						  }, 900);
+						  console.log('yo babtbbb');
+					  }, 700);	  
+				  }, 700);	
+			});
+			// Create a new instance of kontext
+			var k = kontext( document.querySelector( '#kontext1' ) );
+
+			var k2 = kontext( document.querySelector( '#kontext2' ) );
+
+			var k3 = kontext( document.querySelector( '#kontext3' ) );
+
+			var k4 = kontext( document.querySelector( '#kontext4' ) );
+
+
+
+			var bulletsContainer1= document.getElementById( 'bls1' );
+
+			// Create one bullet per layer
+			for( var i = 0, len = k.getTotal(); i < len; i++ ) {
+				var bullet = document.createElement( 'li' );
+				bullet.className = i === 0 ? 'active' : '';
+				bullet.setAttribute( 'index', i );
+				bullet.onclick = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bulletsContainer1.appendChild( bullet );
+			}
+
+			// Update the bullets when the layer changes
+			k3.changed.add( function( layer, index ) {
+				var bullets = document.body.querySelectorAll( '#bls1 li' );
+				for( var i = 0, len = bullets.length; i < len; i++ ) {
+					bullets[i].className = i === index ? 'active' : '';
+				}
+			} );
+			
+
+			document.addEventListener( 'keyup', function( event ) {
+				if( event.keyCode === 37 ) k.prev();
+				if( event.keyCode === 39 ) k.next();
+			}, false );
+
+			document.getElementById("b1l").addEventListener("click", function(){
+		    	k.prev();
+			});
+			document.getElementById("b1r").addEventListener("click", function(){
+		    	k.next();
+			});
+
+			var touchX = 0;
+			var touchConsumed = false;
+
+			document.addEventListener( 'touchstart', function( event ) {
+				touchConsumed = false;
+				lastX = event.touches[0].clientX;
+			}, false );
+
+			document.addEventListener( 'touchmove', function( event ) {
+				event.preventDefault();
+
+				if( !touchConsumed ) {
+					if( event.touches[0].clientX > lastX + 10 ) {
+						k.prev();
+						touchConsumed = true;
+					}
+					else if( event.touches[0].clientX < lastX - 10 ) {
+						k.next();
+						touchConsumed = true;
+					}
+				}
+			}, false );
+
+
+			var bulletsContainer2= document.getElementById( 'bls2' );
+
+			// Create one bullet per layer
+			for( var i = 0, len = k.getTotal(); i < len; i++ ) {
+				var bullet = document.createElement( 'li' );
+				bullet.className = i === 0 ? 'active' : '';
+				bullet.setAttribute( 'index', i );
+				bullet.onclick = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bulletsContainer2.appendChild( bullet );
+			}
+
+			// Update the bullets when the layer changes
+			k3.changed.add( function( layer, index ) {
+				var bullets = document.body.querySelectorAll( '#bls2 li' );
+				for( var i = 0, len = bullets.length; i < len; i++ ) {
+					bullets[i].className = i === index ? 'active' : '';
+				}
+			} );
+
+			
+
+			document.addEventListener( 'keyup', function( event ) {
+				if( event.keyCode === 37 ) k2.prev();
+				if( event.keyCode === 39 ) k2.next();
+			}, false );
+
+			document.getElementById("b2l").addEventListener("click", function(){
+		    	k2.prev();
+			});
+			document.getElementById("b2r").addEventListener("click", function(){
+		    	k2.next();
+			});
+
+			var touchX = 0;
+			var touchConsumed = false;
+
+			document.addEventListener( 'touchstart', function( event ) {
+				touchConsumed = false;
+				lastX = event.touches[0].clientX;
+			}, false );
+
+			document.addEventListener( 'touchmove', function( event ) {
+				event.preventDefault();
+
+				if( !touchConsumed ) {
+					if( event.touches[0].clientX > lastX + 10 ) {
+						k2.prev();
+						touchConsumed = true;
+					}
+					else if( event.touches[0].clientX < lastX - 10 ) {
+						k2.next();
+						touchConsumed = true;
+					}
+				}
+			}, false );
+
+
+			var bulletsContainer3 = document.getElementById( 'bls3' );
+
+			// Create one bullet per layer
+			for( var i = 0, len = k.getTotal(); i < len; i++ ) {
+				var bullet = document.createElement( 'li' );
+				bullet.className = i === 0 ? 'active' : '';
+				bullet.setAttribute( 'index', i );
+				bullet.onclick = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bulletsContainer3.appendChild( bullet );
+			}
+
+			// Update the bullets when the layer changes
+			k3.changed.add( function( layer, index ) {
+				var bullets = document.body.querySelectorAll( '#bls3 li' );
+				for( var i = 0, len = bullets.length; i < len; i++ ) {
+					bullets[i].className = i === index ? 'active' : '';
+				}
+			} );
+
+			document.addEventListener( 'keyup', function( event ) {
+				if( event.keyCode === 37 ) k3.prev();
+				if( event.keyCode === 39 ) k3.next();
+			}, false );
+
+			document.getElementById("b3l").addEventListener("click", function(){
+		    	k3.prev();
+			});
+			document.getElementById("b3r").addEventListener("click", function(){
+		    	k3.next();
+			});
+
+			var touchX = 0;
+			var touchConsumed = false;
+
+			document.addEventListener( 'touchstart', function( event ) {
+				touchConsumed = false;
+				lastX = event.touches[0].clientX;
+			}, false );
+
+			document.addEventListener( 'touchmove', function( event ) {
+				event.preventDefault();
+
+				if( !touchConsumed ) {
+					if( event.touches[0].clientX > lastX + 10 ) {
+						k3.prev();
+						touchConsumed = true;
+					}
+					else if( event.touches[0].clientX < lastX - 10 ) {
+						k3.next();
+						touchConsumed = true;
+					}
+				}
+			}, false );
+
+
+
+			var bulletsContainer4 = document.getElementById( 'bls4' );
+
+			// Create one bullet per layer
+			for( var i = 0, len = k4.getTotal(); i < len; i++ ) {
+				var bullet = document.createElement( 'li' );
+				bullet.className = i === 0 ? 'active' : '';
+				bullet.setAttribute( 'index', i );
+				bullet.onclick = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bullet.ontouchstart = function( event ) { k.show( event.target.getAttribute( 'index' ) ) };
+				bulletsContainer4.appendChild( bullet );
+			}
+
+			// Update the bullets when the layer changes
+			k4.changed.add( function( layer, index ) {
+				var bullets = document.body.querySelectorAll( '#bls4 li' );
+				for( var i = 0, len = bullets.length; i < len; i++ ) {
+					bullets[i].className = i === index ? 'active' : '';
+				}
+			} );
+
+			document.addEventListener( 'keyup', function( event ) {
+				if( event.keyCode === 37 ) k4.prev();
+				if( event.keyCode === 39 ) k4.next();
+			}, false );
+
+			document.getElementById("b4l").addEventListener("click", function(){
+		    	k4.prev();
+			});
+			document.getElementById("b4r").addEventListener("click", function(){
+		    	k4.next();
+			});
+
+			var touchX = 0;
+			var touchConsumed = false;
+
+			document.addEventListener( 'touchstart', function( event ) {
+				touchConsumed = false;
+				lastX = event.touches[0].clientX;
+			}, false );
+
+			document.addEventListener( 'touchmove', function( event ) {
+				event.preventDefault();
+
+				if( !touchConsumed ) {
+					if( event.touches[0].clientX > lastX + 10 ) {
+						k4.prev();
+						touchConsumed = true;
+					}
+					else if( event.touches[0].clientX < lastX - 10 ) {
+						k4.next();
+						touchConsumed = true;
+					}
+				}
+			}, false );
+
+		</script>	
+
+
+	<footer id="fh5co-footer">
+			<div>
+				<a href="../"><img class="downlogo" src="../exo_white.png" class="img-responsive" style="margin: 0 auto; padding: 1em;"></a>
+				<ul class="fh5co-social-icons">
+					<li style="color: #9E9E9E"><a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/exodia.in/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://twitter.com/exodia_iitmandi" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class="fa fa-youtube"></i></a></li>
+				</ul>
+				<p class="text-muted fh5co-no-margin-bottom text-center" style="font-family: 'Roboto', sans-serif;"><small>&copy; 2018 <a href="#">Exodia</a>. All rights reserved.</p>
+			</div>
+		</footer>
+
+	<script type="text/javascript">
+		$('#toggle').click(function() {
+		   $(this).toggleClass('active');
+		   $('#overlay2').toggleClass('open');
+		  });
+	</script>
+	<!--   Core JS Files   -->
+	<!-- <script type="text/javascript" async="" src="./gallery_files/ga.js.download"></script><script src="./gallery_files/jquery.min.js.download" type="text/javascript"></script> -->
+	<script src="./gallery_files/bootstrap.min.js.download" type="text/javascript"></script>
+	<script src="./gallery_files/material.min.js.download"></script>
+	<script  src="../js/party.js"></script>
+
+	
+
+</body></html>

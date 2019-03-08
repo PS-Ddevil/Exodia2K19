@@ -1,0 +1,465 @@
+		@font-face {
+		    font-family: roboto-thin;
+		    src: url('assets/Roboto/Roboto-Thin.ttf');
+		}
+		
+		@font-face {
+		    font-family: roboto-light;
+		    src: url('assets/Roboto/Roboto-Light.ttf');
+		}
+		
+		@font-face {
+		    font-family: roboto-medium;
+		    src: url('assets/Roboto/Roboto-Medium.ttf');
+		}
+	
+		body{
+			background-attachment: fixed;
+			background-position:50% 50%;
+			background-size: cover;
+			/*background-image:url('assets/back.jpeg');*/
+			margin:0px;
+			padding:0px;
+			font-family:roboto-light;
+			color:#fff;
+			transition:background-position 0.5s;
+		}
+		
+		#logoicon{
+			opacity:0;
+		}
+		
+		@keyframes fadeup{
+			0%{
+				opacity:0;
+				transform:translate(0,50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-webkit-keyframes fadeup{
+			0%{
+				opacity:0;
+				transform:translate(0,50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-o-keyframes fadeup{
+			0%{
+				opacity:0;
+				transform:translate(0,50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-moz-keyframes fadeup{
+			0%{
+				opacity:0;
+				transform:translate(0,50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-ms-keyframes fadeup{
+			0%{
+				opacity:0;
+				transform:translate(0,50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@keyframes fadedown{
+			0%{
+				opacity:0;
+				transform:translate(0,-50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-webkit-keyframes fadedown{
+			0%{
+				opacity:0;
+				transform:translate(0,-50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-o-keyframes fadedown{
+			0%{
+				opacity:0;
+				transform:translate(0,-50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-moz-keyframes fadedown{
+			0%{
+				opacity:0;
+				transform:translate(0,-50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@-ms-keyframes fadedown{
+			0%{
+				opacity:0;
+				transform:translate(0,-50px);
+			}
+			100%{
+				opacity:1;
+				transform:translate(0px,0px);
+			}
+		}
+		
+		@keyframes bckclr{
+			0%{
+				background-color:rgba(0,0,0,1);
+			}
+			100%{
+				background-color:rgba(0,0,0,0.6);
+			}
+		}
+		
+		@-webkit-keyframes bckclr{
+			0%{
+				background-color:rgba(0,0,0,1);
+			}
+			100%{
+				background-color:rgba(0,0,0,0.6);
+			}
+		}
+		
+		@-o-keyframes bckclr{
+			0%{
+				background-color:rgba(0,0,0,1);
+			}
+			100%{
+				background-color:rgba(0,0,0,0.6);
+			}
+		}	
+		
+		@-moz-keyframes bckclr{
+			0%{
+				background-color:rgba(0,0,0,1);
+			}
+			100%{
+				background-color:rgba(0,0,0,0.6);
+			}
+		}
+		
+		@-ms-keyframes bckclr{
+			0%{
+				background-color:rgba(0,0,0,1);
+			}
+			100%{
+				background-color:rgba(0,0,0,0.6);
+			}
+		}
+		
+		#navigator{
+			width:100%;
+			background-color:none;
+			padding:0px;
+			margin:0px;
+			position:fixed;
+			transition:background-color 0.3s;
+			z-index:99;
+		}
+		
+		.navigatorelement{
+			padding-top:4px;
+			margin:0px;
+			float:left;
+			width:16.6666666%;
+			background:none;
+			text-align:center;
+			transition:background-color 0.3s,border 0.2s;
+		}
+		
+		/*height of navigation buttons*/
+		#navigator,.navigatorelement{
+			
+		}
+		
+		.navigatoricon{
+			height:42px;
+			padding:0px;
+			margin:0px;
+		}
+		
+		.navigatorelement:hover{
+			background-color:rgba(255,255,255,0.3);
+			cursor: pointer;
+		}
+		
+		.navigatortext{
+			font-size:100%;
+			color:#fff;
+			font-family:roboto-medium;
+		}
+		
+		#contact{
+			background-attachment:fixed;
+			position:absolute;
+			bottom:0px;
+			margin:0px;
+			width:100%;
+			padding-top:8px;
+			padding-bottom:8px;
+			background-color:none;
+			position:fixed;
+			text-align:center;
+			transition:background 0.3s;
+			background-color:rgba(0,0,0,0.9);
+		}
+		
+		.contacticon{
+			height:22px;
+			padding:8px;
+			margin-right:16px;
+			margin-left:16px;
+			border:0px solid #fff;
+			border-radius:50%;
+			z-index:9999;
+			transition:background-color 0.3s;
+		}
+		
+		.contacticon:hover{
+			cursor: pointer;
+			border:0px solid #fff;
+			border-radius:28px;
+			background-color:rgba(255,255,255,0.5);
+		}
+		
+		#contactheading{
+			font-size:140%;
+			color:#fff;
+			font-family:roboto-medium;
+		}
+		
+		.background{
+			background-color:rgba(0,0,0,0.6);
+			transition:background-color 1s;
+		}
+		
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(assets/loading2.gif) center no-repeat #000;
+		}
+		
+		.maincontent{
+			padding:0px;
+			margin-top:0px;	
+			margin-left:0px;
+			margin-right:0px;
+			margin-bottom:0px;
+			width:100%;
+			/*height:100%;*/
+			z-index:9999;
+			display:flex;align-items:center;width:100%;height:100%;
+			background-color:rgba(0,0,0,0.6);
+			transition:background-color 0.3s;
+		}
+		
+		.maincontentchild{
+				width:100%;
+				text-align:center;
+		}
+		
+		
+		
+		#logo{
+			font-size:400%;
+			color:#fff;
+			padding-top:40px;
+		}
+		
+		#timeleft{
+			text-align:center;
+		}
+		
+		.timeelement{
+			display:inline-block;
+			text-align:center;
+			width:120px;
+			padding:0px;
+			margin:32px;
+			font-size:140%;
+		}
+		
+		#aboutchild,#eventschild,#sponsorschild,#contactuschild{
+			text-align:center;
+		}
+		
+		.sectionheading{
+			font-size:160%;
+		}
+		
+		.contenticon{
+			padding:8px;
+			margin:0px;
+			height:44px;
+			border:1px solid #fff;
+			border-radius:50%;
+		}
+		
+		.active{
+			/*background-color:rgba(255,255,255,0.2);*/
+			border-bottom:4px solid #fff;
+		}
+		
+		.aboutexodiaelements{
+			width:30%;
+			background:none;
+			margin:8px;
+			padding:0px;
+			border:0px solid #fff;
+			display:inline-block;
+			text-align:left;
+		}
+		
+		.aboutexodiaicon{
+			padding:0px;
+			margin:0px;
+			height:30px;
+		}
+		
+		.aboutexodiaelementheading{
+			font-family:roboto-medium;
+		}
+		
+		#eventnavigator{
+			width:80%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		
+		.eventnavigatorelement{
+			width:16%;
+			margin:0px;
+			padding-top:8px;
+			padding-bottom:8px;
+			display:inline-block;
+			transition:background-color 0.3s;
+		}
+		
+		.eventnavigatorelement:hover{
+			background-color:rgba(255,255,255,0.3);
+			cursor: pointer;
+		}
+		
+		.event{
+			background-color:#555;
+			display:inline-block;
+			width:140px;
+			height:140px;
+			margin:8px;
+			color:#fff;
+			cursor: pointer;
+			text-align:center;
+			background-position:50% 50%;
+			background-size:cover;
+			background-attachment: fixed;
+			border-radius:50%;
+		}
+		
+		.eventtext{
+			text-align:center;
+			width:140px;
+			font-family:roboto-medium;
+		}
+		
+		.eventchild{
+			height:140px;
+			display:flex;
+			align-items:center;
+			background-color:rgba(0,0,0,0.7);
+			border-radius:50%;
+			transition:background-color 0.3s;
+			border:2px solid #fff;
+		}
+		
+		.eventchild:hover{
+			background-color:rgba(0,0,0,0.8);
+		}
+		
+		.eventchild:active{
+			background-color:rgba(0,0,0,1);
+		}
+		
+		#events{
+			
+		}
+		
+		.contactelement{
+		}
+		
+		.contactuschild{
+		}
+		
+		.contactimg{
+			height:84px;padding:0px;border-radius:50%;margin-right:8px;border:2px solid #fff;
+		}
+		
+		.contactinfo{
+			text-align:center;padding:0px;
+		}
+		
+		.contactuschildchild{
+			margin:2px;
+		}
+		
+		.eventmaincontent{
+			background-color:rgba(0,0,0,0.8);
+		}
+		
+		.eventrules{
+			font-family:roboto-light;
+			font-size:120%;
+		}
+		
+		.eventcontactelement{
+			display:flex;
+			align-items:center;
+		}
+		
+		.eventcontactelement .contactinfo{
+			text-align:left;
+		}
+		
+		.contactdivider{
+			color:#fff;
+		}

@@ -1,0 +1,407 @@
+TOOLS = {};
+TOOLS.Loader = '<i class="fa fa-cog fa-spin" aria-hidden="true"></i>';
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+function showSuccessNotification(message) {
+
+    setTimeout(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "progressBar": true,
+            "preventDuplicates": true,
+            "positionClass": "toast-top-right",
+            "onclick": null,
+            "showDuration": "400",
+            "hideDuration": "1000",
+            "timeOut": "7000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr.success(message, 'Alert');
+
+    }, 100);
+}
+
+function showErrorNotification(message) {
+
+    setTimeout(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "progressBar": true,
+            "preventDuplicates": true,
+            "positionClass": "toast-top-right",
+            "onclick": null,
+            "showDuration": "400",
+            "hideDuration": "1000",
+            "timeOut": "7000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr.error(message, 'Alert');
+
+    }, 100);
+}
+
+function showPendingNotification(message) {
+
+    setTimeout(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "progressBar": true,
+            "preventDuplicates": true,
+            "positionClass": "toast-top-right",
+            "onclick": null,
+            "showDuration": "400",
+            "hideDuration": "1000",
+            "timeOut": "7000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr.warning(message, 'Alert');
+
+    }, 100);
+}
+
+
+$(document).ready(function () {
+
+    $.get("https://ipinfo.io", function (response) {
+        countryName = response.country;
+        $("#countryCode").intlTelInput({
+            preferredCountries: [countryName.toLowerCase()],
+        });
+    }, "json");
+
+
+    $.ajax({
+        type: 'post',
+        url: CONF.baseurl + '/getProfileData',
+        dataType: 'json',
+        success: function (response) {
+            if (response.statuscode == 'ERR') {
+
+                $('#login-modal').modal('show');
+            } else {
+                $('#login-modal').modal('hide');
+            }
+        }
+
+    });
+
+    isAjax = false;
+
+    $(document).on('click', '.count-click', function () {
+
+        if (isAjax == true)
+            return false;
+
+        isAjax = true;
+
+        $.ajax({
+            type: "get",
+            dataType: 'json',
+            url: CONF.baseurl + "/countPDFDownload",
+            //data:{amount:amount},
+            success: function (response) {
+
+
+            },
+            complete: function (response) {
+                isAjax = false;
+            }
+        });
+    });
+
+
+    $("#careerForm").validate({
+        rules: {
+            first_name: "required",
+            last_name: "required",
+            email_address: {
+                required: true,
+                email_address: true
+            },
+            mobile: {
+                required: true,
+                maxlength: 10
+            },
+            exp: "required",
+            resume: "required"
+        },
+        messages: {
+            first_name: 'Please enter First Name',
+            last_name: 'Please enter Lirst Name',
+            email_address: {
+                required: "Please enter a Email Address",
+                email_address: "Please enter a valid Email Address"
+            },
+            mobile: {
+                required: 'Please enter Mobile Number',
+                minlength: 'Mobile must be at least 4 characters'
+            },
+            exp: 'Please enter your Total Relevant Experience',
+            resume: 'Please upload your updated CV',
+        }
+    });
+
+
+    function getWalletAmount() {
+
+
+        $.ajax({
+            type: "get",
+            dataType: 'json',
+            url: CONF.baseurl + "/account/getWalletAmount",
+            //data:{amount:amount},
+            success: function (response) {
+
+                if (response.statuscode == 'SUCC') {
+                    $(document).find('.wallet-amount').html(response.data.amount + ' ' + response.data.currency);
+                    $(document).find('.wal-amt').html('Rs. ' + response.data.amount + '.00');
+                    $(document).find('.wallet-amount-li-a').html('<span>Total Balance </span>' + response.data.amount + ' ' + response.data.currency);
+                    $(document).find('.locked-amount').html('<span>Locked Balance </span>' + response.data.locked_amount + ' ' + response.data.currency);
+
+                    // $(document).find('#pay-now').click();
+                }
+                else {
+                    //showErrorNotification(response.message);
+                }
+
+            },
+            complete: function (response) {
+                isAjax = false;
+            }
+        });
+    }
+
+    getWalletAmount();
+
+    $(document).on('click', 'input, textarea, select', function () {
+        $(this).removeClass('error-border');
+        $(this).parent().find('.text-error').remove();
+    });
+
+
+    ajaxRequestOn = false;
+
+    $(document).on('submit', 'form[name="careerForm"]', function (e) {
+
+
+        $(this).removeClass('error-border');
+        $(this).parent().find('.text-error').remove();
+        e.preventDefault();
+
+        if (ajaxRequestOn == true)
+            return false;
+
+
+        var formData = new FormData($(this)[0]);
+
+        $btn = $(this).find('button[type="submit"]');
+        var btn_text = $btn.html();
+        $btn.html(set.btn_spin_html);
+
+        $btn.html(TOOLS.Loader);
+
+        $.ajax({
+            url: CONF.baseurl + '/post_job',
+            data: formData,
+            type: 'POST',
+            dataType: 'json',
+            // THIS MUST BE DONE FOR FILE UPLOADING
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+
+                $btn.html(btn_text);
+                if (response.statuscode != 'SUCC') {
+
+                    response = response.data;
+                    $.each(response, function (k, v) {
+
+                        $('#' + k).addClass('error-border');
+
+                        if (v != '') {
+                            $('#' + k).parent().find('.text-error').remove();
+                            $('#' + k).after('<div class="text-error text-left">' + v + '</div>');
+                        }
+                    });
+
+                }
+                else {
+                    showSuccessNotification('Thank you! We have received your career request. Our HR team will reach you soon.');
+                    $(document).find('.error-border').removeClass('error-border');
+                    $(document).find('.text-error').remove();
+                    $(document).find('.close-form').click();
+                }
+            },
+            error: function (response) {
+                ajaxRequestOn = false;
+                $btn.html(btn_text);
+            }
+
+            // ... Other options like success and etc
+        });
+
+    });
+
+    $("#userPincode").on('change', function () {
+        var pincode = $("#userPincode").val();
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: CONF.baseurl + '/get_state',
+            data: {'pincode': pincode},
+            success: function (response) {
+                if (response.statuscode == 'SUCC') {
+                    $("#userCity").val(response.data.town);
+                    $("#userState").val(response.data.state);
+                    $("#userCountry").val(response.data.country_code);
+                    $("#countryName").val(response.data.country);
+                }
+                else {
+                    console.log(response);
+                }
+            }
+        });
+    });
+
+    $(document).on('click', '#sendOtp', function () {
+        var _this = $(this);
+        TOOLS.dt = _this.html();
+        var mobile = $('#userMobile').val();
+        if (mobile) {
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                url: CONF.baseurl + '/resendOtp',
+                data: {'mobile': mobile},
+                beforeSend: function () {
+                    _this.html(TOOLS.Loader).attr('disabled', true);
+                },
+                success: function (response) {
+                    _this.html('OTP Sent');
+                    if (response.statuscode == 'SUCC') {
+
+                        showSuccessNotification(response.message);
+                    }
+                    else {
+                        showErrorNotification(response.message);
+                    }
+
+                }
+
+            });
+
+        } else {
+            $("#errMobile").html('please enter your mobile');
+        }
+    });
+    $("#updateUserData").validate({
+        rules: {
+            countryCode: {
+                required: true
+            },
+            userMobile: {
+                required: true
+            },
+            userOtp: {
+                required: true
+            },
+            userPincode: {
+                required: true,
+                maxlength:6
+            },
+            userAddress: {
+                required: true
+            },
+            userCity: {
+                required: true
+            },
+            userState: {
+                required: true
+            },
+            userCountry: {
+                required: true
+            }
+        },
+        messages: {
+            countryCode: {
+                required: 'Country Code can not be blank'
+            },
+            userMobile: {
+                required: 'Mobile can not be blank'
+            },
+            userOtp: {
+                required: 'OTP can not be blank'
+            },
+            userPincode: {
+                required: 'Pin code can not be blank'
+            },
+            userAddress: {
+                required: 'Address can not be blank',
+                maxlength:'Maximum 6 digits allowed'
+            },
+            userCity: {
+                required: 'City can not be blank'
+            },
+            userState: {
+                required: 'State can not be blank'
+            },
+            userCountry: {
+                required: 'Country can not be blank'
+            }
+        }
+    });
+
+    $(document).on('click', '#updateData', function () {
+
+        if ($("#updateUserData").valid()) {
+            var _this = $(this);
+            TOOLS.dt = _this.html();
+            $.ajax({
+                type: 'post',
+                url: CONF.baseurl + '/updateData',
+                dataType: 'json',
+                data: $("#updateUserData").serialize(),
+                beforeSend: function () {
+                    _this.html(TOOLS.Loader).attr('disabled', true);
+                },
+                success: function (response) {
+                    _this.html(TOOLS.dt).removeAttr('disabled');
+
+                    if (response.statuscode == 'SUCC') {
+                        showSuccessNotification(response.message);
+                        $('#login-modal').modal('hide');
+                        window.setTimeout(function () {
+                            location.reload()
+                        }, 3000);
+                    } else {
+                        showErrorNotification(response.message);
+                    }
+                }
+            })
+        }
+
+    });
+});
+
+

@@ -1,0 +1,6 @@
+#fh5co-portfolio .fh5co-portfolio-item .param:not(:hover){
+	background-image: url(images/pictures/param0.jpg);	
+}
+#fh5co-portfolio .fh5co-portfolio-item .param:hover{
+	background-image: url(images/gif/param.gif);
+}

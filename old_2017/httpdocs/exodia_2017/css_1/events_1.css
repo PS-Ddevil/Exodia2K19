@@ -1,0 +1,138 @@
+
+
+#events {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 25px;
+  word-spacing: -5px;
+  width: 100%;
+  font-family: 'Lato',sans-serif !important;
+}
+
+#events ul {
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+}
+
+#events li {
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  word-spacing: 0;
+  width: 100% ;
+  list-style: none;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+  letter-spacing: 3px;
+  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#sub_events_1 li{
+  width: 160%;
+}
+#sub_events_2 li{
+  width:114%;
+}
+
+#events li:hover {
+  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.1);
+  background: #179b77;
+  color: #ffffff;
+}
+
+.activeIn:hover{
+  background: #1ab188;
+  color: #ffffff;  
+  outline: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  cursor: auto !important;
+}
+.activeIn {
+  background: #1ab188 !important;
+  color: #ffffff !important;  
+  outline: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none;
+}
+ 
+#events li span {
+  float: right;
+  font-weight: bold;
+  display: none;
+}
+
+.activeIn span {
+  display: block;
+}
+
+#events div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 30%;
+  width: 68%;
+  height: 100%;
+  background: transparent;
+  padding: 25px;
+  word-spacing:3px;
+  color: white;
+  border: 1px solid white;
+}
+
+#events li div {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68%;
+  height: 100%;
+  background: transparent;
+  padding: 10px;
+  letter-spacing: 1px;
+  z-index: 10;
+  color: white;
+}
+
+#events div h1 {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  font-size: 25px;
+}
+
+button{
+  color:black;
+}
+
+@media screen and (max-width: 50em ){
+
+#events div {
+  position: relative;
+  top: 90%;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin-top:10%;
+}
+
+#sub_events_1 li{
+  width: 180%;
+}
+
+
+
+#events li div {
+  display: none;
+  position: relative;
+  width: 100%;
+  background: #111f2a;
+}
+
+
+}

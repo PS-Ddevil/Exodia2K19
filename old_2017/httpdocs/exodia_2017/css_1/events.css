@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000 !important;
+  font-family: 'Titillium Web', sans-serif;
+  overflow-x: hidden;
+}
+
+.pageContentWrapper{
+  margin-bottom:40px;/* Height of footer*/
+} 
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: -20px 0 40px 0;
+
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+
+
+.tab-content > div{
+  display: none;
+}
+
+.tab-content > div:first-child{
+  display: inherit;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width:50em){
+  h1{
+    font-size: 1.7em;
+  }
+  .tab-group li a{
+    width: 50%;
+  }
+}
+p{
+  margin-top: -50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+}

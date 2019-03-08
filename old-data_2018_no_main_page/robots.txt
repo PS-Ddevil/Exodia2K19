@@ -1,0 +1,2 @@
+User-agent:*
+Disallow: exodia.in:8443

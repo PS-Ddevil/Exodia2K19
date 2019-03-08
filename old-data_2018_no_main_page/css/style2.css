@@ -1,0 +1,266 @@
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+.sound {
+  position: fixed;
+  top: 12%;
+  right: 2%;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+          transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: #FF5252;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay2 {
+  position: fixed;
+  background: #070508;
+  /*top: 0;*/
+  /*left: 0;*/
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+  /*overflow: hidden;*/
+}
+.overlay2.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+.overlay2.open li {
+  -webkit-animation: fadeInRight .5s ease forwards;
+          animation: fadeInRight .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+.overlay2.open li:nth-of-type(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.overlay2.open li:nth-of-type(3) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+.overlay2.open li:nth-of-type(4) {
+  -webkit-animation-delay: .50s;
+          animation-delay: .50s;
+}
+.overlay2 nav {
+  position: relative;
+  padding: 9vw;
+
+  /*top: 50%;*/
+  /*-webkit-transform: translateY(45%);*/
+          /*transform: translateY(45%);*/
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.overlay2 .temp {
+  padding: 0;
+  margin: 0;
+  /*top: 30%;*/
+  height: 100vw; 
+  width: 65vw;
+  left: 0%;
+  transform: translate(-25%, -25%);
+  position: relative;
+  background: url(../overlay.jpg);
+  background-repeat: no-repeat; 
+  /*background-size: 100% 100%;*/
+   background-size: contain;
+  background-position: center center;
+
+
+    /*width:auto;*/
+  /*height:auto;*/
+  /*background: url(CoverPic.jpg);*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*-webkit-background-size: 100% 100%; /*  Safari  */*/
+    /*-khtml-background-size: 100% 100%; /*  Konqueror  */*/
+    /*-moz-background-size: 100% 100%; /*  Firefox  */*/
+
+
+  /*overflow: hidden;*/
+  /*position: relative;*/
+/*  height: 100%;
+  -webkit-transform: translateY(45%);
+          transform: translateY(45%);
+  font-size: 50px;
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  text-align: center;*/
+}
+.overlay2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay2 ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 6);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay2 ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  /*overflow: hidden;*/
+}
+.overlay2 ul li a:hover:after, .overlay2 ul li a:focus:after, .overlay2 ul li a:active:after {
+  width: 100%;
+}
+.overlay2 ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+#prelaoder{position:fixed;top:0;left:0;right:0;bottom:0;background:black;z-index:1000}
+
+.spinner{text-align:center;font-size:10px}
+.spinner,.spinner-inner{position:absolute;top:0;bottom:0;right:0;left:0;border:9px solid #fff;border-color:transparent #fff;margin:auto}
+
+.spinner{width:85px;height:85px;-webkit-animation:spin 2.2s linear 0s infinite normal;-moz-animation:spin 2.2s linear 0s infinite normal;animation:spin 2.2s linear 0s infinite normal}
+
+.spinner-inner{width:40px;height:40px;-webkit-animation:spinback 1.2s linear 0s infinite normal;-moz-animation:spinback 1.2s linear 0s infinite normal;animation:spinback 1.2s linear 0s infinite normal}@-webkit-keyframes spin{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}@-moz-keyframes spin{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(360deg)}}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}@-webkit-keyframes spinback{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(-360deg)}}@-moz-keyframes spinback{from{-moz-transform:rotate(0)}to{-moz-transform:rotate(-360deg)}}@keyframes spinback{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
+
+
+/* Custom, iPhone Retina */ 
+/*    @media only screen and (min-width : 320px) {
+
+    }
+*/
+    /* Extra Small Devices, Phones */ 
+/*    @media only screen and (min-width : 480px) {
+
+    }
+*/
+    /* Small Devices, Tablets */
+  @media (max-width : 768px) {
+    .overlay2 nav {
+      position: relative;
+      padding: 9vw;
+
+      /*top: 50%;*/
+      /*-webkit-transform: translateY(45%);*/
+              /*transform: translateY(45%);*/
+      font-size: 50px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .overlay2 .options{
+      margin-top: -2vw;
+    }
+    .overlay2 .temp {
+        padding: 0;
+        margin: 0;
+        /*top: 30%;*/
+        height: 75vw; 
+        width: 100vw;
+        left: 0%;
+        transform: translate(0%, 0%);
+        position: relative;
+        background: url(../overlay.jpg) 100%;
+        background-repeat: no-repeat; 
+        /*background-size: 100% 100%;*/
+         background-size: cover;
+        background-position: center center;
+    }
+  }
+
+       /* Medium Devices, Desktops */
+/*    @media only screen and (min-width : 992px) {
+
+    }
+*/
+    /* Large Devices, Wide Screens */
+/*    @media only screen and (min-width : 1200px) {
+
+    }*/

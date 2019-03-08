@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+
+  <style type="text/css">
+    body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #101010;
+}
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/62921/spinny-batman.gif);
+  background-size: cover;
+  background-position: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 0.3s linear infinite;
+  filter: blur(20px);
+  border-radius: 100%;
+}
+
+.callout {
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  font-size: 2em;
+  bottom: 0.2em;
+  text-align: center;
+  width: 100%;
+}
+.finger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16em;
+  animation: in-out 1.5s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes in-out {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.75);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+
+  </style>
+
+  <script type="text/javascript">
+    document.body.addEventListener('click', function() {
+  var batman = document.getElementById('batman');
+  batman.play();
+})
+  </script>
+</head>
+<body>
+
+  <div class="bg"></div>
+<!-- <div class="finger">🖕</div> -->
+<img class="finger" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62921/middle-finger-emoji.png" alt="" />
+<h6 class="callout">Click for sound</h6>
+
+<audio id="batman" autoplay>
+  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62921/batman-transition-sound.mp3" type="audio/ogg">
+</audio>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule - Exodia'17</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='css/lgzia.css'>
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+    
+    *,
+    *:before,
+    *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    ul.main {
+        list-style: none;
+        max-width: 75%;
+        margin: -30px auto;
+    }
+    
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .date {
+        width: 17%;
+        padding: 15% 1% 0 0;
+        float: left;
+    }
+    
+    .date h3 {
+        font-size: 1.5em;
+    }
+    
+    .date p {
+        font-size: .8em;
+    }
+    
+    .events {
+        float: left;
+        width: 80%;
+        border-left: 1px solid #ccc;
+        margin-top: 10%;
+        padding-top: 3%;
+    }
+    
+    .events-detail {
+        max-width: 550px;
+    }
+    
+    .events-detail li {
+        padding: 10px;
+        border-bottom: 1px dashed #ccc;
+        line-height: 22px;
+        transition: ease .4s all;
+    }
+    
+    .events-detail li:hover {
+        background: #e9e9e9;
+    }
+    
+    .event-time {
+        font-weight: 900;
+    }
+    
+    .events-detail li a {
+        text-decoration: none;
+        color: #444;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .event-location {
+        font-size: .8em;
+        color: tomato;
+        margin-left: 70px;
+    }
+    
+    @media all and (max-width: 641px) {
+        .date {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .events {
+            border: none;
+            width: 100%;
+            margin-top: 0;
+        }
+        .events-detail {
+            padding: 0;
+
+            @media screen and (max-width: 50em) {}
+            li.date p {
+                margin: 0;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <style>
+    @media screen and (min-width: 800px) {
+
+	    #logo {
+	        height: 7vh;
+	    }
+}	    
+    @media screen and (max-width: 800px) {
+        #logo {
+            height: 5vh !important;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav style="height: 9vh;margin-left: 3%">
+        <a href="http://www.exodia.in/">
+            <img src="../images/logo-white.png" alt="Exodia" class="img-responsive" id="logo">
+        </a>
+        <a href="http://www.exodia.in/events" style="position: absolute;left: 15%;top: 2.5vh;font-size: 1.5em">
+            Events
+        </a>
+    </nav>
+    <h1 style="margin-left: 40% "> Schedule</h1>
+    <ul class="main">
+        <li class="date">
+            <h3>Day 1</h3>
+            <p>April 7</p>
+        </li>
+        <li class="events">
+            <ul class="events-detail">
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 1 (Race Engineering)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">North Campus </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 2 (Ethical Hacking)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">A1-NKN </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Trekking</span>
+                        <span class="event-time">09:00am - 11:00am</span>
+                        <br />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">RoboWars</span>
+                        <span class="event-time">11:30am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">Tennis Court </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Junkyard Wars</span>
+                        <span class="event-time">11:30am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">Mech Lab </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">IOT</span>
+                        <span class="event-time">11:30am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">A1-3 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Canvas</span>
+                        <span class="event-time">2:00pm - 6:00pm</span>
+                        <br />
+                        <span class="event-location">SC-NKN </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Chaar Hazari Performance</span>
+                        <span class="event-time">8:30pm - 10:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Fray</span>
+                        <span class="event-time">10:30pm-4:00am</span>
+                        <br />
+                        <span class="event-location">PC Lab </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Paint Ball</span>
+                        <span class="event-time">10:00am - 6:00pm</span>
+                        <br />
+                        <span class="event-location">Cricket Ground </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Blind Date</span>
+                        <span class="event-time">6:00pm - 9th April</span>
+                        <br />
+                        <span class="event-location">Infront of D1(Cedar) mess</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="date">
+            <h3>Day 2</h3>
+            <p>April 8</p>
+        </li>
+        <li class="events">
+            <ul class="events-detail">
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 1 (Race Engineering)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">North Campus </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 2 (Ethical Hacking)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">A1-NKN </span>
+                    </a>
+                </li>
+				<li>
+                    <a href="#">
+                        <span class="event-name">Workshop 3 (Cloud Computing)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">A1-3 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 4 (3D Animation)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">North Campus </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Junkyard Wars</span>
+                        <span class="event-time">10:00am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">Mech Lab </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">RoboWars</span>
+                        <span class="event-time">10:00am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">Tennis Court </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Nirmaan</span>
+                        <span class="event-time">10:00am - 3:00pm</span>
+                        <br />
+                        <span class="event-location">SC-NKN </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="event-name">Hurdle Rush</span>
+                        <span class="event-time">1:00pm - 5:00pm</span>
+                        <br />
+                        <span class="event-location">Above A9 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Street Soul</span>
+                        <span class="event-time">10:00am-01:00pm</span>
+                        <br />
+                        <span class="event-location">Basketball Court </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Exodia Idol Final</span>
+                        <span class="event-time">10:00am - 12:00pm</span>
+                        <br />
+                        <span class="event-location">A1-NKN </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Biggest Liar</span>
+                        <span class="event-time">10:00pm-12:00am</span>
+                        <br />
+                        <span class="event-location">A1-3 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Band Slam</span>
+                        <span class="event-time">1:00pm - 05:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Couture</span>
+                        <span class="event-time">5:00pm - 8:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">EDM and DJ (Dunes Music Festival)</span>
+                        <span class="event-time">08:00pm - 10:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Treasure Hunt</span>
+                        <span class="event-time">04:00pm-05:00pm</span>
+                        <br />
+                        <span class="event-location">D1(Cedar) Mess </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Fray</span>
+                        <span class="event-time">10:30pm-4:00am</span>
+                        <br />
+                        <span class="event-location">PC Lab </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Paint Ball</span>
+                        <span class="event-time">10:00am - 6:00pm</span>
+                        <br />
+                        <span class="event-location">Cricket Ground </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Escape the room</span>
+                        <span class="event-time">10:00am - 12:00am</span>
+                        <br />
+                        <span class="event-location">Lounge </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="date">
+            <h3>Day 3</h3>
+            <p>April 9</p>
+        </li>
+        <li class="events">
+            <ul class="events-detail">
+                
+                <li>
+                    <a href="#">
+                        <span class="event-name">Workshop 3 (Cloud Computing )</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">A1-3 </span>
+                    </a>
+                </li>
+				<li>
+                    <a href="#">
+                        <span class="event-name">Workshop 4 (3D Animation)</span>
+                        <span class="event-time">10:00am - 5:00pm </span>
+                        <br />
+                        <span class="event-location">North Campus </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Line Follower</span>
+                        <span class="event-time">10:00am- 5:00pm</span>
+                        <br />
+                        <span class="event-location">SC-NKN </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">BioTech</span>
+                        <span class="event-time">2:00pm- 5:00pm</span>
+                        <br />
+                        <span class="event-location">A1-NKN </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Groove Fanatics</span>
+                        <span class="event-time">12:30pm - 3:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Synchronians</span>
+                        <span class="event-time">05:00pm - 07:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Survivor</span>
+                        <span class="event-time">02:30pm-05:30pm</span>
+                        <br />
+                        <span class="event-location">Outside D1(Cedar) Mess </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">The Ordinaire Collective</span>
+                        <span class="event-time">07:00pm - 08:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Pronite(DJ Tejas)</span>
+                        <span class="event-time">08:00pm - 10:00pm</span>
+                        <br />
+                        <span class="event-location">Main Stage </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Paint Ball</span>
+                        <span class="event-time">10:00am - 6:00pm</span>
+                        <br />
+                        <span class="event-location">Cricket Ground </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="event-name">Escape the room</span>
+                        <span class="event-time">10:00am - 12:00am</span>
+                        <br />
+                        <span class="event-location">Lounge </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
