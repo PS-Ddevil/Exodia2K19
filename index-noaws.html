@@ -1,0 +1,384 @@
+<html>
+<head>
+<title>Exodia'19 - IIT Mandi | Remake the Rapture</title>
+<link rel="icon" href="img/favicon.ico">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#F2D297">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#F2D297">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#F2D297">
+<meta charset="UTF-8">
+<meta name="description" content="The biggest and the most magnificent technical and cultural fest of the Himalayas, 
+a complete feast for its participants and sponsors alike, Exodia, is back with its 8th edition, to thrill the youth 
+with its invigorating cultural extravaganza and brain-storming technical fiesta. The previous seven editions of this 
+3 day long euphoria, organized by the students of the esteemed Indian Institute of Technology, 
+Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life">
+<meta name="keywords" content="IIT Mandi, Exodia, Indian Institute of Technology, Mandi, Himachal Competition, Fest, Exodia IIT Mandi">
+<meta name="author" content="Exodia Web Development Team, IIT Mandi">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Monoton|B612|Akronim" rel="stylesheet"> 
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 15px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="on()">
+    
+        <!-- <div id="overlay" onclick="off()">
+            <div id="text" class="hide" ><a href="https://register.exodia.in"><img src="./register.png" alt="Register" height="100px" width="200px"></a></div>
+        </div>-->
+<!--nav(start)-->
+    <!-- sidebar(start)-->
+        <div id="sidebar" class="hide">
+            <a href="#" id="about"><span>About</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./ca" id="sap"><span>SAP</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./events" id="events"><span>Events</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./pronite" id="pronites"><span>Pronites</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./spon" id="sponser"><span>Sponsors</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="./team" id="team"><span>Team</span><img src="img/reel.png" height="80px" width="125px"></a>
+        </div>
+    <!--mobi-sidebar-->
+        <div id="mobo-side" class="sidenav" style="z-index:2">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" id="click-about">About</a>
+            <a href="./ca">SAP</a>
+            <a href="./events">Events</a>
+            <a href="./pronite">Pronites</a>
+            <a href="./spon">Sponsors</a>
+            <a href="./team">Team</a>
+        </div>
+        <span id="open" class="hide" style="font-size:30px;cursor:pointer; position: absolute;margin-left: 2%" onclick="openNav()">&#9776;</span>
+        <script>
+        function openNav() {
+          document.getElementById("mobo-side").style.width = "100%";
+        }
+
+        function closeNav() {
+          document.getElementById("mobo-side").style.width = "0";
+        }
+        </script>
+    <!--mobi-sidebar-->
+    <!-- sidebar(end)-->
+<!--nav(end)-->
+    
+<!--main(start)-->
+    <div id="top_scr"></div>
+    <div id="top" class="hide" style="height: 100%">
+        <div style="height: 5%"></div> 
+		<!--<div style="height: 15%"></div>-->
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
+        </div>
+		<div style="height: 5%"></div>
+        <div class="row">
+            <div class="col-10" style="margin-left: 10%">
+                <center><h2 id="tag1" style="color: white" class="glow">Remake the Rapture</h2>
+                <hr width="25%" id = "line1" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.8">
+                <hr width="20%" id = "line2" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px; opacity: 0.6">
+                <hr width="15%" id="line3" style="height: 5px; color: black; background-color: white; border-radius: 10px; margin-top: -12px;opacity: 0.4">
+                <h5 id="tag2">#RocktheRetro</h5></center>
+            </div>
+        </div>
+        <div>
+            <center>
+            <!--<span id="days"></span>
+            <span id = "none">:</span>
+            <span id="hours">0</span>
+            <span id = "none">:</span>
+            <span id="min">0</span>
+            <span id = "none">:</span>
+			<span id="sec">0</span> -->
+				<span id="none" style="font-size:25px"><b>| 12-14 April |</b></span>
+			<center><a href="https://register.exodia.in/"><img id = "register2" src="./register.png" alt="Register" height="80px" width="160px"></a></center>
+            </center>
+        </div>
+        <center><img id="car" src="img/back.png"></center>
+    </div>
+<!--main(end)-->
+
+<!--model-->
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2>About</h2>
+                      <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 20px">
+                        <p style="font-size: 40px">Exodia</p>
+                      <p><i>The biggest and the most magnificent technical and cultural fest of the Himalayas,
+                        a complete feast for its participants and sponsors alike,
+                        Exodia,
+                        is back with its 8th edition,
+                        to thrill the youth with its invigorating cultural extravaganza and brain-storming technical fiesta.
+                        The previous seven editions of this 3 day long euphoria,
+                        organized by the students of the esteemed
+                        Indian Institute of Technology, Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life</i>
+                    </p>
+                    <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                    <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
+                    </div>    
+                    <div class="col-md-6 col-sm-12">
+                    <center>
+                    <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                    </div>  
+                    </div>    
+                      <p><center><b>Important</b></center></p>
+                    <div class="row" id="info">
+                    <div class="col-md-3 col-sm-6">
+                        <center><a target="_blank" href="docs/NOC.pdf" style="text-decoration:none; color: black"><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></a></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><a target="_blank" href="docs/schedule.html" style="text-decoration:none; color: black"><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></a></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:48px;color:black'></i><br><b>HOW TO REACH</b></a></center>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <center><a target="_blank" href="docs/Req.pdf" style="text-decoration:none; color: black"><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></a></center>
+                    </div>  
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://www.facebook.com/Exodia.IITMandi/" target="_blank"><i class='fab fa-facebook-f' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://in.linkedin.com/company/exodia-iit-mandi" target="_blank"><i class='fab fa-linkedin-in' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.instagram.com/exodia.in" target="_blank"><i class='fab fa-instagram' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
+                        <a href="http://www.exodia.in/"><img src="img/exologo.png" width="40px"></a>
+                    </div>
+                  </div>
+                </div>
+    
+                <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("about");
+                var btn2 = document.getElementById("click-about");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                btn2.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+
+<!--model-->
+
+<!--loading(start)-->
+
+<div id="film-container">
+  <div class="animated-flicker">
+    <svg id="film-mask" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+      width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 400 225">
+      <rect class="rectangle01" width="400" height="225"/>
+      <line id="line-h" class="line01" x1="0" y1="112.5" x2="400" y2="112.5"/>
+      <line id="line-v" class="line02" x1="200" y1="0" x2="200" y2="225"/>
+    </svg>
+    <svg id="film-countdown" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+      width="100%" height="100%" viewBox="0 0 400 225">
+      <circle id="circle-outer" class="circle01" cx="200" cy="112.5" r="95"/>
+      <circle id="circle-inner" class="circle01" cx="200" cy="112.5" r="85"/>
+      <circle class="circle02 animated-rotate" cx="200" cy="112.5" r="494.5"/>
+      <g id="numbers" text-anchor="middle" class="no-select">
+        <text id="animated-text8" x="200.5" y="155">3</text>
+        <text id="animated-text9" x="200.5" y="155">2</text>
+        <text id="animated-text10" x="200.5" y="155">1</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<!--loading(end)-->
+    
+    
+<!--script for loading(start)-->
+<script>          
+setTimeout(function(){
+    document.getElementById('top').classList.remove('hide');
+    document.getElementById('sidebar').classList.remove('hide');
+    document.getElementById('open').classList.remove('hide');
+    document.getElementById('film-container').classList.add('hide');
+	document.getElementById('text').classList.remove('hide');
+}, 2500);
+
+(function() {
+  if (!window.requestAnimationFrame) {
+    var nLastTime = 0,
+      aVendors = ['moz', 'ms', 'o', 'webkit'];
+    for (var i=0; i<aVendors.length; ++i) {
+      window.requestAnimationFrame = window[aVendors[i] + 'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[aVendors[i] + 'CancelAnimationFrame'] || window[aVendors[i] + 'CancelRequestAnimationFrame'];
+    }
+    window.requestAnimationFrame = function(callback, element) {
+      var nCurrentTime = new Date().getTime(),
+        nTimeToCall = Math.max(0, 16 - (nCurrentTime - nLastTime)),
+        nTimer = window.setTimeout(function() {
+          callback(nCurrentTime + nTimeToCall);
+        }, nTimeToCall);
+      nLastTime = nCurrentTime + nTimeToCall;
+      return nTimer;
+    };
+  }
+  if (!window.cancelAnimationFrame) {
+    window.cancelAnimationFrame = function(nTimer) {
+      clearTimeout(nTimer);
+    };
+  }
+}());
+
+var circleOuter = document.getElementById('circle-outer'),
+  circleInner = document.getElementById('circle-inner'),
+  lineH = document.getElementById('line-h'),
+  lineV = document.getElementById('line-v'),
+  numbers = document.getElementById('numbers'),
+  nCircleCx = +circleOuter.getAttribute('cx'),
+  nCircleCy = +circleOuter.getAttribute('cy'),
+  nLineY = +lineH.getAttribute('y1'),
+  nLineX = +lineV.getAttribute('x1'),
+  nFps = 12, // Just like vintage silent films :]
+  nJitterLevel = 2.5, // How shaky is the projector?
+  nTick = 0;
+
+function jitter() {
+  setTimeout(function() {
+    if (nTick===nFps*9) {
+      // Reset position
+      circleOuter.setAttribute('cx', nCircleCx);
+      circleInner.setAttribute('cx', nCircleCx);
+      circleOuter.setAttribute('cy', nCircleCy);
+      circleInner.setAttribute('cy', nCircleCy);
+      lineH.setAttribute('y1', nLineY);
+      lineH.setAttribute('y2', nLineY);
+      lineV.setAttribute('x1', nLineX);
+      lineV.setAttribute('x2', nLineX);
+      numbers.style.transform = '';
+      // Transition after countdown
+      document.body.className = 'message';
+      return;
+    }
+    // Use rAF for improved performance
+    requestAnimationFrame(jitter);
+    // Repaint!
+    var nOffsetX = Math.random()*nJitterLevel * ((Math.random()>=0.5)?1:-1),
+      nOffsetY = Math.random()*nJitterLevel * ((Math.random()>=0.5)?1:-1);
+    circleOuter.setAttribute('cx', nCircleCx + nOffsetX);
+    circleInner.setAttribute('cx', nCircleCx + nOffsetX);
+    circleOuter.setAttribute('cy', nCircleCy + nOffsetY);
+    circleInner.setAttribute('cy', nCircleCy + nOffsetY);
+    lineH.setAttribute('y1', nLineY + nOffsetY);
+    lineH.setAttribute('y2', nLineY + nOffsetY);
+    lineV.setAttribute('x1', nLineX + nOffsetX);
+    lineV.setAttribute('x2', nLineX + nOffsetX);
+    numbers.style.transform = 'translate3d(' + nOffsetX + 'px, ' + nOffsetY + 'px, 0)';
+    ++nTick;
+  }, 1000/nFps);
+}
+
+jitter();
+</script>
+<!--script for loading(end)-->
+<!--script foy clock-->
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("April 12, 2019 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var countdownfunction = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("days").innerHTML = (days < 10) ? ('0' + days) : days;
+      document.getElementById("hours").innerHTML = (hours < 10) ? ('0' + hours) : hours;
+      document.getElementById("min").innerHTML = (minutes < 10) ? ('0' + minutes) : minutes;
+      document.getElementById("sec").innerHTML = (seconds < 10) ? ('0' + seconds) : seconds;
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("min").innerHTML = "00";
+        document.getElementById("sec").innerHTML = "00";
+      }
+    }, 1000);
+    </script>
+    <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
+    </script>
+<!--script foy clock-->
+    
+</body>
+</html>
