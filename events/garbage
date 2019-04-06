@@ -1,0 +1,43 @@
+
+<p class="subhead" data-aos="fade-up" id="gaming"><i class='fa fa-space-shuttle' style='font-size:48px;'></i>&nbsp;Gaming</p>
+    <section class="tiles-a ele-2" data-aos="fade-up">
+        <ul>
+            <li class="list-item">
+                <center class="event_name">PUBG</center>
+				<a href="#" style="background: url('https://s3-ap-southeast-1.amazonaws.com/events-exodia/events/pubg.jpg'); background-size: cover;" aria-controls="aside" aria-expanded="false" class="inner-bx">
+					<div class="details visually-hidden">
+						<img class="img-content" src="https://s3-ap-southeast-1.amazonaws.com/events-exodia/events/pubg-1.jpg" alt="PUBG">
+						<div class="text-copy wrapper">
+							<h3 class="innerhead">PUBG</h3>
+                            <h5><i>Gear Up Your Squad</i></h5>
+							<p class="info">Register your team here to get a chance to win prizes worth 10-15K and to show-off your skills See you in Battleground.</p>
+                            <center>
+                                <hr>
+                                <h5>Coordinator</h5>
+                                <div class="row">
+                                <div class="col-6">
+                                    <p>Atyant Yadav</p>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> 8959604102</p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Atyant Yadav</p>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> 8273253850</p>
+                                </div>
+                                </div>
+                                <hr>
+                            </center>
+							<center>
+                            <button class="prob_download" type="submit" onclick="window.open('../prob_stat/pubg.pdf')">Problem Statement</button>
+                            // <a class="prob_download" href="https://forms.gle/vP1N3zwcdartbyAc6">Problem Statement</a>
+                            </center>
+                        </div>
+                        <center><img src="img/exologo.png" style="width: 100px; padding-bottom: 30px; padding-top: 30px"></center>
+					</div>
+				</a>
+                <div class="hover-title" style="margin-top: -30px;">
+                    <center><p style="font-size: 4vh"><b>PUBG</b></p></center>
+                </div>
+			</li>       
+        </ul>
+    </section>
+    
