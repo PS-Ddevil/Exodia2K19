@@ -1,0 +1,283 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <style>
+    body{
+        height: 100%;
+        overflow-x: hidden;
+    }
+    th{
+        color: white;
+    }
+    tr{
+        color: white;
+    }
+    @media only screen and (max-width: 768px){
+        .etag{
+            font-size: 12px !important;
+        }
+    }
+    hr{
+        color: white;
+    }
+    </style>
+    <style>
+    .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    </style>
+</head>
+<body class="deep-orange lighten-1">
+<div class="red"id="back" style="min-height: 800px">
+<div class="loader" id="loader"></div>
+</div>
+    <div class="container main_bdy">
+        <div class="row">
+            <div class="col m12 s12 center">
+                <img src="img/exologo-1.png" width="100px">
+            </div>
+        </div>
+    </div>
+    <div class="blue container main_bdy">
+        <h5 class="white-text" style="font-family: 'Ubuntu', sans-serif;">Events going on-</h5>
+        <hr>
+        <div id="output" class="white-text" style="font-size: 20px;"></div>
+    </div>
+    <div class="section scrollspy container main_bdy">
+        <ul id="tabs-swipe" class="tabs">
+          <li class="tab col s3"><a class="active" href="#test-swipe-1">Day 1</a></li>
+          <li class="tab col s3"><a href="#test-swipe-2">Day 2</a></li>
+          <li class="tab col s3"><a href="#test-swipe-3">Day 3</a></li>
+        </ul>
+        <div id="test-swipe-1" class="col s12 blue">
+            <h3 class="white-text center" style="padding-top: 20px; padding-bottom: 20px;">DAY 1</h3>
+            <div id="day1_event1">
+                <div>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width" style="overflow: hidden">
+                            <li class="tab col"><a href="#d1c" class="etag">Cultural</a></li>
+                            <li class="tab col"><a href="#d1t" class="etag">Technical</a></li>
+                            <li class="tab col"><a href="#d1w" class="etag">Workshops</a></li>
+                            </ul>
+                        </div>
+                        <div id="d1c" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d1_cult">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d1t" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d1_tech">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d1w" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d1_work">
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+        <div id="test-swipe-2" class="col s12 blue">
+            <h3 class="white-text center" style="padding-top: 20px; padding-bottom: 20px;">DAY 2</h3>
+            <div id="day1_event2">
+                <div>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width" style="overflow: hidden">
+                            <li class="tab col s3"><a href="#d2c" class="etag">Cultural</a></li>
+                            <li class="tab col s3"><a href="#d2t" class="etag">Technical</a></li>
+                            <li class="tab col s3"><a href="#d2w" class="etag">Workshops</a></li>
+                            </ul>
+                        </div>
+                        <div id="d2c" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d2_cult">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d2t" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d2_tech">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d2w" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d2_work">
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+        <div id="test-swipe-3" class="col s12 blue">
+            <h3 class="white-text center" style="padding-top: 20px; padding-bottom: 20px;">DAY 3</h3>
+            <div id="day1_event3">
+                <div>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width" style="overflow: hidden">
+                            <li class="tab col"><a href="#d3c" class="etag">Cultural</a></li>
+                            <li class="tab col"><a href="#d3t" class="etag">Technical</a></li>
+                            <li class="tab col"><a href="#d3w" class="etag">Workshops</a></li>
+                            </ul>
+                        </div>
+                        <div id="d3c" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d3_cult">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d3t" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d3_tech">
+                            </tbody>
+                            </table>
+                        </div>
+                        <div id="d3w" class="col s12">
+                            <br><hr><hr>
+                            <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Venue</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="d3_work">
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> 
+   <script>    
+    $(document).ready(function(){
+    $('.tabs').tabs();
+    });
+
+    $('.main_bdy').hide();
+   </script>
+   <script src="js/firebase.js"></script>
+   <script src="js/display.js"></script>
+   <script src="js/now.js"></script>
+</body>
+</html>
