@@ -19,7 +19,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Monoton|B612|Akronim" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Monoton|B612|Akronim|Pacifico|Gloria+Hallelujah" rel="stylesheet"> 
 <link type="text/css" rel="stylesheet" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
@@ -51,18 +51,22 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="on()">
-        <div id="overlay" class="hide" onclick="off()">
-            <div id="text" class="hide"><a href="https://register.exodia.in"><img src="./register.png" alt="Register" height="75px" width="150px"></a></div>
-        </div>
+    
+        <!-- <div id="overlay" onclick="off()">
+            <div id="text" class="hide" ><a href="https://register.exodia.in"><img src="./register.png" alt="Register" height="100px" width="200px"></a></div>
+        </div>-->
 <!--nav(start)-->
     <!-- sidebar(start)-->
+	<span id="menu" class="hide" style="font-family: 'Pacifico', cursive;"><b>Menu</b></span>
         <div id="sidebar" class="hide">
-            <a href="#" id="about"><span>About</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="./ca" id="sap"><span>SAP</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="./events" id="events"><span>Events</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="./pronite" id="pronites"><span>Pronites</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="./spon" id="sponser"><span>Sponsors</span><img src="img/reel.png" height="80px" width="125px"></a>
-            <a href="./team" id="team"><span>Team</span><img src="img/reel.png" height="80px" width="125px"></a>
+            <a href="#" id="about"><span>About</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+            <a href="./ca" id="sap"><span>SAP</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+            <a href="./events" id="events"><span>Events</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+            <a href="https://www.exodia.in/docs/schedule.html" id="schedule"><span>Schedule</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+			<a href="./pronite" id="pronites"><span>Pronites</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+            <a href="./spon" id="sponser"><span>Sponsors</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+            <a href="./team" id="team"><span>Team</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
+			<a href="./workshops" id="works"><span>Workshops</span><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/reel.png" height="80px" width="125px"></a>
         </div>
     <!--mobi-sidebar-->
         <div id="mobo-side" class="sidenav" style="z-index:2">
@@ -70,6 +74,8 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
             <a href="#" id="click-about">About</a>
             <a href="./ca">SAP</a>
             <a href="./events">Events</a>
+			<a href="./workshops">Workshops</a>
+			<a href="https://www.exodia.in/docs/schedule.html">Schedule</a>
             <a href="./pronite">Pronites</a>
             <a href="./spon">Sponsors</a>
             <a href="./team">Team</a>
@@ -91,12 +97,12 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <!--main(start)-->
     <div id="top_scr"></div>
     <div id="top" class="hide" style="height: 100%">
-        <!-- <div style="height: 13%"><br><center><span id="register-btn"><b><a href="https://register.exodia.in/">Register Now</a></b></span></center></div> -->
-		<div style="height: 15%"></div>
+        <div style="height: 5%"></div> 
+		<!--<div style="height: 15%"></div>-->
         <div class="row">
-            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="img/exologo.png"></center></div>
+            <div class="col-10" style="margin-left: 10%"><center><img id="exologo" src="https://s3.ap-south-1.amazonaws.com/img-exo/img/exologo.png"></center></div>
         </div>
-        <div style="height: 5%"></div>
+		<div style="height: 5%"></div>
         <div class="row">
             <div class="col-10" style="margin-left: 10%">
                 <center><h2 id="tag1" style="color: white" class="glow">Remake the Rapture</h2>
@@ -115,10 +121,14 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
             <span id="min">0</span>
             <span id = "none">:</span>
 			<span id="sec">0</span> -->
-			<span id="none">12-14 April</span>
+			<span id="none" style="font-size:25px"><b>| 12-14 April |</b></span>
+			<center>
+				<a href="https://register.exodia.in/"><button type="button" class="btn btn-danger">Register</button></a>
+				<a href="https://www.exodia.in/docs/schedule.html"><button type="button" class="btn btn-danger">Schedule</button></a>
+			</center>
             </center>
         </div>
-        <center><img id="car" src="img/back.png"></center>
+        <center><img id="car" src="https://s3.ap-south-1.amazonaws.com/img-exo/img/back.png"></center>
     </div>
 <!--main(end)-->
 
@@ -145,27 +155,27 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                     </p>
                     <div class="row justify-content-center">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                    <center><iframe width="300" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
+                    <center><iframe width="70%" height="180px" src="https://www.youtube.com/embed/WU_8wcNML3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>   
                     </div>    
                     <div class="col-md-6 col-sm-12">
                     <center>
-                    <iframe width="300px" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="70%" height="180px" src="https://www.youtube.com/embed/LFx_d2d3ZH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </center>
                     </div>  
                     </div>    
                       <p><center><b>Important</b></center></p>
                     <div class="row" id="info">
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></center>
+                        <center><a target="_blank" href="docs/NOC.pdf" style="text-decoration:none; color: black"><i class='fas fa-file-alt' style='font-size:48px;color:black'></i><br><b>NOC</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></center>
+                        <center><a target="_blank" href="docs/schedule.html" style="text-decoration:none; color: black"><i class='fas fa-calendar-alt' style='font-size:48px;color:black'></i><br><b>SCHEDULE</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <center><a href="http://www.iitmandi.ac.in/institute/campus/how_to_reach.php" style="text-decoration:none; color: black"><i class='fas fa-plane' style='font-size:48px;color:black'></i><br><b>HOW TO REACH</b></a></center>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <center><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></center>
+                        <center><a target="_blank" href="docs/Req.pdf" style="text-decoration:none; color: black"><i class='fas fa-copy' style='font-size:48px;color:black'></i><br><b>DOCUMENTS</b></a></center>
                     </div>  
                     </div>
                     </div>
@@ -176,7 +186,7 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
                         <a href="https://twitter.com/Exodia_IITMandi" target="_blank"><i class='fab fa-twitter' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
                         <a href="https://www.youtube.com/user/exodiaiitmandi" target="_blank"><i class='fab fa-youtube' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
                         <a href="https://www.flickr.com/photos/140120696@N06/" target="_blank"><i class='fab fa-flickr' style='font-size:24px;color:black;padding-right: 5px;'></i></a>
-                        <a href="http://www.exodia.in/"><img src="img/exologo.png" width="40px"></a>
+                        <a href="http://www.exodia.in/"><img src="https://s3.ap-south-1.amazonaws.com/img-exo/img/exologo.png" width="40px"></a>
                     </div>
                   </div>
                 </div>
@@ -248,11 +258,12 @@ Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than li
 <!--script for loading(start)-->
 <script>          
 setTimeout(function(){
+	document.getElementById('menu').classList.remove('hide');
     document.getElementById('top').classList.remove('hide');
     document.getElementById('sidebar').classList.remove('hide');
     document.getElementById('open').classList.remove('hide');
     document.getElementById('film-container').classList.add('hide');
-    document.getElementById('text').classList.remove('hide');
+	document.getElementById('text').classList.remove('hide');
 }, 2500);
 
 (function() {

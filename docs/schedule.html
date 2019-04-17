@@ -1,15 +1,25 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<link rel="icon" href="img/favicon.ico">
+    <meta charset="UTF-8"><meta charset="UTF-8">
+    <meta http-equiv="refresh" content="15" >
+	<meta name="description" content="The biggest and the most magnificent technical and cultural fest of the Himalayas, 
+	a complete feast for its participants and sponsors alike, Exodia, is back with its 8th edition, to thrill the youth 
+	with its invigorating cultural extravaganza and brain-storming technical fiesta. The previous seven editions of this 
+	3 day long euphoria, organized by the students of the esteemed Indian Institute of Technology, 
+	Mandi, also fondly known as the ‘IIT of Himalayas’, have been larger than life">
+	<meta name="keywords" content="IIT Mandi, Exodia, Indian Institute of Technology, Mandi, Himachal Competition, Fest, Exodia IIT Mandi">
+	<meta name="author" content="Exodia Web Development Team, IIT Mandi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Schedule</title>
+    <title>Schedule|Exodia'19</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <style>
     body{
         height: 100%;
@@ -60,7 +70,7 @@
     </style>
 </head>
 <body class="deep-orange lighten-1">
-<div class="red"id="back" style="min-height: 800px">
+<div class="deep-orange lighten-1" id="back" style="min-height: 800px">
 <div class="loader" id="loader"></div>
 </div>
     <div class="container main_bdy">
@@ -71,12 +81,13 @@
         </div>
     </div>
     <div class="blue container main_bdy">
-        <h5 class="white-text" style="font-family: 'Ubuntu', sans-serif;">Events going on-</h5>
+        <h5 class="white-text" style="font-family: 'Ubuntu', sans-serif;">Events going on <button onclick="window.location.reload()"style='font-size:24px; background-color: transparent; border: none; cursor: pointer'><i class='fas fa-redo-alt' style="color:white"></i></button></h5>
         <hr>
-        <div id="output" class="white-text" style="font-size: 20px;"></div>
+        <div id="no-eve" class="white-text" style="font-size: 20px; font-family: cursive"></div>
+        <div id="output" class="white-text" style="font-size: 20px; font-family: cursive"></div>
     </div>
     <div class="section scrollspy container main_bdy">
-        <ul id="tabs-swipe" class="tabs">
+        <ul id="tabs-swipe" class="tabs tabs-fixed-width" style="overflow: hidden">
           <li class="tab col s3"><a class="active" href="#test-swipe-1">Day 1</a></li>
           <li class="tab col s3"><a href="#test-swipe-2">Day 2</a></li>
           <li class="tab col s3"><a href="#test-swipe-3">Day 3</a></li>
@@ -90,7 +101,6 @@
                             <ul class="tabs tabs-fixed-width" style="overflow: hidden">
                             <li class="tab col"><a href="#d1c" class="etag">Cultural</a></li>
                             <li class="tab col"><a href="#d1t" class="etag">Technical</a></li>
-                            <li class="tab col"><a href="#d1w" class="etag">Workshops</a></li>
                             </ul>
                         </div>
                         <div id="d1c" class="col s12">
@@ -120,21 +130,6 @@
                                 </tr>
                             </thead>
                             <tbody id="d1_tech">
-                            </tbody>
-                            </table>
-                        </div>
-                        <div id="d1w" class="col s12">
-                            <br><hr><hr>
-                            <table class="centered">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Venue</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
-                                </tr>
-                            </thead>
-                            <tbody id="d1_work">
                             </tbody>
                             </table>
                         </div>
@@ -246,20 +241,20 @@
                             </table>
                         </div>
                         <div id="d3w" class="col s12">
-                            <br><hr><hr>
-                            <table class="centered">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Venue</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
-                                </tr>
-                            </thead>
-                            <tbody id="d3_work">
-                            </tbody>
-                            </table>
-                        </div>
+                        <br><hr><hr>
+                        <table class="centered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Venue</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="d3_work">
+                        </tbody>
+                        </table>
+                    </div>
                     </div>                          
                 </div>
             </div>
@@ -273,7 +268,6 @@
     $(document).ready(function(){
     $('.tabs').tabs();
     });
-
     $('.main_bdy').hide();
    </script>
    <script src="js/firebase.js"></script>

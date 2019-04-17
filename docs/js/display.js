@@ -7,7 +7,7 @@ function print(doc, day, type){
     var div_ = document.getElementById(x);
     var name = doc.data().name;
     var venue = doc.data().venue;
-    var start = doc.data().start.toDate().getHours() + ':'+ pad(doc.data().start.toDate().getMinutes());
+    var start = pad(doc.data().start.toDate().getHours()) + ':'+ pad(doc.data().start.toDate().getMinutes());
     var end = doc.data().end.toDate().getHours() + ':'+ pad(doc.data().end.toDate().getMinutes());
     var data = "<tr>" + "<td>" + name + "</td>" + "<td>" + venue + "</td>" + "<td>" + start + "</td>" + "<td>" + end + "</td>" + "</tr>";
     div_.innerHTML += data;
@@ -27,12 +27,12 @@ db.collection('day1_t').orderBy("start").onSnapshot(function(querySnapshot){
     });
 });
 
-db.collection('day1_w').orderBy("start").onSnapshot(function(querySnapshot){
-    x = querySnapshot.docs.length;
-    querySnapshot.forEach(function(doc) {
-        print(doc, "d1", "_work");
-    });
-});
+// db.collection('day1_w').orderBy("start").onSnapshot(function(querySnapshot){
+//     x = querySnapshot.docs.length;
+//     querySnapshot.forEach(function(doc) {
+//         print(doc, "d1", "_work");
+//     });
+// });
 
 db.collection('day2_c').orderBy("start").onSnapshot(function(querySnapshot){
     x = querySnapshot.docs.length;
@@ -69,6 +69,7 @@ db.collection('day3_t').orderBy("start").onSnapshot(function(querySnapshot){
     });
 });
 
+
 db.collection('day3_w').orderBy("start").onSnapshot(function(querySnapshot){
     x = querySnapshot.docs.length;
     querySnapshot.forEach(function(doc) {
@@ -79,5 +80,5 @@ db.collection('day3_w').orderBy("start").onSnapshot(function(querySnapshot){
 setTimeout(function(){
     $('#loader').hide();
     $('#back').hide();
-    $('.main_bdy').show();
+	$('.main_bdy').show();
 }, 2000);
