@@ -1,0 +1,30 @@
+#event-content{
+    padding-top: 50px;
+    min-height: 800px;
+}
+
+#content-heading{
+    text-align: center;
+}
+
+.img-content{
+    width: 100%;
+}
+
+.tab-pane{
+    padding-top: 20px;
+}
+
+.content-row{
+    padding-top: 20px;
+}
+
+#footer{
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+#contact{
+    padding-top: 50px;
+    color: white;
+}
