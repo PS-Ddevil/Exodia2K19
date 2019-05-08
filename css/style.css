@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px){
 #top{
-    background-image: url(https://s3.ap-south-1.amazonaws.com/img-exo/img/exo-50.jpg);
+    background-image: url(../img/exo-50.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,7 +32,7 @@
 }
 @media only screen and (max-width: 768px){
     #top_scr{
-        background-image: url("https://s3.ap-south-1.amazonaws.com/img-exo/img/mob-1.jpg");
+        background-image: url("../img/mob-1.jpg");
         position: fixed;
         background-position: center;
         background-size: cover;
